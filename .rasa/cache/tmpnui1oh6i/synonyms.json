@@ -1,0 +1,7 @@
+{
+  "urgent": "high",
+  "really important": "high",
+  "escalated": "high",
+  "escalate": "high",
+  "critical": "high"
+}

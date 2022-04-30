@@ -1,0 +1,1675 @@
+version: "3.0"
+stories:
+
+- story: answer out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: give help
+  steps:
+  - intent: help
+  - action: utter_help
+
+- story: thank
+  steps:
+  - intent: thank
+  - action: utter_welcome
+
+- story: greet + give info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: open incident form interrupted
+  steps:
+  - or:
+    - intent: open_incident
+    - intent: password_reset
+    - intent: problem_email
+  - action: open_incident_form
+  - active_loop: open_incident_form
+  - intent: help
+  - action: utter_help
+  - action: open_incident_form
+  - active_loop: null
+  - action: action_open_incident
+
+- story: open incident form interrupted
+  steps:
+  - or:
+    - intent: open_incident
+    - intent: password_reset
+    - intent: problem_email
+  - action: open_incident_form
+  - active_loop: open_incident_form
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: open_incident_form
+  - active_loop: null
+  - action: action_open_incident
+
+- story: incident status form interrupted
+  steps:
+  - intent: incident_status
+  - action: incident_status_form
+  - active_loop: incident_status_form
+  - intent: help
+  - action: utter_help
+  - action: incident_status_form
+  - active_loop: null
+  - action: action_check_incident_status
+
+- story: incident status form interrupted
+  steps:
+  - intent: incident_status
+  - action: incident_status_form
+  - active_loop: incident_status_form
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: incident_status_form
+  - active_loop: null
+  - action: action_check_incident_status
+
+- story: incident status form switch to open incident
+  steps:
+  - intent: incident_status
+  - action: incident_status_form
+  - active_loop: incident_status_form
+  - or:
+    - intent: open_incident
+    - intent: password_reset
+    - intent: problem_email
+  - action: open_incident_form
+  - active_loop: open_incident_form
+  - active_loop: null
+  - action: action_open_incident
+
+- story: open incident form switch to incident status form
+  steps:
+  - or:
+    - intent: open_incident
+    - intent: password_reset
+    - intent: problem_email
+  - action: open_incident_form
+  - active_loop: open_incident_form
+  - intent: incident_status
+  - action: incident_status_form
+  - active_loop: incident_status_form
+  - active_loop: null
+  - action: action_check_incident_status
+
+  ############"
+  
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: greeting_ar path
+  steps:
+  - intent: greet_ar
+  - action: utter_greet_ar
+  
+- story: greeting_ar path
+  steps:
+  - intent: greet_ar
+  - action: utter_greet_ar
+  - intent: mood_ar
+  - action: utter_mood_ar
+  
+  
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: compte_bancaire_fr path
+  steps:
+   - intent: compte_bancaire_fr
+   - action: utter_compte_bancaire_fr
+   
+- story: compte_bancaire_an path
+  steps:
+   - intent: compte_bancaire_an
+   - action: utter_compte_bancaire_an
+
+- story: compte_bancaire_ar path
+  steps:
+   - intent: compte_bancaire_ar
+   - action: utter_compte_bancaire_ar
+
+- story: compte_bancaire_ar1 path
+  steps:
+   - intent: compte_bancaire_ar
+   - action: utter_compte_bancaire_ar
+#########################################################  
+- story: types_comptes_fr path 
+  steps:
+   - intent: types_comptes_fr
+   - action: utter_types_comptes_fr
+
+- story: types_comptes_ar path 
+  steps:
+   - intent: types_comptes_ar
+   - action: utter_types_comptes_ar
+   
+- story: types_comptes_an path 
+  steps:
+   - intent: types_comptes_an
+   - action: utter_types_comptes_an
+   
+############################################################## 
+- story: cloture_comptes_fr path 
+  steps:
+   - intent: cloture_comptes_fr
+   - action: utter_cloture_comptes_fr
+   
+- story: cloture_comptes_an path 
+  steps:
+   - intent: cloture_comptes_an
+   - action: utter_cloture_comptes_an
+   
+- story: cloture_comptes_ar path1
+  steps:
+   - intent: cloture_comptes_ar
+   - action: utter_cloture_comptes_ar
+   
+- story: cloture_comptes_ar path 
+  steps:
+   - intent: greet_ar
+   - action: utter_greet_ar
+   - intent: cloture_comptes_ar
+   - action: utter_cloture_comptes_ar
+   - intent: compte_bancaire_ar
+   - action: utter_compte_bancaire_ar
+   - intent: carte_bancaire_ar
+   - action: utter_carte_bancaire_ar
+   - intent: relevés_bancaire_ar
+   - action: utter_relevés_bancaire_ar  
+####################################################
+- story: carte_bancaire_fr path 
+  steps:
+   - intent: carte_bancaire_fr
+   - action: utter_carte_bancaire_fr
+   
+- story: carte_bancaire_an path 
+  steps:
+   - intent: carte_bancaire_an
+   - action: utter_carte_bancaire_an
+   
+- story: carte_bancaire_ar path 
+  steps:
+   - intent: carte_bancaire_ar
+   - action: utter_carte_bancaire_ar
+   
+- story: carte_bancaire_ar path1 
+  steps:
+   - intent: carte_bancaire_ar
+   - action: utter_carte_bancaire_ar
+########################################################  
+- story: relevés_bancaire_fr path 
+  steps:
+   - intent: relevés_bancaire_fr
+   - action: utter_relevés_bancaire_fr
+
+- story: relevés_bancaire_an path 
+  steps:
+   - intent: relevés_bancaire_an
+   - action: utter_relevés_bancaire_an
+   
+- story: relevés_bancaire_ar path 
+  steps:
+   - intent: relevés_bancaire_ar
+   - action: utter_relevés_bancaire_ar
+   
+- story: relevés_bancaire_ar path1 
+  steps:
+   - intent: relevés_bancaire_ar
+   - action: utter_relevés_bancaire_ar   
+############################################################################################  
+- story: relevés_bancaire_droit_fr
+  steps:
+   - intent: relevés_bancaire_droit_fr
+   - action: utter_relevés_bancaire_droit_fr
+ 
+- story: relevés_bancaire_droit_an
+  steps:
+   - intent: relevés_bancaire_droit_an
+   - action: utter_relevés_bancaire_droit_an
+
+- story: relevés_bancaire_droit_ar
+  steps:
+   - intent: relevés_bancaire_droit_ar
+   - action: utter_relevés_bancaire_droit_ar
+   
+   
+############################################################################################ 
+- story: card blocked
+  steps:
+  - intent: blocked_card
+  - action: utter_blocked_card
+
+- story: choix debit card 
+  steps:
+  - intent: choix_debit_card
+  - action: utter_choix_debit_card
+
+- story: carte volé perdu
+  steps:
+  - intent: carte_volé_perdu
+  - action: utter_carte_volé_perdu
+
+- story: carte defectueuse
+  steps:
+  - intent: carte_defectueuse
+  - action: utter_carte_defectueuse
+
+- story: carte enfant
+  steps:
+  - intent: carte_enfant
+  - action: utter_carte_enfant
+
+- story: carte sans contact
+  steps:
+  - intent: carte_sans_contact
+  - action: utter_carte_sans_contact
+
+# - story : web
+#   steps:
+#     -intent: more_info
+#     -action: utter_carte_dispo
+
+# - story: rasa enquire path
+#   steps:
+#   - intent: rasa
+#   - action: utter_rasa
+
+- story: carte dispo
+  steps:
+  - intent: carte_dispo
+  - action: utter_carte_dispo
+
+- story: delai reception code carte
+  steps:
+  - intent: delai_reception_code_carte
+  - action: utter_delai_reception_code_carte
+
+- story: deuxieme carte
+  steps:
+  - intent: deuxieme_carte
+  - action: utter_deuxieme_carte
+
+- story:  utter changement carte
+  steps:
+  - intent: changement_carte
+  - action: utter_changement_carte
+
+- story: cout carte et affichage details
+  steps:
+  - intent: cout_carte
+  - action: utter_cout_carte
+  - intent: oui_details_prix
+  - action: utter_oui_details_prix
+
+
+- story: cout carte et non affichage details 
+  steps:
+  - intent: cout_carte
+  - action: utter_cout_carte
+  - intent: non_details_prix
+  - action: utter_non_details_prix
+
+- story: suppression  ajout option carte 
+  steps:
+  - intent: supp_ajout_option_carte
+  - action: utter_supp_ajout_option_carte
+
+- story: retirement carte
+  steps:
+  - intent: retirement_carte
+  - action: utter_retirement_carte
+
+- story: chang adresse reception carte
+  steps:
+  - intent: chang_adresse_reception_carte
+  - action: utter_chang_adresse_reception_carte
+
+- story: paymenent plusieurs fois
+  steps:
+  - intent: payement_plusieurs_fois
+  - action: utter_payement_plusieurs_fois
+
+- story: frais nouvelle carte
+  steps:
+  - intent: frais_nouvelle_carte
+  - action: utter_frais_nouvelle_carte
+
+- story: unknown fonctionnalité demande conseiller
+  steps:
+  - intent: unknown_fonctionnalité_demande_conseiller
+  - action: utter_unknown_fonctionnalité_demande_conseiller
+
+
+- story: carte avalé distributeur
+  steps:
+  - intent: carte_avalé_distributeur
+  - action: utter_carte_avalé_distributeur
+
+- story: obtenir carte
+  steps:
+  - intent: obtenir_carte
+  - action: utter_obtenir_carte
+
+- story:  oublie code card
+  steps:
+  - intent:  oublie_code_card
+  - action: utter_oublie_code_card
+ 
+- story: payement refusé
+  steps:
+  - intent: payement_refusé
+  - action: utter_payement_refusé
+ 
+- story: definition verrouiller temporairement carte 
+  steps:
+  - intent: definition_verr_temp_carte
+  - action: utter_definition_verr_temp_carte  
+
+- story: deverrouiller carte 
+  steps:
+  - intent: deverr_carte
+  - action: utter_deverr_carte
+
+- story: transactions sur carte verrouillee
+  steps:
+  - intent: transactions_carte_verr
+  - action: utter_transactions_carte_verr
+  
+- story: activer nouvelle carte qui est verrouillee
+  steps:
+  - intent: activer_nv_carte
+  - action: utter_activer_nv_carte
+
+- story: temps carte reste verrouillee
+  steps:
+  - intent: carte_temps_verrouillee
+  - action: utter_carte_temps_verrouillee
+
+- story: difference verrouillage et opposition
+  steps:
+  - intent: diff_ver_opp
+  - action: utter_diff_ver_opp
+
+
+  ############### ENGLISH PART ####################
+
+- story: card blocked ang
+  steps:
+  - intent: blocked_card_ang
+  - action: utter_blocked_card_ang
+
+- story: choix debit card ang
+  steps:
+  - intent: choix_debit_card_ang
+  - action: utter_choix_debit_card_ang
+
+- story: carte volé perdu ang
+  steps:
+  - intent: carte_volé_perdu_ang
+  - action: utter_carte_volé_perdu_ang
+
+- story: carte defectueuse ang
+  steps:
+  - intent: carte_defectueuse_ang
+  - action: utter_carte_defectueuse_ang
+
+- story: carte enfant ang
+  steps:
+  - intent: carte_enfant_ang
+  - action: utter_carte_enfant_ang
+
+- story: carte sans contact ang
+  steps:
+  - intent: carte_sans_contact_ang
+  - action: utter_carte_sans_contact_ang
+
+# - story : web
+#   steps:
+#     -intent: more_info
+#     -action: utter_carte_dispo
+
+# - story: rasa enquire path
+#   steps:
+#   - intent: rasa
+#   - action: utter_rasa
+
+- story: carte dispo ang
+  steps:
+  - intent: carte_dispo_ang
+  - action: utter_carte_dispo_ang
+
+- story: delai reception code carte ang
+  steps:
+  - intent: delai_reception_code_carte_ang
+  - action: utter_delai_reception_code_carte_ang
+
+- story: deuxieme carte ang
+  steps:
+  - intent: deuxieme_carte_ang
+  - action: utter_deuxieme_carte_ang
+
+- story:  utter changement carte ang
+  steps:
+  - intent: changement_carte_ang
+  - action: utter_changement_carte_ang
+
+- story: cout carte et affichage details ang
+  steps:
+  - intent: cout_carte_ang
+  - action: utter_cout_carte_ang
+  - intent: oui_details_prix_ang
+  - action: utter_oui_details_prix_ang
+
+
+- story: cout carte et non affichage details ang 
+  steps:
+  - intent: cout_carte_ang
+  - action: utter_cout_carte_ang
+  - intent: non_details_prix_ang
+  - action: utter_non_details_prix_ang
+
+- story: suppression  ajout option carte  ang
+  steps:
+  - intent: supp_ajout_option_carte_ang
+  - action: utter_supp_ajout_option_carte_ang
+
+- story: retirement carte ang
+  steps:
+  - intent: retirement_carte_ang
+  - action: utter_retirement_carte_ang
+
+- story: chang adresse reception carte ang
+  steps:
+  - intent: chang_adresse_reception_carte_ang
+  - action: utter_chang_adresse_reception_carte_ang
+
+- story: paymenent plusieurs fois ang
+  steps:
+  - intent: payement_plusieurs_fois_ang
+  - action: utter_payement_plusieurs_fois_ang
+
+- story: frais nouvelle carte ang
+  steps:
+  - intent: frais_nouvelle_carte_ang
+  - action: utter_frais_nouvelle_carte_ang
+
+- story: unknown fonctionnalité demande conseiller ang
+  steps:
+  - intent: unknown_fonctionnalité_demande_conseiller_ang
+  - action: utter_unknown_fonctionnalité_demande_conseiller_ang
+
+
+- story: carte avalé distributeur ang
+  steps:
+  - intent: carte_avalé_distributeur_ang
+  - action: utter_carte_avalé_distributeur_ang
+
+- story: obtenir carte ang
+  steps:
+  - intent: obtenir_carte_ang
+  - action: utter_obtenir_carte_ang
+
+- story:  oublie code card ang
+  steps:
+  - intent:  oublie_code_card_ang
+  - action: utter_oublie_code_card_ang
+ 
+- story: payement refusé ang
+  steps:
+  - intent: payement_refusé_ang
+  - action: utter_payement_refusé_ang
+ 
+- story: definition verrouiller temporairement carte  ang
+  steps:
+  - intent: definition_verr_temp_carte_ang
+  - action: utter_definition_verr_temp_carte_ang
+
+- story: deverrouiller carte  ang
+  steps:
+  - intent: deverr_carte_ang
+  - action: utter_deverr_carte_ang
+
+- story: transactions sur carte verrouillee ang
+  steps:
+  - intent: transactions_carte_verr_ang
+  - action: utter_transactions_carte_verr_ang
+  
+- story: activer nouvelle carte qui est verrouillee ang
+  steps:
+  - intent: activer_nv_carte_ang
+  - action: utter_activer_nv_carte_ang
+
+- story: temps carte reste verrouillee ang
+  steps:
+  - intent: carte_temps_verrouillee_ang
+  - action: utter_carte_temps_verrouillee_ang
+
+- story: difference verrouillage et opposition ang
+  steps:
+  - intent: diff_ver_opp_ang
+  - action: utter_diff_ver_opp_ang
+
+- story: virrement1
+  steps:
+  - intent: liste_virrement
+  - action: utter_liste
+
+- story: list virrementan
+  steps:
+  - intent: list_virrement_an
+  - action: utter_list_virrement_an
+
+- story: pays de zone SEPA
+  steps:
+  - intent: pays_zone_SEPA
+  - action: utter_pays_zone_SEPA
+
+- story: annuler ou modifier un virement
+  steps:
+  - intent: annuler_modifier_virement
+  - action: utter_annuler_modifier_virement
+
+- story: cancelor modify a classic international transferan 
+  steps:
+  - intent: cancel_modify_classic_international_transfer_an 
+  - action: utter_cancel_modify_classic_international_transfer_an 
+
+- story: connaitre expediteur du virement
+  steps:
+  - intent: connaitre_expediteur_virement 
+  - action: utter_connaitre_expediteur_virement
+
+- story: findout who senta wire transfer
+  steps:
+  - intent: findout_sent_wire_transfer 
+  - action: utter_findout_sent_wire_transfer
+
+- story: change transfer limit
+  steps:
+  - intent: How_change _transfer_limit 
+  - action: utter_How_change _transfer_limit
+
+- story: effectuer un virement espace client
+  steps:
+  - intent: effectuer_virement_espace_client
+  - action: utter_effectuer_virement_espace_client
+
+- story: make a transfer from a customer area
+  steps:
+  - intent: make_transfer_from_customer_area
+  - action: utter_make_transfer_from_customer_area
+
+- story: effectuer un virement livret epargne
+  steps:
+  - intent: effectuer_virement_livret_epargne
+  - action: utter_effectuer_virement_livret_epargne
+
+- story: transfer money from savingsaccount
+  steps:
+  - intent: transfer_money_savings_account
+  - action: utter_transfer_money_savings_account
+
+- story: faire un virement vers etranger
+  steps:
+  - intent: faire_virement_etranger
+  - action: utter_faire_virement_etranger
+ 
+- story: make a transfer abroad
+  steps:
+  - intent: make_a_transfer_abroad
+  - action: utter_make_a_transfer_abroad
+
+- story: countries SEPA zone
+  steps:
+  - intent: countries_SEPA_zone
+  - action: utter_countries_SEPA_zone
+
+- story: indiquer un montant de virement
+  steps:
+  - intent: indiquer_montant_virement
+  - action: utter_indiquer_montant_virement
+
+- story: enterthe amount's transfer
+  steps:
+  - intent: enter_amount_transfer
+  - action: utter_enter_amount_transfer
+
+- story: obtenir une justificatif virement
+  steps:
+  - intent: obtenir_justificatif_virement
+  - action: utter_obtenir_justificatif_virement
+
+- story: reference reason transfer
+  steps:
+  - intent: reference_reason_transfer
+  - action: utter_reference_reason_transfer
+
+- story: remettre en place un virement
+  steps:
+  - intent: remettre_place_virement
+  - action: utter_remettre_place_virement
+
+- story: putback a transfer
+  steps:
+  - intent: putback_transfer
+  - action: utter_putback_transfer
+
+- story: modifier ou supprimer un beneficiaire de virement
+  steps:
+  - intent: modifier_supprimer_beneficiaire_virement
+  - action: utter_modifier_supprimer_beneficiaire_virement
+
+- story: modify or delete a beneficiarytransfer
+  steps:
+  - intent: modify_delete_beneficiary_transfer
+  - action: utter_modify_delete_beneficiary_transfer
+
+- story: verifier IBAN ou RIB destinataire virement 
+  steps:
+  - intent: verifier_IBAN_RIB_destinataire_virement 
+  - action: utter_verifier_IBAN_RIB_destinataire_virement 
+
+- story: verify IBAN or RIB transferrecipient
+  steps:
+  - intent: verify_IBAN_RIB_transfer_recipient 
+  - action: utter_verify_IBAN_RIB_transfer_recipient
+  
+- story: un virement echu 
+  steps:
+  - intent: un_virement_echu
+  - action: utter_un_virement_echu
+ 
+- story: matured transfer 
+  steps:
+  - intent: matured_transfer
+  - action: utter_matured_transfer
+  
+- story: le virement SEPA
+  steps:
+  - intent: le_virement_SEPA
+  - action: utter_le_virement_SEPA
+   
+- story: SEPA credit transfer
+  steps:
+  - intent: SEPA_credit_transfer
+  - action: utter_SEPA_credit_transfer
+  
+- story: le virement refuse ou bloque
+  steps:
+  - intent: refuse_bloque
+  - action: utter_refuse_bloque
+ 
+- story: refused or blocked
+  steps:
+  - intent: refused_blocked
+  - action: utter_refused_blocked
+
+- story: delai SEPA classique compte destinataire
+  steps:
+  - intent: delai_SEPA_classique_compte_destinataire
+  - action: utter_delai_SEPA_classique_compte_destinataire
+
+- story: periodoftime to receive traditional SEPA transfer
+  steps:
+  - intent: periodoftime_receive_traditional_SEPA_transfer_recipient
+  - action: utter_periodoftime_receive_traditional_SEPA_transfer_recipient
+
+- story: delai reception d'un virement compt
+  steps:
+  - intent: delai_reception_virement_compte
+  - action: utter_delai_reception_virement_compte
+ 
+- story: periodeto receive a transfer personnal account
+  steps:
+  - intent: periode_receive_transfer_personnal_account
+  - action: utter_periode_receive_transfer_personnal_account
+  
+- story: le virement euro
+  steps:
+  - intent: euro
+  - action: utter_euro  
+
+- story: Je suis l'expéditeur du virement
+  steps:
+  - intent: expediteur_virement
+  - action: utter_expediteur_virement
+
+- story: I am the recipient of the transfer
+  steps:
+  - intent: recipient
+  - action: utter_recipient
+
+
+- story:  I am the sender of the transfer
+  steps:
+  - intent: sender_transfer
+  - action: utter_sender_transfer
+
+- story: Je suis le destinataire du virement
+  steps:
+  - intent: destinataire
+  - action: utter_destinataire
+  
+- story: les frais virements internationaux
+  steps:
+  - intent: les_frais_virements_internationaux
+  - action: utter_les_frais_virements_internationaux
+   
+- story: fees's international transfers
+  steps:
+  - intent: fees_international_transfers
+  - action: utter_fees_international_transfers
+  
+- story: le virement autre devise
+  steps:
+  - intent: autre_devise
+  - action: utter_autre_devise
+   
+- story: limite montant virements
+  steps:
+  - intent: limite_montant_virements
+  - action: utter_limite_montant_virements
+  
+- story: limit of the amounttransfers
+  steps:
+  - intent: limit_amount_transfers
+  - action: utter_limit_amount_transfers  
+
+- story: frais reçu d'un virement international
+  steps:
+  - intent: frais_reçu_virement_international
+  - action: utter_frais_reçu_virement_international
+   
+- story: fees receive international transferl
+  steps:
+  - intent: fees_receive_international_transfer
+  - action: utter_fees_receive_international_transfer
+      
+- story: frais d'un virement SEPA vers la France ou pays zone euro
+  steps:
+  - intent: frais_virement_SEPA_France_pays_zone_euro
+  - action: utter_frais_virement_SEPA_France_pays_zone_euro
+       
+- story: charges EPAtransfer France country euro zone 
+  steps:
+  - intent: charges_SEPAtransfer_France_country_euro_zone 
+  - action: utter_charges_SEPAtransfer_France_country_euro_zone 
+       
+- story: demander un remboursement de frais irement
+  steps:
+  - intent: demander_remboursement_frais_irement
+  - action: utter_demander_remboursement_frais_irement
+           
+- story: transfer's fees request
+  steps:
+  - intent: transfer_fees_request
+  - action: utter_transfer_fees_request
+       
+- story: verrification virrement Appli
+  steps:
+  - intent: verrification_virrement_Appli
+  - action: utter_verrification_virrement_Appli
+         
+- story: verrification Appli's transfer
+  steps:
+  - intent: verrification_Appli_transfer
+  - action: utter_verrification_Appli_transfer
+        
+- story: delai du traitement d'un virement vers etranger
+  steps:
+  - intent: delai_traitement_virement_etranger
+  - action: utter_delai_traitement_virement_etranger
+           
+- story: deadline's international tarnsfer
+  steps:
+  - intent: deadline_international_tarnsfer
+  - action: utter_deadline_international_tarnsfer
+         
+- story: erreur sur les coordonnees beneficiaire et virement a ete valide
+  steps:
+  - intent: erreur_coordonnees_beneficiaire_virement_valide
+  - action: utter_erreur_coordonnees_beneficiaire_virement_valide
+              
+- story: error's beneficiary transfer validated
+  steps:
+  - intent: error_beneficiary_transfer_validated
+  - action: utter_error_beneficiary_transfer_validated
+         
+- story: beneficiaire non ajoutee solution
+  steps:
+  - intent: beneficiaire_non_ajoutee
+  - action: utter_beneficiaire_non_ajoutee
+          
+- story: add a beneficiary
+  steps:
+  - intent: add_beneficiary
+  - action: utter_add_beneficiary
+           
+- story: faire un virement vs pays non IBAN
+  steps:
+  - intent: faire_virement_pays_non_IBAN
+  - action: utter_faire_virement_pays_non_IBAN
+            
+- story: make a  transfer to non IBAN country
+  steps:
+  - intent: make_transfer_country _not_IBAN
+  - action: utter_make_transfer_country _not_IBAN
+           
+- story: envoyer de l'argent par SMS
+  steps:
+  - intent: envoyer_argent_SMS
+  - action: utter_envoyer_argent_SMS
+               
+- story: send money by SMS
+  steps:
+  - intent: send_money_SMS
+  - action: utter_send_money_SMS
+           
+- story: annuler ou modifier  permanent
+  steps:
+  - intent: annuler_modifier_virement_permanent
+  - action: utter_annuler_modifier_virement_permanent
+             
+- story: cancelor modifya permanent transfer
+  steps:
+  - intent: cancel_modify_permanent_transfer
+  - action: utter_cancel_modify_permanent_transfer
+           
+- story: augmenterun plafond de virement comptes mineur
+  steps:
+  - intent: augmenter_plafond_virement_comptes_mineur
+  - action: utter_augmenter_plafond_virement_comptes_mineur
+             
+- story: increase the transfer limit minor's account
+  steps:
+  - intent: increase_transfer_limit_minor
+  - action: utter_increase_transfer_limit_minor
+           
+- story: effectuerun virement bancaire international
+  steps:
+  - intent: effectuer_virement_bancaire_international
+  - action: utter_effectuer_virement_bancaire_international
+             
+- story: make an international bank transfer
+  steps:
+  - intent: make_international_bank_transfer
+  - action: utter_make_international_bank_transfer
+           
+- story: temps prennent un vir banc interna
+  steps:
+  - intent: temps_prennent_virements_bancaires_internationaux
+  - action: utter_temps_prennent_virements_bancaires_internationaux
+           
+- story: coute d'un virement bancaire international
+  steps:
+  - intent: coute_virement_bancaire_international
+  - action: utter_coute_virement_bancaire_international
+               
+- story: international bank_transfer time cost
+  steps:
+  - intent: international_bank_transfer_time_cost
+  - action: utter_international_bank_transfer_time_cost
+                    
+- story: time that international bank transfer takes
+  steps:
+  - intent: time_international_bank_transfer_takes
+  - action: utter_time_international_bank_transfer_takes
+           
+- story: emplacement d'un virement bancaire international
+  steps:
+  - intent: emplacement_virement_bancaire_international
+  - action: utter_emplacement_virement_bancaire_international
+              
+- story: send international bank transfer
+  steps:
+  - intent: place_send_international_bank_transfer
+  - action: utter_place_send_international_bank_transfer
+           
+- story: le beneficiaire recevra le virbancaire
+  steps:
+  - intent: Quand_beneficiaire_recevra_irement_bancaire
+  - action: utter_Quand_beneficiaire_recevra_irement_bancaire
+             
+- story: When the beneficiary will receive bank transfer
+  steps:
+  - intent: When_beneficiary_receive_bank_transfer
+  - action: utter_When_beneficiary_receive_bank_transfer
+           
+- story: type de virement modif annuler
+  steps:
+  - intent: type_virement_modifier_annuler
+  - action: utter_type_virement_modifier_annuler
+          
+- story: receive bank transfer notyet
+  steps:
+  - intent: receive_bank_transfer_notyet
+  - action: utter_receive_bank_transfer_notyet
+
+- story: classique et ou internationafr
+  steps:
+  - intent: classique_et_ou_internationa
+  - action: utter_classique_et_ou_internationa
+  
+- story: the maximumlimit amount that can i send
+  steps:
+  - intent: maximum_limit_amount_can_send
+  - action: utter_maximum_limit_amount_can_send
+  
+- story: virement permanentfr
+  steps:
+  - intent: virement_permanent
+  - action: utter_virement_permanent
+  
+- story: Aucune ces propositionsfr
+  steps:
+  - intent: Aucune_ces_propositions
+  - action: utter_Aucune_ces_propositions
+           
+- story: beneficiaire n'a pas reçu virban
+  steps:
+  - intent: beneficiaire_reçu_virement_bancaire
+  - action: utter_beneficiaire_reçu_virement_bancaire
+           
+- story: limite maximale_du montant envoyee
+  steps:
+  - intent: limite_maximale_montant_envoyee
+  - action: utter_limite_maximale_montant_envoyee
+           
+- story: code BIC Swift
+  steps:
+  - intent: code_BIC_Swift
+  - action: utter_code_BIC_Swift
+              
+- story: an cd  BICSwift
+  steps:
+  - intent: cd_BC_Swift_an
+  - action: utter_cd_BC_Swift_an
+           
+- story: code IBAN
+  steps:
+  - intent: code_IBAN
+  - action: utter_code_IBAN
+          
+- story: english code IBAN
+  steps:
+  - intent: code_IBAN_an
+  - action: utter_code_IBAN_an
+          
+- story: cancel a banktransfer
+  steps:
+  - intent: cancel_bank_transfer
+  - action: utter_cancel_bank_transfer
+           
+- story: A1
+  steps:
+  - intent: classic_and_or_international
+  - action: utter_classic_and_or_international
+          
+- story: A2
+  steps:
+  - intent: standing_order
+  - action: utter_standing_order
+         
+- story: A3
+  steps:
+  - intent: None_the_aboves
+  - action: utter_None_the_aboves
+- story: Carte_bancaire_fr
+  steps:
+  - intent: paiement_sans_contact
+  - action: utter_fonctionnalité_sans_contact
+
+- story: Carte_bancaire_fr 2
+  steps:  
+  - intent: contestation_de_paiement
+  - action: utter_contestation_de_paiement
+  
+- story: Carte_bancaire_fr 3
+  steps:
+  - intent: paiement_carte_bancaire
+  - action: utter_paiement_carte_bancaire
+  
+- story: Carte_bancaire_fr 4
+  steps:
+  - intent: modifier_les_plafonds
+  - action: utter_modifier_plafonds
+
+- story: Carte_bancaire_fr 5
+  steps:
+  - intent: durée_validité_augmentation
+  - action: utter_durée_validité_augmentation
+
+- story: Carte_bancaire_fr 6
+  steps:  
+  - intent:  temps_de_remboursement_contestation
+  - action:  utter_temps_de_remboursement_contestation
+
+- story: Carte_bancaire_fr 7
+  steps:
+  - intent:  choisir_code_secret
+  - action:  utter_choisir_code_secret
+
+- story: Prelevement_bancaire_fr
+  steps:
+  - intent: rechercher_prélèvement
+  - action: utter_rechercher_prélèvement
+
+- story: Prelevement_bancaire_fr 1
+  steps:
+  - intent: un_créancier_un_prélèvement
+  - action: utter_créancier_un_prélèvement
+
+- story: Prelevement_bancaire_fr 2
+  steps:
+  - intent: arrêter_prélèvement
+  - action: utter_arrêter_prélèvement
+
+- story: Prelevement_bancaire_fr 3
+  steps:
+  - intent: contester_prélèvement
+  - action: utter_contester_prélèvement
+
+- story: Prelevement_bancaire_fr 4
+  steps:
+  - intent: opposition_prélèvement
+  - action: utter_opposition_prélèvement
+
+- story: Prelevement_bancaire_fr 5
+  steps:  
+  - intent: mettre_en_place_prélèvement
+  - action: utter_mettre_en_place_prélèvement
+
+- story: Prelevement_bancaire_fr 6
+  steps:  
+  - intent: modifier_prélèvement
+  - action: utter_modifier_prélèvement
+
+- story: Prelevement_bancaire_fr 7
+  steps:    
+  - intent: suivre_prelevement
+  - action: utter_suivre_prelevement
+  
+- story: Prelevement_bancaire_fr 8
+  steps:  
+  - intent: avant_prélèvement 
+  - action: utter_avant_prélèvement
+
+- story: Prelevement_bancaire_fr 9
+  steps:    
+  - intent: conséquences_compte_non_provisionné
+  - action: utter_conséquences_compte_non_provisionné
+
+- story: Prelevement_bancaire_fr 10
+  steps:    
+  - intent: prélèvement_SEPA
+  - action: utter_prélèvement_SEPA
+
+- story: Prelevement_bancaire_fr 11
+  steps:     
+  - intent: frais_relatifs_aux_prélèvements
+  - action: utter_frais_relatifs_aux_prélèvements
+
+- story: Prelevement_bancaire_fr 12
+  steps:  
+  - intent: rejet_prelevement
+  - action: utter_rejet_prelevement
+
+- story: Prelevement_bancaire_fr 13
+  steps:   
+  - intent:  prélèvements_récurrents
+  - action: utter_prélèvements_récurrents
+
+- story: Prelevement_bancaire_fr 14
+  steps:  
+  - intent: annuler_contestation_prélèvement
+  - action: utter_annuler_contestation_prélèvement
+
+- story: Prelevement_bancaire_fr 15
+  steps:   
+  - intent: contestation_créancier
+  - action: utter_contestation_créancier
+
+- story: Prelevement_bancaire_fr 16
+  steps:     
+  - intent: contestation_prélèvement
+  - action: utter_contestation_prélèvement
+
+- story: Prelevement_bancaire_fr 17
+  steps:     
+  - intent: frais_rejet
+  - action: utter_frais_rejet
+
+- story: Prelevement_bancaire_fr 18
+  steps:     
+  - intent: compte_preleve2_fois
+  - action: utter_compte_preleve2_fois
+
+- story: Bank_Card_en
+  steps:     
+  - intent: contactless_feature
+  - action: utter_contactless_feature
+
+- story: Bank_Card_en 1
+  steps:     
+  - intent: payment_dispute
+  - action: utter_payment_dispute
+
+- story: Bank_Card_en 2
+  steps:     
+  - intent: bank_card_payment
+  - action: utter_bank_card_payment
+
+- story: Bank_Card_en 3
+  steps:     
+  - intent: change_the_limits
+  - action: utter_change_the_limits
+  
+
+- story: Bank_Card_en 4
+  steps:     
+  - intent: increase_validity_period
+  - action: utter_increase_validity_period
+
+- story: Bank_Card_en 5
+  steps:   
+  - intent: refund_time_dispute
+  - action: utter_refund_time_dispute 
+  
+- story: Bank_Card_en 6
+  steps:   
+  - intent: choose_secret_code
+  - action: utter_choose_secret_code
+
+- story: Prelevement_bancaire_en
+  steps:   
+  - intent: search_debit
+  - action: utter_search_debit
+
+- story: Prelevement_bancaire_en 1
+  steps:   
+  - intent: a_creditor_a_debit
+  - action: utter_a_creditor_a_debit
+
+- story: Prelevement_bancaire_en 2
+  steps:   
+  - intent: stop_direct_debit
+  - action: utter_stop_direct_debit
+
+- story: Prelevement_bancaire_en 3
+  steps:   
+  - intent: dispute_direct_debit
+  - action: utter_dispute_direct_debit
+
+#- story: Prelevement_bancaire_en 4
+#  steps:   
+#  - intent: direct_debit_opposition
+#  - action: utter_direct_debit_opposition
+
+- story: Prelevement_bancaire_en 5
+  steps:   
+  - intent: set_up_direct_debit
+  - action: utter_set_up_direct_debit
+
+- story: Prelevement_bancaire_en 6
+  steps:   
+  - intent: change_direct_debit
+  - action: utter_change_direct_debit
+
+- story: Prelevement_bancaire_en 7
+  steps:     
+  - intent: track_direct_debit
+  - action: utter_track_direct_debit
+
+- story: Prelevement_bancaire_en 8
+  steps:     
+  - intent: before_sampling
+  - action: utter_before_sampling
+
+- story: Prelevement_bancaire_en 9
+  steps:     
+  - intent: consequences_account_not_funded
+  - action: utter_consequences_account_not_funded
+
+- story: Prelevement_bancaire_en 10
+  steps:     
+  - intent: SEPA_Direct_Debit
+  - action: utter_SEPA_Direct_Debit
+
+- story: Prelevement_bancaire_en 11
+  steps:     
+  - intent: direct_debit_fees
+  - action: utter_direct_debit_fees
+
+- story: Prelevement_bancaire_en 12
+  steps:   
+  - intent: sample_rejection
+  - action: utter_sample_rejection
+
+- story: Prelevement_bancaire_en 13
+  steps: 
+  - intent: recurring_direct_debits
+  - action: utter_recurring_direct_debits
+
+- story: Prelevement_bancaire_en 14
+  steps:  
+  - intent: cancel_direct_debit_dispute
+  - action: utter_cancel_direct_debit_dispute
+
+- story: Prelevement_bancaire_en 15
+  steps:  
+  - intent: creditor_dispute
+  - action: utter_creditor_dispute
+
+- story: Prelevement_bancaire_en 16
+  steps:  
+  - intent: direct_debit_dispute
+  - action: utter_direct_debit_dispute
+
+- story: Prelevement_bancaire_en 17
+  steps:  
+  - intent: rejection_fee
+  - action: utter_rejection_fee
+  
+- story: slu
+  steps:
+  - intent: salut
+  - action: utter_salut
+  
+
+- story: code securite
+  steps:
+  - intent: code_securite_info_fr
+  - action: utter_code_securite_info_fr
+
+- story: modifier corrdonnee
+  steps:
+  - intent: modifier_corrdonnées_fr
+  - action: utter_modifier_corrdonnées_fr
+
+- story: modifier ou supprime bénéficiaire
+  steps:
+  - intent: modifier_supprime_bénéficiaire_fr
+  - action: utter_modifier_supprime_bénéficiaire_fr
+
+
+- story: démarches déménagement 
+  steps:
+  - intent: démarches_déménagement_fr
+  - action: utter_démarches_déménagement_fr
+
+
+- story: démarches changement nom  
+  steps:
+  - intent: démarches_change_nom_fr
+  - action: utter_démarches_change_nom_fr
+
+
+
+- story: nouvelle mail 
+  steps:
+  - intent: nouvelle_mail_fr
+  - action: utter_nouvelle_mail_fr
+
+
+- story: nouvelle identité passeport
+  steps:
+  - intent: nouvelle_identité_passeport_fr
+  - action: utter_nouvelle_identité_passeport_fr
+
+
+
+- story: garde copie identite
+  steps:
+  - intent: garde_copie_identite_fr
+  - action: utter_garde_copie_identite_fr
+
+
+
+- story: comptes externes sécurisé
+  steps:
+  - intent: comptes_externes_sécurisé_fr
+  - action: utter_comptes_externes_sécurisé_fr
+
+
+
+- story: étranger fonctionne Pass Sécurité
+  steps:
+  - intent: étranger_fonctionne_Pass_Sécurité_fr
+  - action: utter_étranger_fonctionne_Pass_Sécurité_fr
+
+
+- story: activer désactiver Pass Sécurité
+  steps:
+  - intent: activer_désactiver_Pass_Sécurité_fr
+  - action: utter_activer_désactiver_Pass_Sécurité_fr
+
+
+- story: Pass Sécurité ne fonctionne pas
+  steps:
+  - intent: Pass_Sécurité_ne_fonctionne_pas_fr
+  - action: utter_Pass_Sécurité_ne_fonctionne_pas_fr
+
+
+- story: modifier code secret
+  steps:
+  - intent: modifier_code_secret_fr
+  - action: utter_modifier_code_secret_fr
+
+
+- story: modifier num tel securite
+  steps:
+  - intent: modifier_num_tel_securite_fr
+  - action: utter_modifier_num_tel_securite_fr
+
+
+- story: obtenir code client
+  steps:
+  - intent: obtenir_code_client_fr
+  - action: utter_obtenir_code_client_fr
+
+- story: obtenir code secret
+  steps:
+  - intent: obtenir_code_secret_fr
+  - action: utter_obtenir_code_secret_fr
+
+
+- story: oublie perte carte bancaire
+  steps:
+  - intent: oublie_perte_carte_bancaire_fr
+  - action: utter_oublie_perte_carte_bancaire_fr
+
+
+- story: réceptionner code sécurité
+  steps:
+  - intent: réceptionner_code_sécurité_fr
+  - action: utter_réceptionner_code_sécurité_fr
+
+
+- story: email douteux
+  steps:
+  - intent: email_douteux_fr
+  - action: utter_email_douteux_fr
+
+- story: repondu email douteux
+  steps:
+  - intent: repondu_email_douteux_fr
+  - action: utter_repondu_email_douteux_fr
+
+- story: bloque espace client_fr
+  steps:
+  - intent: bloque_espace_client_fr
+  - action: utter_bloque_espace_client_fr
+
+
+- story: pas recu code securite tel app
+  steps:
+  - intent: pas_recu_code_securite_tel_app_fr
+  - action: utter_pas_recu_code_securite_tel_app_fr
+
+- story: pas recu code par mail code securite_fr
+  steps:
+  - intent: pas_recu_code_par_mail_code_securite_fr
+  - action: utter_pas_recu_code_par_mail_code_securite_fr
+
+
+- story: etranger fct pass securite
+  steps:
+  - intent: etranger_fct_pass_securite_fr
+  - action: utter_etranger_fct_pass_securite_fr
+
+- story: probleme clavier_fr
+  steps:
+  - intent: probleme_clavier_fr
+  - action: utter_probleme_clavier_fr
+
+- story: contester payement_fr
+  steps:
+  - intent: contester_payement_fr
+  - action: utter_contester_payement_fr
+
+
+- story: security code info_ag
+  steps:
+  - intent: security_code_info_ag
+  - action: utter_security_code_info_ag
+
+
+- story: modify contact_ag
+  steps:
+  - intent: modify_contact_ag
+  - action: utter_modify_contact_ag
+
+- story: modify delete beneficiary_en
+  steps:
+  - intent: modify_delete_beneficiary_en
+  - action: utter_modify_delete_beneficiary_en
+
+- story: steps moving_en
+  steps:
+  - intent: steps_moving_en
+  - action: utter_steps_moving_en
+
+- story: steps change_name_ag
+  steps:
+  - intent: steps_change_name_ag
+  - action: utter_steps_change_name_ag
+
+
+- story: new mail_an
+  steps:
+  - intent: new_mail_an
+  - action: utter_new_mail_an
+
+
+- story: new identity passport ag
+  steps:
+  - intent: new_identity_passport_ag
+  - action: utter_new_identity_passport_ag
+
+
+- story: identity copy guard_en
+  steps:
+  - intent: identity_copy_guard_en
+  - action: utter_identity_copy_guard_en
+
+- story: secure external accounts en
+  steps:
+  - intent: secure_external_accounts_en
+  - action: utter_secure_external_accounts_en
+
+
+- story: foreigner functions Pass Security_ag
+  steps:
+  - intent: foreigner_functions_Pass_Security_ag
+  - action: utter_foreigner_functions_Pass_Security_ag
+
+
+- story: activate deactivate Security_Pass_ag
+  steps:
+  - intent: activate_deactivate_Security_Pass_ag
+  - action: utter_activate_deactivate_Security_Pass_ag
+
+- story: Security Pass not working_ag
+  steps:
+  - intent: Security_Pass_not_working_ag
+  - action: utter_Security_Pass_not_working_ag  
+
+
+- story: modify code secret ag
+  steps:
+  - intent: modify_code_secret_ag
+  - action: utter_modify_code_secret_ag
+
+
+- story: change phone number security_ag
+  steps:
+  - intent: change_phone_number_security_ag
+  - action: utter_change_phone_number_security_ag
+
+- story: get customer code_ag
+  steps:
+  - intent: get_customer_code_ag
+  - action: utter_get_customer_code_ag
+
+- story: get secret code_ag
+  steps:
+  - intent: get_secret_code_ag
+  - action: utter_get_secret_code_ag
+
+- story: forget lost bank card_ag
+  steps:
+  - intent: forget_lost_bank_card_ag
+  - action: utter_forget_lost_bank_card_ag
+
+
+- story: receive security code_ag
+  steps:
+  - intent: receive_security_code_ag
+  - action: utter_receive_security_code_ag  
+
+- story: dubious mail_ag
+  steps:
+  - intent: dubious_mail_ag
+  - action: utter_dubious_mail_ag
+
+- story: answered dubious mail_ag
+  steps:
+  - intent: answered_dubious_mail_ag
+  - action: utter_answered_dubious_mail_ag
+
+
+- story: blocked customer area ag
+  steps:
+  - intent: blocked_customer_area_ag
+  - action: utter_blocked_customer_area_ag
+
+
+- story: did not receive the Security code vie_phone 
+  steps:
+  - intent: did_not_receive_the_Security_Code_vie_phone_ag
+  - action: utter_did_not_receive_the_Security_Code_vie_phone_ag
+
+- story: did not receive Security Code by mail_ag 
+  steps:
+  - intent: did_not_receive_SecurityCode_by_mail_ag
+  - action: utter_did_not_receive_SecurityCode_by_mail_ag
+
+- story: Security Pass work travel_ag 
+  steps:
+  - intent: Security_Pass_work_travel_ag
+  - action: utter_Security_Pass_work_travel_ag
+
+
+- story: keyborard problem ag 
+  steps:
+  - intent: keyborard_problem_ag
+  - action: utter_keyborard_problem_ag
+
+- story: dispute payment ag
+  steps:
+  - intent: dispute_payment_ag
+  - action: utter_dispute_payment_ag
+
+- story: thank
+  steps:
+  - intent: thank
+  - action: utter_welcome
+
+- story: answer out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: ask_time
+  steps:
+  - intent: ask_time
+  - action: utter_time
+
+- story: first_last_name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_names
+  - action: name_form
+  - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: first_name
+  - slot_was_set:
+    - first_name: hamza
+  - slot_was_set:
+    - requested_slot: last_name
+  - slot_was_set:
+    - last_name: benabdelkader
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+  - action: utter_help
+
+
+
+- story: give help
+  steps:
+  - intent: help
+  - action: utter_help
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: name
+  steps:
+  - intent: request_names
+  - action: name_form
+  - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: first_name
+  - slot_was_set:
+    - first_name: hamza
+  - slot_was_set:
+    - requested_slot: last_name
+  - slot_was_set:
+    - last_name: benabdelkader
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values
+  - action: utter_help
+

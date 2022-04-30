@@ -1,0 +1,22 @@
+{
+  "urgent": "high",
+  "really important": "high",
+  "escalated": "high",
+  "escalate": "high",
+  "critical": "high",
+  "compte": "compte bancaire",
+  "mon compte": "compte bancaire",
+  "le compte": "compte bancaire",
+  "elcompte": "compte bancaire_ar",
+  "el compte": "compte bancaire_ar",
+  "compte mt3i": "compte bancaire_ar",
+  "comptowiya": "compte bancaire_ar",
+  "l compte": "compte bancaire_ar",
+  "lcompte": "compte bancaire_ar",
+  "compta": "compte bancaire_ar",
+  "lcompt": "compte bancaire_ar",
+  "account": "bank account",
+  "an account": "bank account",
+  "accounts": "bank account",
+  "my account": "bank account"
+}

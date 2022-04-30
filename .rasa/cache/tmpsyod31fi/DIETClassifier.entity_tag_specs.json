@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-day_number",
+      "2": "I-day_number",
+      "3": "L-day_number",
+      "4": "U-day_number",
+      "5": "B-priority",
+      "6": "I-priority",
+      "7": "L-priority",
+      "8": "U-priority",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-day_number": 1,
+      "I-day_number": 2,
+      "L-day_number": 3,
+      "U-day_number": 4,
+      "B-priority": 5,
+      "I-priority": 6,
+      "L-priority": 7,
+      "U-priority": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

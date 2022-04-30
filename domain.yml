@@ -1,0 +1,1837 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: true
+intents:
+  - ask_time
+  - greet
+  - goodbye
+  - bot_challenge
+  - password_reset
+  - inform
+  - thank
+  - help
+  - problem_email
+  - open_incident:
+      use_entities: []
+  - incident_status
+  - out_of_scope
+  - restart
+  - affirm
+  - deny
+  - trigger_handoff
+  - human_handoff
+  - handoff
+  ##### added
+  - greet_ar
+  - deny_ar
+  - mood_ar
+  - mood_great
+  - mood_unhappy
+  - request_names
+  - salut
+  - code_securite_info_fr
+  - modifier_corrdonnées_fr
+  - modifier_supprime_bénéficiaire_fr
+  - démarches_déménagement_fr
+  - démarches_change_nom_fr
+  - nouvelle_mail_fr
+  - nouvelle_identité_passeport_fr
+  - garde_copie_identite_fr
+  - comptes_externes_sécurisé_fr
+  - étranger_fonctionne_Pass_Sécurité_fr
+  - activer_désactiver_Pass_Sécurité_fr
+  - Pass_Sécurité_ne_fonctionne_pas_fr
+  - modifier_code_secret_fr
+  - modifier_num_tel_securite_fr
+  - obtenir_code_client_fr
+  - obtenir_code_secret_fr
+  - oublie_perte_carte_bancaire_fr
+  - réceptionner_code_sécurité_fr
+  - email_douteux_fr
+  - repondu_email_douteux_fr
+  - bloque_espace_client_fr
+  - pas_recu_code_securite_tel_app_fr
+  - pas_recu_code_par_mail_code_securite_fr
+  - etranger_fct_pass_securite_fr
+  - probleme_clavier_fr
+  - contester_payement_fr
+  - security_code_info_ag
+  - modify_contact_ag
+  - modify_delete_beneficiary_en
+  - steps_moving_en
+  - steps_change_name_ag
+  - new_mail_an
+  - new_identity_passport_ag
+  - identity_copy_guard_en
+  - secure_external_accounts_en
+  - foreigner_functions_Pass_Security_ag
+  - activate_deactivate_Security_Pass_ag
+  - Security_Pass_not_working_ag
+  - modify_code_secret_ag
+  - change_phone_number_security_ag
+  - get_customer_code_ag
+  - get_secret_code_ag
+  - forget_lost_bank_card_ag
+  - receive_security_code_ag
+  - dubious_mail_ag
+  - answered_dubious_mail_ag
+  - blocked_customer_area_ag
+  - did_not_receive_the_Security_Code_vie_phone_ag
+  - did_not_receive_SecurityCode_by_mail_ag
+  - Security_Pass_work_travel_ag
+  - keyborard_problem_ag
+  - dispute_payment_ag
+  - liste_virrement
+  - annuler_modifier_virement
+  - modifier_plafond_virement
+  - connaitre_expediteur_virement
+  - effectuer_virement_espace_client 
+  - effectuer_virement_livret_epargne
+  - faire_virement_etranger
+  - pays_zone_SEPA
+  - indiquer_montant_virement
+  - obtenir_justificatif_virement
+  - remettre_place_virement
+  - modifier_supprimer_beneficiaire_virement
+  - verifier_IBAN_RIB_destinataire_virement
+  - un_virement_echu
+  - le_virement_SEPA
+  - refuse_bloque
+  - delai_SEPA_classique_compte_destinataire
+  - delai_reception_virement_compte
+  - euro
+  - autre_devise
+  - limite_montant_virements
+  - frais_reçu_virement_international
+  - frais_virement_SEPA_France_pays_zone_euro
+  - demander_remboursement_frais_irement
+  - verrification_virrement_Appli
+  - delai_traitement_virement_etranger
+  - erreur_coordonnees_beneficiaire_virement_valide
+  - beneficiaire_non_ajoutee
+  - faire_virement_pays_non_IBAN
+  - les_frais_virements_internationaux
+  - expediteur_virement
+  - destinataire
+  - envoyer_argent_SMS
+  - annuler_modifier_virement_permanent
+  - augmenter_plafond_virement_comptes_mineur
+  - effectuer_virement_bancaire_international
+  - temps_prennent_virements_bancaires_internationaux
+  - coute_virement_bancaire_international
+  - emplacement_virement_bancaire_international
+  - Quand_beneficiaire_recevra_irement_bancaire
+  - type_virement_modifier_annuler
+  - classique_et_ou_internationa
+  - virement_permanent
+  - Aucune_ces_propositions
+  - beneficiaire_reçu_virement_bancaire
+  - limite_maximale_montant_envoyee
+  - code_BIC_Swift
+  - code_IBAN
+  - list_virrement_an
+  - cancel_modify_classic_international_transfer_an 
+  - How_change _transfer_limit
+  - findout_sent_wire_transfer
+  - make_transfer_from_customer_area
+  - transfer_money_savings_account
+  - make_a_transfer_abroad
+  - countries_SEPA_zone
+  - enter_amount_transfer
+  - reference_reason_transfer
+  - putback_transfer
+  - modify_delete_beneficiary_transfer
+  - verify_IBAN_RIB_transfer_recipient
+  - matured_transfer
+  - SEPA_credit_transfer
+  - refused_blocked
+  - periodoftime_receive_traditional_SEPA_transfer_recipient
+  - periode_receive_transfer_personnal_account
+  - limit_amount_transfers
+  - fees_receive_international_transfer
+  - charges_SEPAtransfer_France_country_euro_zone 
+  - transfer_fees_request
+  - verrification_Appli_transfer
+  - deadline_international_tarnsfer
+  - error_beneficiary_transfer_validated
+  - add_beneficiary
+  - make_transfer_country _not_IBAN
+  - fees_international_transfers
+  - sender_transfer
+  - recipient
+  - send_money_SMS
+  - cancel_modify_permanent_transfer
+  - increase_transfer_limit_minor
+  - make_international_bank_transfer
+  - international_bank_transfer_time_cost
+  - place_send_international_bank_transfer
+  - time_international_bank_transfer_takes
+  - When_beneficiary_receive_bank_transfer
+  - receive_bank_transfer_notyet
+  - maximum_limit_amount_can_send
+  - cd_BC_Swift_an
+  - code_IBAN_an
+  - cancel_bank_transfer
+  - classic_and_or_international
+  - standing_order
+  - None_the_aboves
+  - types_comptes_fr
+  - types_comptes_an
+  - types_comptes_ar
+  - compte_bancaire_ar 
+  - compte_bancaire_fr
+  - compte_bancaire_an
+  - cloture_comptes_fr
+  - cloture_comptes_an
+  - cloture_comptes_ar
+  - carte_bancaire_fr 
+  - carte_bancaire_an
+  - carte_bancaire_ar
+  - relevés_bancaire_fr
+  - relevés_bancaire_an
+  - relevés_bancaire_ar
+  - relevés_bancaire_droit_fr
+  - relevés_bancaire_droit_an
+  - relevés_bancaire_droit_ar
+  - blocked_card
+  - choix_debit_card
+  - carte_volé_perdu
+  - carte_defectueuse
+  - carte_enfant
+  - carte_sans_contact
+  - more_info
+  - rasa
+  - carte_dispo
+  - delai_reception_carte
+  - delai_reception_code_carte
+  - deuxieme_carte
+  - changement_carte
+  - cout_carte
+  - supp_ajout_option_carte
+  - retirement_carte
+  - chang_adresse_reception_carte
+  - payement_plusieurs_fois
+  - frais_nouvelle_carte
+  - unknown_fonctionnalité_demande_conseiller
+  - carte_avalé_distributeur
+  - obtenir_carte
+  - paiement_sans_contact
+  - contestation_de_paiement
+  - paiement_carte_bancaire
+  - modifier_les_plafonds
+  - durée_validité_augmentation
+  - temps_de_remboursement_contestation
+  - choisir_code_secret
+  - rechercher_prélèvement
+  - un_créancier_un_prélèvement
+  - arrêter_prélèvement
+  - contester_prélèvement
+  - opposition_prélèvement
+  - mettre_en_place_prélèvement
+  - modifier_prélèvement
+  - suivre_prelevement
+  - avant_prélèvement
+  - conséquences_compte_non_provisionné
+  - prélèvement_SEPA
+  - frais_relatifs_aux_prélèvements
+  - rejet_prelevement
+  - prélèvements_récurrents
+  - annuler_contestation_prélèvement
+  - contestation_créancier
+  - contestation_prélèvement
+  - frais_rejet
+  - compte_preleve2_fois
+  - contactless_feature
+  - payment_dispute
+  - bank_card_payment
+  - change_the_limits
+  - increase_validity_period
+  - refund_time_dispute
+  - choose_secret_code
+  - search_debit
+  - a_creditor_a_debit
+  - stop_direct_debit
+  - dispute_direct_debit
+  - direct_debit_opposition
+  - set_up_direct_debit
+  - change_direct_debit
+  - track_direct_debit
+  - before_sampling
+  - consequences_account_not_funded
+  - SEPA_Direct_Debit
+  - direct_debit_fees
+  - sample_rejection
+  - recurring_direct_debits
+  - cancel_direct_debit_dispute
+  - creditor_dispute
+  - direct_debit_dispute
+  - rejection_fee
+  - oublie_code_card
+  - payement_refusé
+  - definition_verr_temp_carte
+  - deverr_carte
+  - transactions_carte_verr
+  - activer_nv_carte
+  - carte_temps_verrouillee
+  - diff_ver_opp
+  ###
+  - debit
+  - oui_details_prix:
+      use_entities:
+        - prix_cartes
+  - non_details_prix:
+      ignore_entities:
+        - prix_cartes
+
+
+  # ENG PART
+  - blocked_card_ang
+  - choix_debit_card_ang
+  - carte_volé_perdu_ang
+  - carte_defectueuse_ang
+  - carte_enfant_ang
+  - carte_sans_contact_ang
+  - more_info_ang
+  - carte_dispo_ang
+  - delai_reception_carte_ang
+  - delai_reception_code_carte_ang
+  - deuxieme_carte_ang
+  - changement_carte_ang
+  - cout_carte_ang
+  - supp_ajout_option_carte_ang
+  - retirement_carte_ang
+  - chang_adresse_reception_carte_ang
+  - payement_plusieurs_fois_ang
+  - frais_nouvelle_carte_ang
+  - unknown_fonctionnalité_demande_conseiller_ang
+  - carte_avalé_distributeur_ang
+  - obtenir_carte_ang
+  - oublie_code_card_ang
+  - payement_refusé_ang
+  - definition_verr_temp_carte_ang
+  - deverr_carte_ang
+  - transactions_carte_verr_ang
+  - activer_nv_carte_ang
+  - carte_temps_verrouillee_ang
+  - diff_ver_opp_ang
+
+  - oui_details_prix_ang:
+      use_entities:
+        - prix_cartes
+  - non_details_prix_ang:
+      ignore_entities:
+        - prix_cartes
+
+entities:
+- email
+- priority
+- handoff_to
+- day_number
+- prix_cartes
+- place
+- time
+
+
+slots:
+  time: 
+    type: any
+    mappings:
+    - type: from_entity
+      entity: time
+
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: place
+
+  first_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: name_form
+           requested_slot: first_name
+  last_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: name_form
+           requested_slot: last_name
+          
+
+  confirm:
+    type: bool
+    influence_conversation: false
+    mappings:
+    - type: from_intent
+      intent: affirm
+      value: true
+      conditions:
+      - active_loop: open_incident_form
+        requested_slot: confirm
+    - type: from_intent
+      intent: deny
+      value: false
+      conditions:
+      - active_loop: open_incident_form
+        requested_slot: confirm
+  previous_email:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  caller_id:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: email
+      conditions:
+      - active_loop: open_incident_form
+        requested_slot: email
+      - active_loop: incident_status_form
+        requested_slot: email
+    - type: from_intent
+      intent: affirm
+      value: true
+      conditions:
+      - active_loop: open_incident_form
+        requested_slot: email
+      - active_loop: incident_status_form
+        requested_slot: email
+    - type: from_intent
+      intent: deny
+      value: false
+      conditions:
+      - active_loop: open_incident_form
+        requested_slot: email
+      - active_loop: incident_status_form
+        requested_slot: email
+    - type: from_entity
+      entity: email
+  incident_title:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_trigger_intent
+      intent: password_reset
+      value: Problem resetting password
+      conditions:
+      - active_loop: open_incident_form
+        requested_slot: incident_title
+    - type: from_trigger_intent
+      intent: problem_email
+      value: Problem with email
+      conditions:
+      - active_loop: open_incident_form
+        requested_slot: incident_title
+    - type: from_text
+      not_intent:
+      - incident_status
+      - bot_challenge
+      - help
+      - affirm
+      - deny
+      conditions:
+      - active_loop: open_incident_form
+        requested_slot: incident_title
+  priority:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: priority
+      conditions:
+      - active_loop: open_incident_form
+    - type: from_entity
+      entity: priority
+  problem_description:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      not_intent:
+      - incident_status
+      - bot_challenge
+      - help
+      - affirm
+      - deny
+      conditions:
+      - active_loop: open_incident_form
+        requested_slot: problem_description
+  requested_slot:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  handoff_to:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: handoff_to
+
+responses:
+  utter_time:
+  - text: "It is {time}."
+
+  utter_out_of_scope:
+  - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
+
+  utter_greet:
+  - text: "Hey! How are you?"
+    image: "https://us.123rf.com/450wm/kahovsky/kahovsky1712/kahovsky171200043/91317699-cute-smiling-funny-robot-chat-bot-in-speech-bubble-vector-modern-flat-cartoon-character-illustration.jpg?ver=6"
+  
+  utter_goodbye:
+  - text: Goodbye!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_email:
+  - text: What is your email address?
+  utter_ask_incident_title:
+  - text: What should we use for the title of this incident?
+  utter_ask_problem_description:
+  - text: What is the problem description for the issue?
+  utter_ask_priority:
+  - text: What is the priority of this issue?
+    buttons:
+    - payload: /inform{"priority":"low"}
+      title: low
+    - payload: /inform{"priority":"medium"}
+      title: medium
+    - payload: /inform{"priority":"high"}
+      title: high
+  utter_no_priority:
+  - text: Sorry "{priority}" is not a valid priority. Please try again.
+  utter_no_email:
+  - text: Sorry, "{email}" isn't in our incident management system. Please try again.
+  utter_help:
+  - text: "I can help you open a service request ticket, or check the status of your open incidents. \nYou can ask me things like: \n- Open an incident \n- Help me reset my password \n- I'm having a issue with my email \n- What's the status of the ticket I opened?"
+  utter_welcome:
+  - text: You're welcome!
+  utter_default:
+  - text: I didn't quite understand that. Could you rephrase?
+  utter_ask_use_previous_email:
+  - text: Would you like to use the last email address you used, {previous_email}?
+  utter_ask_confirm:
+  - text: "Should I open an incident with the following details? \n    email: {email} \n    problem description: {problem_description} \n    title: {incident_title} \n    priority: {priority}"
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No, cancel the incident
+      payload: /deny
+  utter_incident_creation_canceled:
+  - text: Alright, I have cancelled the incident.
+  utter_ask_whatelse:
+  - text: What else can I help you with?
+  utter_ask_handoff:
+  - text: It looks like you want to be transferred to a human agent.
+  utter_handoff:
+  - text: Alright, I'll try to transfer you.
+  utter_wouldve_handed_off:
+  - text: If you were talking to me via chatroom, I would have handed you off to {handoffhost}.
+  utter_no_handoff:
+  - text: Since you haven't configured a host to hand off to, I can't send you anywhere!
+### added 
+  utter_greet_ar:
+  - text: "ahla,marhbe bik ! lbes 3lik ? kifch njem n3wnek?kan 3andik ay haja theb tes2lha ?"
+  
+  utter_mood_ar:
+  - text: "hamdoulah..!,kifch njem n3wnek? kan 3andik ay haja theb tes2lha ?  "
+  
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+
+  
+
+  utter_ask_first_name:
+  - text: What is your first name?
+  utter_ask_last_name:
+  - text: So {first_name}, what is your last name?
+  utter_submit:
+  - text: Ok. Thanks!
+  utter_slots_values:
+  - text: I will remember that your name is {first_name} {last_name}!
+ ###########################################""
+ 
+  utter_compte_bancaire_fr:
+  - text: "Vous êtes une personne physique résidente et vous voulez ouvrir un compte à vue c’est simple, vous n’avez qu’à vous présenter à l’une des agences les plus proches de chez vous muni de : \n 1)Votre carte d’identité nationale ou votre certificat de séjour \n 2)Un bulletin de paie de date récente ou tout justificatif de revenus \n 3)Un justificatif de votre adresse(facture d’électricité, quittance de loyer, avis d’imposition).\n pour d'autre informations vous pouvez consulter ce lien : https://www.bt.com.tn/ "
+ 
+  utter_compte_bancaire_an: 
+  - text: "You are a resident natural person and you want to open a current account, it's simple, just go to one of the branches closest to you with: \n 1 )Your national identity card or your residence certificate \n 2)A recent payslip or any proof of income \n 3)Proof of your address (electricity bill, rent receipt, notice of imposition).\n for other information you can consult this link: https://www.bt.com.tn/ "
+  
+  utter_compte_bancaire_ar: 
+  - text: "inti cha5ess mo9im f tounes o t7eb t7el compte .Ma3lik kan tmechi la9reb agence bahdhek o thez m3ak : \n 1) bita9et t3rif mte3ek ( CIN) ou chehedet i9ama \n 2)Un bulletin de paie de date récente ou tout justificatif de revenus \n 3) ay haja tothbet i9ama mte3ek ( facture d’électricité, quittance de loyer, avis d’imposition)."
+ ##################################################### 
+  utter_types_comptes_fr : 
+  - text: "il y a : \n -le compte classique qui sert à gérer son argent au quotidien (compte courant, compte à vue, compte chèque, compte de dépôt ). \n - le compte épargne qui a l’avantage de produire des intérêts. \n-le compte individuel,soit un compte bancaire appartenant à une seule personne. \n -le compte joint, soit un compte bancaire appartenant à deux ou plusieurs personnes.\n -le compte à terme, soit un compte bancaire dont le titulaire indique qu’il ne souhaite pas utiliser l’argent déposé durant une certaine période."
+
+  utter_types_comptes_an : 
+  - text: "there is: \n - the classic account which is used to manage your money on a daily basis (current account, current account, checking account, deposit account). \n - the savings account which has the advantage of interest. \n-the individual account, i.e. a bank account belonging to a single person. \n - the joint account, i.e. a bank account belonging to two or more people.\n - the term account, i.e. an account bank whose holder indicates that he does not wish to use the money deposited during a certain period."
+
+  utter_types_comptes_ar: 
+  - text: "fama : \n -le compte classique qui sert à gérer son argent au quotidien (compte courant, compte à vue, compte chèque, compte de dépôt ). \n - le compte épargne qui a l’avantage de produire des intérêts. \n-le compte individuel,soit un compte bancaire appartenant à une seule personne. \n -le compte joint, soit un compte bancaire appartenant à deux ou plusieurs personnes.\n -le compte à terme, soit un compte bancaire dont le titulaire indique qu’il ne souhaite pas utiliser l’argent déposé durant une certaine période."
+#############################################################
+  utter_cloture_comptes_fr : 
+  - text: "Afin de clôturer votre compte, vous devez nous communiquer les éléments suivants : \n - Les moyens de paiement associés à votre compte (carte, chéquier) \n - Un courrier écrit daté et signé demandant la clôture du compte \n - Votre nouveau RIB afin que l'on vous vire le solde de votre compte"
+
+  utter_cloture_comptes_an : 
+  - text: "In order to close your account, you must provide us with the following information: \n - The means of payment associated with your account (card, checkbook) \n - A dated and signed written letter requesting the closure of the account \n - Your new RIB so that we can transfer the balance of your account"
+   
+  utter_cloture_comptes_ar : 
+  - text: "bech tsaker compte mte3ek , lezmek temchi lel banque mte3ek o thadher awre9 hethom : \n- Les moyens de paiement associés à votre compte (carte, chéquier) \n- Un courrier écrit daté et signé demandant la clôture du compte \n- Votre nouveau RIB afin que l'on vous vire le solde de votre compte"
+ ############################################################  
+  utter_carte_bancaire_fr : 
+  - text: "L'obtention d'une carte bancaire passe forcement par l'ouverture d'un compte bancaire . Puis,il suffit de remplir l'imprimé 'Demande de carte' et de le déposer auprès de votre agence. "
+
+  utter_carte_bancaire_an: 
+  - text: "Obtaining a bank card necessarily involves opening a bank account. Then, all you have to do is fill out the 'Card request' form and submit it to your branch. "
+  
+  utter_carte_bancaire_ar: 
+  - text: "bech ta3mel carte bancaire lezm ikoun 3andek compte bancaire , ba3ed ma3lik kan t3amer matleb o teb3thou lel banque mte3ek"
+  
+ ###################################################################################################
+  utter_relevés_bancaire_fr: 
+  - text: "Si vous avez égaré votre (vos) ancien(s) relevé(s) de compte, vous pouvez en demander une copie à votre banque contre le remboursement des frais liés à cette recherche. Votre banque garde la plupart des documents vous concernant pendant 5 ans."
+  
+  utter_relevés_bancaire_an: 
+  - text: "If you have misplaced your old account statement(s), you can request a copy from your bank against reimbursement of the costs associated with this search. Your bank keeps most of the documents you concerning for 5 years."
+
+  utter_relevés_bancaire_ar:
+  - text: "kan dhye3et les relevé(s) mte3ek ma3lik kan temchi lel banque mte3ek o totleb minhom  relevé(s) moa9bel mabla8 meli mo3ayen .\n M3a el 3lem ili banque testa7fedh b les relevé(s) mta3 l9dom l modet 5 snin ."  
+
+
+###################################################################################################
+
+  utter_relevés_bancaire_droit_fr:
+  - text: "Oui. Avant d'accorder un prêt, l'établissement de crédit a l'obligation légale de vérifier votre solvabilité, c'est-à-dire votre capacité à rembourser le crédit que vous demandez."
+  
+  utter_relevés_bancaire_droit_an:
+  - text: "Yes. Before granting a loan, the credit institution has the legal obligation to check your solvency, that is to say your ability to repay the credit you request."
+
+  utter_relevés_bancaire_droit_ar:
+  - text: " ey , bitbi3a!"
+  
+###################################################################################################
+  utter_blocked_card:
+  - text: "Si vous avez bloqué votre carte suite au nombre de tentatives de erronés, rendez-vous dans une de nos banques pour débloquer votre carte."
+
+  utter_choix_debit_card:
+  - text: "Oui, en effet, Vous pouvez demander le changement des modalités de débit de votre carte gratuitement, à tout moment, en contactant votre Conseiller ou le 3933"
+  
+  utter_carte_volé_perdu:
+  - text: "Le premier réflexe à adopter dans le cas de perte, c’est de faire opposition dans les brefs délais. Cette opération consiste à bloquer la carte bancaire, la rendant ainsi inutilisable.
+Vous devez le faire plus vite, vos remboursements en dépendent. 
+Pour faire opposition, Vous devez nous contacter par téléphone, il vous sera demandé votre numéro de carte et sa date d’expiration, 
+c’est pourquoi il est vivement recommandé d’en garder une copie dans un endroit sûr (évitez donc de les ranger dans la même poche que la carte).
+Cet appel passé, envoyez dans la journée un courrier recommandé avec accusé de réception à votre banque pour confirmer la demande d’opposition. Cela facilitera vos remboursements."
+  
+  utter_carte_defectueuse:
+  - text: " Votre carte est défectueuse? le conseiller bancaire pourra en commander une nouvelle. Des frais bancaires peuvent être facturés pour cette opération."
+
+
+  utter_carte_enfant:
+  - text: "La carte « Ta7founa » est une carte nationale prépayée, destinée aux jeunes âgés de 12 à 25 ans ; elle vous permet d'effectuer, aussi bien des retraits DAB, que des opérations de paiement en Tunisie. Elle est simple dans son utilisation, sécurisante, accessible et valorisante. De plus, elle vous donne l’autonomie de gérer librement votre budget. Pour plus de détails, nous vous invitons à contacter votre agence AMEN BANK ou notre Centre de Relation Clients au 71 148 888."
+
+  utter_carte_sans_contact:
+  - text: " AMEN BANK, ayant fait de l’innovation son crédo, vient de lancer le payement «sans contact sécurisé» (ou «securecontactless»), qui permet à ses porteurs de cartes de réaliser désormais des opérations de payement, d’une manière accélérée et en toute simplicité et sécurité, d’autant plus que ce projet a été certifié par Visa et Mastercard."
+
+  utter_carte_dispo:
+  - text : "Nous vous offrons une gamme de cartes bancaires très riche; choisissez celles qui conviendront le mieux à vos différents besoins à travers ce lien: https://www.amenbank.com.tn/fr/particuliers/0020-cartes-bancaires.html"
+  
+  utter_delai_reception_code_carte:
+  - text: "Le délai de réception du code carte bleue est généralement de 3 à 5 jours ouvrés après la réception de votre carte. Ne tardez pas si vous ne recevez pas votre code secret dans ces délais."
+
+  utter_deuxieme_carte:
+  - text: "Il est parfaitement possible de disposer de deux cartes bancaires de sa banque pour son seul compte courant : Les cartes bancaires peuvent être identiques : deux cartes débit ou deux cartes crédit, de niveaux différents : classiques, Premier, etc…"
+  
+  utter_changement_carte:
+  - text: "Le changement de carte bancaire n’est pas bien compliqué, nous vous expliquons la marche à suivre:
+  Pour obtenir une nouvelle carte bleue, vous devrez d’abord résilier votre carte actuelle et adresser une lettre de demande une nouvelle carte bancaire. Il est recommandé de faire parvenir votre demande de nouvelle carte bancaire par courrier recommandé avec accusé de réception à votre banque. "
+  
+  utter_cout_carte:
+  - text: "Les tarifs moyens varient selon les types d'opérations effectuées. Souhaitez-vous avoir plus de détails à ce propos? "
+    buttons:
+    - title: "Oui je souhaite consulter les détails"
+      payload: "/oui_details_prix"
+    - title: "Non, Merci"
+      payload: "/non_details_prix"
+
+  utter_oui_details_prix:
+  - text: "Parfait! Ce document va beaucoup vous aider 😁"
+    image: "https://www.amenbank.com.tn/interface/files/images/files/Conditions_de_banque_/20190503102253_IM_Tarifs_et_conditions.pdf"
+    
+  utter_non_details_prix:
+  - text: "Très bien! Comment puis-je vous aider autrement?"
+  
+  
+  utter_supp_ajout_option_carte:
+  - text: "Vous pouvez à tout moment supprimer ou ajouter une option de votre carte. Pour ce faire, contactez le CENTRE DE RELATIONS CLIENTS au
+    (+216) 71 148 888 pour discuter les nouveaux tarifs et fonctionnalités"
+
+  utter_retirement_carte:
+  - text: "Vous pouvez à tout moment résilier votre carte en adressant votre demande par écrit à votre Conseiller bancaire."
+  
+  utter_chang_adresse_reception_carte:
+  - text: "Pour modifier l'adresse de réception de votre carte, contactez votre Conseiller. Cette demande doit être faite avant la mise en opposition ou la refabrication de votre carte."
+
+  utter_payement_plusieurs_fois:
+  - text: "Vous avez la possibilité de payer en plusieurs fois avec votre carte si votre commerçant propose ce service" 
+
+  utter_frais_nouvelle_carte:
+  - text: "La commande d'une nouvelle carte est GRATUITE dans les cas suivants :
+  - A l'occasion de son renouvellement automatique
+  - En cas de dysfonctionnement.
+  Bon à savoir 😁 : Si vous souhaitez connaitre les frais relatifs à la commande d'une seconde carte, rapprochez vous de votre Conseiller."
+
+  utter_unknown_fonctionnalité_demande_conseiller:
+  - text: "Pour cette fonctionnalité, nous vous conseillons d'en discuter d'avantages avec votre Conseiller bancaire"
+
+  utter_carte_avalé_distributeur:
+  - text: "Si votre carte est restée bloquée dans un distributeur, vous devez la mettre en opposition par mesure de sécurité. Vous devriez la mettre en opposition.
+  Votre carte sera automatiquement refabriquée. Elle vous est adressée à votre domicile, ou à votre agence, si vous avez demandé le changement de votre code secret."
+
+  utter_obtenir_carte:
+  - text: "Pour obtenir une carte bancaire, commencez par Choisir la carte qui correspond à vos besoins.
+  Définissez l’option de débit et les plafonds
+  Examinez les tarifs.
+  Choisissez de faire une demande en personne ou en ligne
+  Adressez-vous à votre banque
+  Recevez votre carte
+  "
+  # utter_no_recognition: 
+  #   - text: " Désolé, je ne suis que la version bêta de moi-même. 
+  #   Aidez-moi à progresser : vous ai-je surpris, fait rire ou énervé ? On se dit tout… :) "
+
+  utter_oublie_code_card:
+  - text: " Dans ce cas, de vol, nous vous conseillons dans les brefs délais. Vous pouvez également en discuter avec votre conseiller ou appelez par téléphone 
+  (+216) 71 148 888 pour avoir plus détails."
+
+  utter_payement_refusé:
+  - text: "Pour connaître la raison d'un paiement rejeté, nous vous invitons à vérifier que :
+  - La limite de votre plafond de paiement n'est pas dépassée
+  - La provision sur le compte est suffisante"
+
+
+  utter_definition_verr_temp_carte:
+  - text: "le verrouillage temporaire de votre carte vous permet de restreindre fortement son utilisation" 
+
+  utter_deverr_carte:
+  - text: " Si vous souhaitez utiliser de nouveau votre carte, vous pouvez la déverrouiller  en Contactant son conseiller bancaire ou en se rendant directement à l’agence." 
+
+  utter_transactions_carte_verr:
+  - text: "Nous vous rappelons que le verrouillage n'est pas une mise en opposition. "
+
+
+  utter_activer_nv_carte:
+  - text: "Si votre carte était verrouillée lorsqu’elle a été mise en opposition, votre nouvelle carte héritera de ce paramètre."
+  
+  utter_carte_temps_verrouillee:
+  - text: "Le verrouillage temporaire d’une carte est sans limite de temps.
+  Nous vous rappelons néanmoins que le verrouillage n’est pas une mise en opposition. Il restreint fortement l’usage de la carte mais certaines opérations peuvent toujours être réalisées.
+  Si vous pensez que votre carte bancaire a été volée ou si vous ne la retrouvez pas, il est indispensable de faire opposition à votre carte.
+  Vous continuez à payer votre cotisation carte quand votre carte est verrouillée et les opérations ne nécessitant pas une mise en opposition peuvent toujours être réalisées."
+  
+  utter_diff_ver_opp:
+  - text: "Dès que vous faites opposition sur votre carte, votre banque la bloque. Ainsi, L'opposition est un blocage définitif de votre carte pour tous types de transactions. Vous devez impérativement faire opposition à votre carte en cas de perte, vol et/ou transactions frauduleuses.
+  Le verrouillage temporaire est une fonctionnalité de votre espace client web ou mobile qui vous permet de bloquer momentanément votre carte lorsque 
+  vous ne savez plus où vous l'avez mise par exemple. "
+
+########################## ENGLISH PART #############################
+
+  utter_blocked_card_ang:
+  - text: "If you have blocked your card due to the number of incorrect attempts, go to one of our banks to unblock your card."
+
+  utter_choix_debit_card_ang:
+  - text: "Yes, indeed, You can request the change of your card debit modalities for free, at any time, by contacting your Advisor or 3933."
+  
+  utter_carte_volé_perdu_ang:
+  - text: "The first thing to do in the event of loss is to stop the card as soon as possible. This operation consists in blocking the bank card, making it unusable.
+You must do it as soon as possible, your refunds depend on it. 
+To stop the payment, you must contact us by phone, you will be asked for your card number and its expiration date, 
+It is therefore strongly recommended that you keep a copy in a safe place (avoid putting them in the same pocket as the card).
+After this call, send a registered letter with acknowledgement of receipt to your bank within the day to confirm the opposition request. This will facilitate your refunds."
+  
+  utter_carte_defectueuse_ang:
+  - text: "Your card is defective...the bank advisor may order a new one. Bank fees may be charged for this operation."
+
+
+  utter_carte_enfant_ang:
+  - text: "The card ''Ta7founa'' is a national prepaid card, intended for young people aged 12 to 25 years; it allows you to make both ATM withdrawals and payment transactions in Tunisia. It is simple in its use, secure, accessible and rewarding. Moreover, it gives you the autonomy to manage your budget freely. For more details, we invite you to contact your AMEN BANK branch or our Customer Relations Center at 71 148 888."
+
+  utter_carte_sans_contact_ang:
+  - text: "AMEN BANK, having made innovation its credo, has just launched the 'securecontactless' payment, which allows its cardholders to carry out payment operations in an accelerated manner and with complete simplicity and security, especially since this project has been certified by Visa and Mastercard."
+
+
+
+  utter_carte_dispo_ang:
+  - text: "We offer you a wide range of bank cards; choose the ones that best suit your different needs
+  through this link: https://www.amenbank.com.tn/fr/particuliers/0020-cartes-bancaires.html"
+
+  utter_delai_reception_code_carte_ang:
+  - text: "The delay for receiving the blue card code is usually 3 to 5 working days after receiving your card. Do not delay if you do not receive your secret code within this time frame."
+
+  utter_deuxieme_carte_ang:
+  - text: "It is perfectly possible to have two bank cards from your bank for your only current account : The bank cards can be identical: two debit cards or two credit cards, of different levels: classic, Premier, etc..."
+
+  utter_changement_carte_ang:
+  - text: "Changing your bank card is not very complicated, we explain the procedure:
+  To get a new credit card, you will first have to cancel your current card and send a letter requesting a new credit card. It is recommended that you send your request for a new bank card by registered mail with return receipt to your bank. "
+  
+  utter_cout_carte_ang:
+  - text: "Average fees vary depending on the types of transactions performed. Would you like to have more details about this? "
+    buttons:
+    - title: "Yes I would like to see the details"
+      payload: "/oui_details_prix_ang"
+    - title: "No, thank you"
+      payload: "/non_details_prix_ang"
+
+  utter_oui_details_prix_ang:
+    - text: "Perfect! This document will help you a lot 😁"
+      image: "https://www.amenbank.com.tn/interface/files/images/files/Conditions_de_banque_/20190503102253_IM_Tarifs_et_conditions.pdf"
+    
+  utter_non_details_prix_ang:
+  - text: "Very good! How else can I help you?"
+  
+  utter_supp_ajout_option_carte_ang:
+  - text: "You can remove or add an option from your card at any time. To do so, contact the CUSTOMER RELATIONS CENTER at
+  (+216) 71 148 888 to discuss the new rates and features"
+
+  utter_retirement_carte_ang:
+  - text: "You may cancel your card at any time by sending your request in writing to your Banking Advisor."
+  
+  utter_chang_adresse_reception_carte_ang:
+  - text: "To change your card's receiving address, contact your Advisor. This request must be made prior to placing a stop payment or remanufacturing your card."
+
+  utter_payement_plusieurs_fois_ang:
+  - text: "You have the option to pay in installments with your card if your merchant offers this service." 
+
+  utter_frais_nouvelle_carte_ang:
+  - text: "The order of a new card is FREE in the following cases:
+  - On the occasion of its automatic renewalsl
+  Good to know 😁 : If you want to know the fees related to the order of a second card, get closer to your Advisor."
+
+
+  utter_unknown_fonctionnalité_demande_conseiller_ang:
+  - text: "For this feature, we recommend that you discuss the benefits with your bank advisor."
+
+  utter_carte_avalé_distributeur_ang:
+  - text: "If your card has been stuck in an ATM, you should stop it as a security measure. You should stop it.
+  Your card will automatically be reissued. It is sent to your home, or to your branch, if you have requested a change of your secret code."
+
+  utter_obtenir_carte_ang:
+  - text: "To get a bank card, start by Choosing the card that fits your needs.
+  Set the debit option and limits
+  Review the rates.
+  Choose to apply in person or online
+  Contact your bank
+  Receive your card
+  "
+  # utter_no_recognition: 
+  # - text: "Sorry, I'm just the beta version of myself. 
+  # Help me to progress: did I surprise you, make you laugh or irritate you? We tell each other everything... :) "
+
+  utter_oublie_code_card_ang:
+  - text: " In this case, of flight, we advise you in the shortest possible time. You can also discuss it with your consultant or call 
+  (+216) 71 148 888 for more details."
+
+  utter_payement_refusé_ang:
+  - text: "To find out the reason for a rejected payment, we invite you to check that :
+  - Your payment limit has not been exceeded
+  - There are sufficient funds in your account"
+
+
+  utter_definition_verr_temp_carte_ang:
+  - text: "the temporary locking of your card allows you to strongly restrict its use" 
+
+  utter_deverr_carte_ang:
+  - text: "If you wish to use your card again, you can unlock it by Contacting his bank advisor or by going directly to the branch." 
+
+  utter_transactions_carte_verr_ang:
+  - text: "We remind you that locking is not a stop payment. "
+
+
+  utter_activer_nv_carte_ang:
+  - text: "If your card was locked when it was put into stop, your new card will inherit this setting."
+  
+  
+  utter_carte_temps_verrouillee_ang:
+  - text: "The temporary locking of a card has no time limit. "
+  
+  utter_diff_ver_opp_ang:
+  - text: "As soon as you place a stop payment on your card, your bank blocks it. Thus, the stop payment is a definitive blocking of your card for all types of transactions. You must stop your card in case of loss, theft and/or fraudulent transactions.
+  Temporary blocking is a feature in your web or mobile customer area that allows you to temporarily block your card when 
+  you don't know where you put it for example. "
+
+  utter_cancel_bank_transfer:
+  - text: "What type of transfer do you want to change or cancel "
+    buttons: 
+    - title: "A classic and/or international transfe"
+      payload: /classic_and_or_international
+    - title: "A standing order"
+      payload: /standing_order
+    - title: "None of the aboves"
+      payload: /None_the_aboves
+  
+  utter_classic_and_or_international:
+  - text: "It is not possible to modify a classic or international transfer. You must delete it and make another one. \n
+           To do this, go to your customer area, heading Transfers in 'Accounts and cards' and click on the button 'Follow my transfers'. \n You can then consult the status of your transfers: only transfers with the status 'pending' can be cancelled, by clicking on 'Delete'. \n  You must enter your 6-digit secret code for this operation"
+
+  utter_standing_order:
+  - text: "If you wish to cancel or modify a standing order, connect to your customer area under Transfers in Accounts and Cards"
+
+  utter_None_the_aboves:
+  - text: "I'm sorry, I didn't understand your question or I don't have the answer to it yet.  \n
+           Can you rephrase your request with a short sentence and simple terms?"
+
+  utter_code_IBAN_an:
+  - text: "The IBAN (International Bank Account Number) is the standardized international identifier of a bank account. It is intended to facilitate the automated processing of cross-border transactions. For Societe Generale in France, it starts with FR76"
+
+  utter_cd_BC_Swift_an:
+  - text: "The BIC (Bank Identifier Code) is the international standard identifier for financial institutions. For Société Générale in France, the BIC is SOGEFRPP"
+
+  utter_maximum_limit_amount_can_send:
+  - text: "There is no limit to the amount of money you can send to a Passbook Account (LSA). You can save without limit"
+
+  utter_receive_bank_transfer_notyet:
+  - text: "If an expected transfer does not appear to be in process, we invite you to contact the sender of the transfer so that he/she can contact his/her bank"
+
+  utter_When_beneficiary_receive_bank_transfer:
+  - text: "When a transfer arrives at Société Générale, it is immediately recorded on your transaction statement with the mention 'in process'. This mention is visible from your customer area. Transfers indicated as 'in process' are available on D+1.
+           If an expected transfer does not appear as being processed, we invite you to contact the sender of the transfer so that he/she can contact his/her bank."
+
+  utter_time_international_bank_transfer_takes:
+  - text: "Transfers abroad are processed on the next business day, when the beneficiary account is held at another bank and the transfer was entered from Monday to Friday, before 6:00 p.m. (excluding public holidays)
+           Transfers entered after 6pm, or on Saturdays, Sundays and public holidays, are processed on the next business day"
+
+  utter_place_send_international_bank_transfer:
+  - text: "For a transfer in euros to a country in the SEPA zone, go to your Customer Area, heading Transfers. Then select the type of transfer you want (one-off, instantaneous) \n
+           For a transfer in another currency, or to a country that is not in the SEPA zone, go to your Customer Area, heading Transfers. Then click on International transfers"
+
+  utter_international_bank_transfer_time_cost:
+  - text: "For transfers in a currency other than the euro and/or transfers from a country outside the SEPA zone: \n
+          - Receiving an international transfer on your account for an amount less than or equal to €150 (in euro equivalent) is free. \n
+          - For amounts greater than or equal to 150 €, a fee of 22 € is applied in order to integrate the cost of financial intermediaries which differ from one country to another \n 
+           Additional fees for exchange commissions may be charged. For more information, please contact your Société Générale advisor and our price list"
+
+  utter_make_international_bank_transfer:
+  - text: "To make a transfer abroad, you must first register the beneficiary of your transfer \n
+          For a transfer in euros to a country in the SEPA zone, go to your Customer Area, heading Transfers. Then select the type of transfer you want (one-off, instantaneous) \n
+          For a transfer in another currency, or to a country which is not in the SEPA zone, go to your Customer Area, heading Transfers. Then click on International transfers"
+
+  utter_increase_transfer_limit_minor:
+  - text: "The transfer limit on the account(s) and passbook(s) of the minor may be adjusted if necessary, at the request of his/her legal representative(s). This request must be made to the minor holder's advisor in the account-keeping branch \n In the event of an increase in the transfer limit, the written agreement and signature of both legal representatives will be required"
+
+  utter_cancel_modify_permanent_transfer:
+  - text: "If you wish to cancel or modify a standing order, log on to your customer area under Transfers in Accounts and Cards
+           Then click on the link Follow my transfers in the right-hand menu and select the transfer you wish to cancel or modify"
+
+  utter_send_money_SMS:
+  - text: "To send money by SMS, you must have installed the Société Générale App for iPhone or Android. In the transfers and transfers section of the App, select the option to transfer money by SMS and then let yourself be guided. The money transfer by SMS is free. It works for all accounts, including those of banks other than Société Générale"
+
+  utter_fees_international_transfers:
+  - text: "In order to find out about the fees associated with international money transfers, please tell us if you are the recipient or the sender of the transfer ?"
+    buttons: 
+    - title: "I am the recipient of the transfer"
+      payload: /recipient
+    - title: " I am the sender of the transfer"
+      payload: /sender_transfer
+  
+  utter_recipient:
+  - text: " Receiving transfers in euros from a country in the SEPA zone is freee"
+
+  utter_sender_transfer:
+  - text: "The fees for sending a transfer abroad from your Customer Area can range from 9 to 20 euros. These fees can be shared between the sender and the beneficiary (SHARE option), or be charged to the sender only (OUR option), or to the beneficiary only (BEN option). This last option is only available at the branch"
+
+  utter_make_transfer_country _not_IBAN:
+  - text: "Banks in some countries do not have an IBAN. However, it is possible to make a transfer to these countries, if the currency is part of the list of proposed currencies. To do so, go to your customer area, heading International transfers . Otherwise, we invite you to call 77555000 (Service 0,30 DT TTC / min + price of a call), from Monday to Friday from 8am to 8pm and Saturday from 8am to 7pm or to contact your Advisor. \n
+            For a claim or the proper execution of your contracts, contact your agency (call not surcharged)"
+
+  utter_add_beneficiary:
+  - text: "To add a beneficiary, go to your Customer Area, heading Transfers in the tab 'Accounts and cards'. Then click on 'Manage beneficiary accounts', and enter the various information requested.
+            Adding a beneficiary is immediate, so you can make a transfer to a beneficiary account as soon as it has been added"
+
+  utter_error_beneficiary_transfer_validated:
+  - text: "If you think you have made a mistake with the beneficiary of your transfer, call 77555000 (Service 0,30 DT TTC / min + price of a call), from Monday to Friday from 8am to 8pm and Saturday from 8am to 7pm or get in touch with your Advisor as soon as possible.
+            For a complaint or the good execution of your contracts, contact your agency (call not surcharged)"
+
+  utter_deadline_international_tarnsfer:
+  - text: "An international transfer allows you to carry out your occasional transaction to a country that is not part of the SEPA zone. Transfers abroad are processed on the next business day, when the beneficiary account is held in another bank and the transfer was entered from Monday to Friday, before 6pm (excluding public holidays)[. Transfers entered after 6pm, or on Saturdays, Sundays and public holidays, are processed on the 1st business day following .]"
+
+  utter_verrification_Appli_transfer:
+  - text: "In case of technical problems during the execution of your transfer, we invite you to contact the technical support at (+216) 77555000 (Monday to Saturday from 9am to 6pm, excluding public holidays)."
+
+  utter_transfer_fees_request:
+  - text: "The pricing of transfers is detailed in the pricing brochure Conditions applied to banking operations - Individuals[... If you wish to have more information or to contest a transaction, contact your Advisor .]"
+
+  utter_charges_SEPAtransfer_France_country_euro_zone :
+  - text: "A SEPA transfer to France or to a country in the euro zone is free of charge if it is initiated from your Customer Area [... If it is processed by your branch, the operation is charged ...]."
+
+  utter_fees_receive_international_transfer:
+  - text: "Receiving transfers in euros from a country in the SEPA zone is free
+           For transfers in a currency other than the euro and/or transfers from a country outside the SEPA zone: \n
+           - The receipt of an international transfer on your account for an amount less than or equal to €150 (in euro equivalent) is free of charge. \n
+           - For amounts greater than or equal to 150 €, a fee of 22 € is applied to integrate the cost of financial intermediaries which differ from one country to another \n
+           [.. Additional fees for exchange commissions may be charged. For more information, please contact your Société Générale advisor and our price list]"
+
+  utter_limit_amount_transfers:
+  - text: "To know more about the limit of the amount of the transfers, we invite you to consult our General Conditions of the Remote Bank.
+           You can also contact 77555000 (Service 0,30 DT TTC / min + price of a call), from Monday to Friday from 8am to 8pm and Saturday from 8am to 7pm or contact your advisor in your branch"
+
+  utter_periode_receive_transfer_personnal_account:
+  - text: "When a transfer arrives at Société Générale, it is immediately recorded on your transaction statement with the mention 'in process'. This indication is visible from your customer area. Transfers indicated as being 'in process' are available on D+1[. If an expected transfer does not appear as being processed, we invite you to contact the sender of the transfer so that he/she can contact his/her bank .]"
+
+  utter_periodoftime_receive_traditional_SEPA_transfer_recipient:
+  - text: "A one-time transfer allows you to carry out your occasional transaction. For any order issued from Monday to Friday, before 6pm (excluding public holidays), the time required to receive a standard SEPA transfer is as follows: \n 
+          - When the beneficiary account is a Société Générale account, it is credited the same day the transfer is executed \n
+          - When the beneficiary account is held at another bank, the funds are remitted to the beneficiary's bank no later than the next business day. The beneficiary's bank is obliged to credit the beneficiary's account immediately[... Conventional SEPA transfers entered after 6:00 p.m., or on Saturdays, Sundays and public holidays, are processed on the 1st business day following .]"
+
+  utter_refused_blocked:
+  - text: "Your transfer order may have been blocked or refused for several reasons. To clarify the situation, consider :  \n
+          - Verify that your balance is sufficient to allow the transaction \n
+          - Then check that you have not reached your daily transfer limit \n
+          - Finally, check with your advisor that you are authorized to make online transfers. Not all accounts can be senders or recipients of transfers. \n
+          [.. For more information on your operation, do not hesitate to contact 77555000 (Service 0,30 DT TTC / min + price of a call), from Monday to Friday from 8am to 8pm and Saturday from 8am to 7pm or your Advisor.
+          Finally, for a complaint or the good execution of your contracts, contact your agency (not surcharged call)...]"
+
+  utter_SEPA_credit_transfer:
+  - text: "A SEPA transfer (ordinary or instantaneous) is a money transfer between two accounts domiciled in the SEPA zone...The SEPA zone (Single Euro Payments Area) is the single euro payments area. Transfers in euro between the member countries of this zone are facilitated, they take place in the same way as a transfer in France]"
+
+  utter_matured_transfer:
+  - text: "A matured transfer is a standing transfer that has reached the end of the period you defined when you created it...In this case, no transfer will be executed after this period. To continue a regular automatic transfer, you must create a new standing order]."
+
+  utter_verify_IBAN_RIB_transfer_recipient:
+  - text: "It is not possible to verify the identity of a transfer recipient when entering their BIC/IBAN. You must enter exactly the IBAN that has been provided to you[...] In case of doubt, do not hesitate to validate with the beneficiary his bank details. In case of error, only the recipient of the transfer will be able to proceed to the reimbursement by making you a transfer of the same amount]."
+
+  utter_modify_delete_beneficiary_transfer:
+  - text: "To modify the details of a beneficiary account following an input error or for any other reason, you will have to delete this account from your list of beneficiaries and create a new one with the right references.
+           To delete it, go to your Customer Area, heading Transfers in the tab 'Accounts and cards'. Then click on 'Manage beneficiary accounts'."
+
+  utter_putback_transfer:
+  - text: "If you have revoked a transfer or a beneficiary and you wish to put it back in place, you must contact 77555000 (Service 0,30 DT TTC / min + price of a call), from Monday to Friday from 8am to 8pm and Saturday from 8am to 7pm or your Advisor in order to lift the revocation. \n
+            For a complaint or the good execution of your contracts, contact your agency (call not surcharged)"
+
+  utter_reference_reason_transfer:
+  - text: "When you issue a transfer order, you can enter an associated reason in the field provided for this purpose in the transfer characteristics. Indicate, for example, the reference of a beneficiary or an invoice. This will allow you to find them more easily on your account statement]."
+
+  utter_enter_amount_transfer:
+  - text: "To enter the amount of a transfer, enter the amount without commas. Enter the cents after a period or a comma if the amount includes cents. It is not necessary to add the sign 'DT'."
+
+  utter_countries_SEPA_zone:
+  - text: "SEPA (Single Euro Payments Area) aims to harmonize payment methods in the European area, whether it is a transfer or a direct debit. To know the countries of the SEPA zone, consult the dedicated information sheet on our website"
+
+  utter_make_a_transfer_abroad:
+  - text: "To make a transfer abroad, you must first register the beneficiary of your transfer [...For a transfer in Dinar to a country in the SEPA zone, go to your Customer Area, heading Transfers. Then select the type of transfer you want (one-off, instantaneous)...]"
+
+  utter_transfer_money_savings_account:
+  - text: "You can make a transfer to your savings account within the limits of the minimum and maximum amounts stipulated by the regulations. To do so, go to your customer area, heading Transfers. Click on Make a transfer, then select the type of transfer you want (permanent, one-off, etc.) .]"
+
+  utter_list_virrement_an:
+  - text: "You can view, consult and manage your list of beneficiary accounts from your customer area under Transfers, then click on 'Manage beneficiary accounts'."
+
+  utter_make_transfer_from_customer_area:
+  - text: "You can make a transfer from your Customer Area, under the heading 'Transfers' in the 'Accounts and cards' tab. Start by selecting the beneficiary of your choice or adding a new beneficiary if it is not already registered."
+
+  utter_code_IBAN:
+  - text: "L'IBAN (International Bank Account Number) est l'identifiant international normalisé d'un compte bancaire. Il est destiné à faciliter le traitement automatisé des opérations transfrontières. Pour Société Générale en France,  il débute par FR76"
+
+  utter_findout_sent_wire_transfer:
+  - text: "To know the identity of the sender of a transfer you received, please contact your Advisor"
+
+  utter_cancel_modify_classic_international_transfer_an :
+  - text: "It is not possible to modify a classic or international transfer. You have to delete it and make another one. 
+           To do this, go to your customer area, heading Transfers in 'Accounts and cards' and click on the button 'Follow my transfers'. You can then consult the status of your transfers: only transfers with the status 'pending' can be cancelled, by clicking on 'Delete'. You must enter your 6-digit secret code for this operation"
+
+  utter_code_BIC_Swift:
+  - text: "Le BIC (Bank Identifier Code) est l'identifiant international normalisé des établissements financiers. Pour Société Générale en France, le BIC est SOGEFRPP"
+
+  utter_remettre_place_virement:
+  - text: "Si vous avez révoqué un virement ou un bénéficiaire et que vous souhaitez le remettre en place, vous devez contacter le 77555000 (Service 0,30 DT TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h ou votre Conseiller afin de lever la révocation.Pour une réclamation ou la bonne exécution de vos contrats, contacter votre agence (appel non surtaxé)"
+
+  utter_un_virement_echu:
+  - text: "Un virement échu est un virement permanent qui est arrivé au terme de la période que vous aviez définie lors de sa création[..Dans ce cas, aucun virement ne sera exécuté au-delà de cette durée. Pour poursuivre un versement automatique et régulier, vous devez créer un nouveau virement permanent..]"
+
+  
+ 
+  utter_How_change _transfer_limit:
+  - text: "You can ask to change your transfer limits by calling 77555000 (Service 0.30 DT incl. tax / min + price of a call), from Monday to Friday from 8am to 8pm and Saturday from 8am to 7pm or by contacting your advisor at the branch"
+   
+  utter_limite_montant_virements:
+  - text: "Pour en savoir plus sur la limite du montant des virements, nous vous invitons à consulter nos Conditions Générales de la Banque à Distance .Vous pouvez également contacter le 77555000 (Service 0,30 DT TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h ou vous rapprocher de votre conseiller en agence "
+  
+  utter_delai_reception_virement_compte:
+  - text: "Lorsqu'un virement arrive chez Société Générale, il est immédiatement retranscrit sur votre relevé d'opérations avec la mention en cours de traitement. Cette mention est visible depuis votre espace client. Les virements indiqués 'en cours de traitement' sont disponibles à J+1 \n [.. Si un virement attendu n'apparaît pas comme en cours de traitement, nous vous invitons à contacter l'émetteur du virement pour qu'il se rapproche éventuellement de sa banque ..]"
+
+  utter_autre_devise :
+  - text: "Pour un virement dans une autre devise, ou vers un pays qui n'est pas dans la zone SEPA, rendez-vous dans votre Espace Client, rubrique Virements. Cliquez ensuite sur Virements internationaux"
+
+  utter_euro:
+  - text: "Pour un virement en euros vers un pays de la zone SEPA, rendez-vous dans votre Espace Client, rubrique Virements. Sélectionnez ensuite le type de virement souhaité (ponctuel, instantané)"
+ 
+  utter_delai_SEPA_classique_compte_destinataire:
+  - text: "Un virement ponctuel vous permet de réaliser votre transaction occasionnelle. Pour tout ordre émis du lundi au vendredi, avant 18h (hors jours fériés), les délais de réception d'un virement SEPA classique sont les suivants : \n
+          - Lorsque le compte bénéficiaire est un compte Société Générale, il est crédité le jour même de l'exécution du virement \n
+          - Lorsque le compte bénéficiaire est tenu dans une autre banque, les fonds sont remis à la banque du bénéficiaire au plus tard le jour ouvré suivant. La banque du bénéficiaire est tenue de créditer immédiatement le compte bénéficiaire \n [.. Les virements SEPA classiques saisis après 18h, ou les samedi, dimanche et jours fériés, sont traités le 1er jour ouvré suivant ..]"
+
+  utter_refuse_bloque:
+  - text: "Votre ordre de virement peut avoir été bloqué ou refusé pour plusieurs raisons. Pour clarifier la situation, pensez à : \n
+          - Vérifier que votre solde est suffisant pour permettre la transaction \n
+          - Vérifier ensuite que vous n'avez pas atteint votre plafond de virement journalier  \n
+          - Enfin, vérifier auprès de votre conseiller que vous êtes bien autorisé à réaliser des virements en ligne. Tous les comptes ne peuvent en effet pas être émetteurs ou bénéficiaires de virement \n
+          [.. Pour plus d'information sur votre opération, n'hésitez pas à contacter le 77555000 (Service 0,30 DT TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h ou votre Conseiller.
+          Enfin, pour une réclamation ou la bonne exécution de vos contrats, contacter votre agence (appel non surtaxé)..] "
+
+  utter_le_virement_SEPA:
+  - text: "Un virement SEPA (ordinaire ou instantané) est une opération de transfert d'argent entre deux comptes domiciliés dans la zone SEPA[..La zone SEPA (Single Euro Payments Area) est l'espace unique de paiements en euro. Les virements en euro entre les pays membres de cette zone sont facilités, ils se déroulent de la même manière qu'un virement en France..]"
+
+  
+ 
+  utter_limite_maximale_montant_envoyee:
+  - text: "Il n'y a pas de plafond pour un Compte sur Livret (CSL). Vous pouvez épargner sans limite"
+  
+  utter_beneficiaire_reçu_virement_bancaire:
+  - text: "Si un virement attendu n'apparaît pas comme en cours de traitement, nous vous invitons à contacter l'émetteur du virement pour qu'il se rapproche éventuellement de sa banque"
+  
+  utter_Quand_beneficiaire_recevra_irement_bancaire:
+  - text: "Lorsqu'un virement arrive chez Société Générale, il est immédiatement retranscrit sur votre relevé d'opérations avec la mention en cours de traitement. Cette mention est visible depuis votre espace client. Les virements indiqués 'en cours de traitement' sont disponibles à J+1 \n 
+           Si un virement attendu n'apparaît pas comme en cours de traitement, nous vous invitons à contacter l'émetteur du virement pour qu'il se rapproche éventuellement de sa banque."
+  
+  utter_emplacement_virement_bancaire_international:
+  - text: "Pour un virement en euros vers un pays de la zone SEPA, rendez-vous dans votre Espace Client, rubrique Virements. Sélectionnez ensuite le type de virement souhaité (ponctuel, instantané) \n 
+           Pour un virement dans une autre devise, ou vers un pays qui n'est pas dans la zone SEPA, rendez-vous dans votre Espace Client, rubrique Virements. Cliquez ensuite sur Virements internationaux"
+  
+  utter_temps_prennent_virements_bancaires_internationaux:
+  - text: "Les virements à l'étranger sont traités dès le jour ouvré suivant, lorsque le compte bénéficiaire est détenu dans une autre banque et que le virement a été saisi du lundi au vendredi, avant 18h (hors jours fériés) \n 
+           Les virements saisis après 18h, ou les samedi, dimanche et jours fériés, sont traités le 1er jour ouvré suivant!"
+  
+  utter_effectuer_virement_bancaire_international:
+  - text: Pour faire un virement vers l'étranger, vous devez au préalable enregistrer le bénéficiaire de votre virement \n
+          Pour un virement en euros vers un pays de la zone SEPA, rendez-vous dans votre Espace Client, rubrique Virements. Sélectionnez ensuite le type de virement souhaité (ponctuel, instantané) \n
+          Pour un virement dans une autre devise, ou vers un pays qui n'est pas dans la zone SEPA, rendez-vous dans votre Espace Client, rubrique Virements. Cliquez ensuite sur Virements internationaux"
+  
+  utter_annuler_modifier_virement_permanent:
+  - text: "Si vous souhaitez annuler ou modifier un virement permanent, connectez-vous à votre espace client rubrique Virements dans Comptes et Cartes \n Cliquez ensuite sur le lien Suivre mes virements dans le menu de droite puis sélectionnez le virement que vous souhaitez annuler ou modifie"
+  
+  utter_envoyer_argent_SMS:
+  - text: "Pour envoyer de l'argent par SMS, vous devez avoir installé l'Appli Société Générale pour iPhone ou Android. Dans la rubrique transferts et virements de l'Appli, sélectionnez l'option transfert par SMS puis laissez-vous guider. \n  Le transfert d'argent par SMS est gratuit. \n Il fonctionne vers tous les comptes, y compris vers d'autres banques que Société Générale"
+    
+  utter_beneficiaire_non_ajoutee:
+  - text: "Pour ajouter un bénéficiaire, rendez-vous dans votre Espace Client, rubrique Virements dans l'onglet 'Comptes et cartes'. Cliquez ensuite sur 'Gérer les comptes bénéficiaires', puis saisissez les différentes informations qui sont demandées. \n 
+           L'ajout d'un bénéficiaire est immédiat, vous pouvez donc réaliser un virement à destination d'un compte bénéficiaire dès que celui a été ajouté"
+  
+  utter_erreur_coordonnees_beneficiaire_virement_valide:
+  - text: "Si vous pensez avoir fait une erreur de bénéficiaire de virement, appelez le 77555000 (Service 0,30 DT TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h ou rapprochez-vous de votre Conseiller au plus vite.Pour une réclamation ou la bonne exécution de vos contrats, contacter votre agence (appel non surtaxé)"
+
+  utter_verrification_virrement_Appli:
+  - text: "En cas de problème technique lors de l'exécution de votre virement, nous vous invitons à contacter l'assistance technique au (+216) 77555000 (lundi au samedi de 9h à 18h, hors jours fériés)"
+
+  utter_verifier_IBAN_RIB_destinataire_virement:
+  - text: "Il n'est pas possible de vérifier l'identité d'un bénéficiaire de virement au moment de la saisie de son BIC/IBAN. Vous devez saisir exactement l'IBAN qui vous a été fourni[..En cas de doute, n'hésitez pas à valider avec le bénéficiaire ses coordonnées bancaires. En cas d'erreur, seul le destinataire du virement pourra procéder au remboursement en vous faisant un virement du même montant..]"
+
+  utter_modifier_supprimer_beneficiaire_virement:
+  - text: "Pour modifier les coordonnées d'un compte bénéficiaire à la suite d'une erreur de saisie ou pour toute autre raison, il vous faudra supprimer ce compte de votre liste de bénéficiaire et en créer un nouveau avec les bonnes références.Pour le supprimer, rendez-vous dans votre Espace Client, rubrique Virements dans l'onglet'Comptes et carte'. Cliquez ensuite sur 'Gérer les comptes bénéficiaires'"
+
+  utter_obtenir_justificatif_virement:
+  - text: "Pour avoir confirmation de la bonne réception de votre virement par le bénéficiaire, nous vous invitons à vous rendre en agence pour demander un avis d'exécution détaillé du virement concerné"
+
+  utter_indiquer_montant_virement:
+  - text: "Pour indiquer le montant d'un virement, entrez le montant sans virgule. Inscrivez les centimes après un point ou une virgule si le montant comporte des centimes. Il n'est pas utile d'ajouter le signe 'DT'"
+
+  utter_pays_zone_SEPA:
+  - text: "Le SEPA (Single Euro Payments Area - Espace unique des paiements en euro) a pour objet d'harmoniser les moyens de paiement dans l'espace européen, qu'il s'agisse du virement ou du prélèvement. Pour connaitre les pays de la zone SEPA, consultez la fiche d'information dédiée sur notre site"
+
+  utter_type_virement_modifier_annuler:
+  - text: "Quel type de virement souhaitez-vous modifier ou annuler "
+    buttons: 
+    - title: "Un virement classique et/ou international"
+      payload: /classique_et_ou_internationa
+    - title: "Un virement permanent"
+      payload: /virement_permanent
+    - title: "Aucune de ces propositions"
+      payload: /Aucune_ces_propositions
+  
+  utter_classique_et_ou_internationa:
+  - text: " Il n'est pas possible de modifier un virement classique ou international. Il faut le supprimer et en refaire un autre. \n
+            Pour ce faire, rendez-vous dans votre espace client, rubrique Virements dans 'Comptes et cartes' et cliquez sur le bouton 'Suivre mes virements'. \n  Vous pouvez alors consulter le statut de vos virements : seuls les virements ayant le statut 'en attente' peuvent être annulés, en cliquant sur Supprimer. La saisie de votre code secret à 6 chiffres est indispensable pour cette opération."
+
+  utter_virement_permanent:
+  - text: "Si vous souhaitez annuler ou modifier un virement permanent, connectez-vous à votre espace client rubrique Virements dans Comptes et Cartes"
+
+  utter_Aucune_ces_propositions:
+  - text: "Je suis désolé je n'ai pas compris votre question ou je n'ai pas encore la réponse à celle-ci."
+
+
+  utter_coute_virement_bancaire_international:
+  - text: "Pour les virements dans une devise autre que l'euro et/ou les virements en provenance d'un pays en dehors de la zone SEPA : \n
+           - La réception d'un virement international sur votre compte d'un montant inférieur ou égal à 150 € (en contre-valeur euros) est gratuite. \n
+           - Pour des montants supérieurs ou égaux , des frais de 22 € sont appliqués afin notamment d'intégrer le coût des intermédiaires financiers qui diffèrent d'un pays à l'autre \n
+           Des frais supplémentaires de commissions de change peuvent vous être facturés. Pour plus d'informations, contactez votre Conseiller Société Générale et notre brochure tarifaire."
+  
+  utter_augmenter_plafond_virement_comptes_mineur:
+  - text: "Le plafond de virement du / des compte(s) et livret(s) du mineur pourra être ajusté si besoin, à la demande de son ou ses représentants légaux. Cette demande devra se faire auprès du conseiller du titulaire mineur dans l'agence teneur de compte. \n [.. En cas d'augmentation du plafond de virements, l'accord écrit et la signature des deux représentants légaux seront nécessaires...]"
+  
+  utter_les_frais_virements_internationaux:
+  - text: "Afin de vous renseignez sur les frais liés au virement international, veuillez nous indiquer si vous êtes-vous le destinataire ou l'expéditeur du virement ?"
+    buttons: 
+    - title: "Je suis le destinataire du virement"
+      payload: /destinataire
+    - title: "Je suis l'expéditeur du virement"
+      payload: /expediteur_virement
+  
+  utter_destinataire:
+  - text: "La réception de virements en euros, en provenance d'un pays de la zone SEPA, est gratuite"
+
+  utter_expediteur_virement:
+  - text: "Les frais liés à l'émission d'un virement vers l'étranger depuis votre Espace Client peuvent aller de 9 à 20 euros. Ces frais peuvent être partagés entre l'émetteur et le bénéficiaire (option SHARE), ou être à la charge de l'émetteur uniquement (option OUR), ou à la charge du bénéficiaire uniquement (option BEN). Cette dernière option n'est possible qu'en agence"
+
+  utter_faire_virement_pays_non_IBAN:
+  - text: "Les banques de certains pays ne disposent pas d'IBAN. Il est toutefois possible d'effectuer un virement vers ces pays, si la devise fait partie de la liste des devises proposées. Pour ce faire, rendez-vous dans votre espace client, rubrique Virements internationaux \n [.. Sinon, nous vous invitons à appeler le 77555000 (Service 0,30 DT TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h ou à vous rapprocher de votre Conseiller.
+            Pour une réclamation ou la bonne exécution de vos contrats, contacter votre agence (appel non surtaxé) ..]"
+  
+  utter_delai_traitement_virement_etranger:
+  - text: "Un virement international vous permet de réaliser votre transaction occasionnelle vers un pays ne faisant pas partie de la zone SEPA. Les virements à l'étranger sont traités dès le jour ouvré suivant, lorsque le compte bénéficiaire est détenu dans une autre banque et que le virement a été saisi du lundi au vendredi, avant 18h (hors jours fériés) \n [.. Les virements saisis après 18h, ou les samedi, dimanche et jours fériés, sont traités le 1er jour ouvré suivant ..]"
+  
+  utter_demander_remboursement_frais_irement:
+  - text: "La tarification des virements est détaillée dans la brochure tarifaire Conditions appliquées aux opérations bancaires  Particuliers \n [.. Si vous souhaitez plus de renseignements ou contester une opération, contactez votre Conseiller ..]"
+
+  utter_frais_virement_SEPA_France_pays_zone_euro:
+  - text: "Un virement SEPA vers la France ou vers un pays de la zone euro est gratuit s'il est initié depuis votre Espace Client \n  [.. S'il est traité par votre agence l'opération est facturée ..]"
+
+  utter_faire_virement_etranger:
+  - text: "Pour faire un virement vers l'étranger, vous devez au préalable enregistrer le bénéficiaire de votre virement"
+    buttons: 
+    - title: "En Euro"
+      payload: /euro
+    - title: "Autre devise"
+      payload: /autre_devise  
+
+  utter_effectuer_virement_livret_epargne:
+  - text: "Vous pouvez effectuer un virement sur votre livret d'épargne dans la limite des minima et des plafonds prévus par la réglementation[.. Pour ce faire, rendez-vous dans votre espace client, rubrique Virements. Cliquez sur Faire un virement, puis sélectionnez le type de virement souhaité (permanent, ponctuel, etc.) ..]"
+
+  utter_effectuer_virement_espace_client:
+  - text: "Vous pouvez effectuer un virement depuis votre Espace Client, rubrique Virements dans l'onglet 'Comptes et cartes'[..Commencez par sélectionner le bénéficiaire de votre choix ou ajouter un nouveau bénéficiaire si ce dernier n'est pas déjà enregistré..]"
+
+  utter_connaitre_expediteur_virement  :
+  - text: "Pour connaître l'identité du donneur d'ordre d'un virement que vous avez reçu, veuillez contacter votre Conseiller"
+
+  utter_modifier_plafond_virement:
+  - text: "Vous pouvez demander à modifier vos plafonds de virement auprès du 77555000 (Service 0,30 DT TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h ou de votre conseiller en agence"
+
+  utter_annuler_modifier_virement:
+  - text: "Il n'est pas possible de modifier un virement classique ou international. Il faut le supprimer et en refaire un autre. Pour ce faire, rendez-vous dans votre espace client, rubrique Virements dans 'Comptes et cartes' et cliquez sur le bouton 'Suivre mes virements'. Vous pouvez alors consulter le statut de vos virements : seuls les virements ayant le statut 'en attente' peuvent être annulés, en cliquant sur Supprimer. La saisie de votre code secret à 6 chiffres est indispensable pour cette opération"
+
+  utter_frais_reçu_virement_international:
+  - text: "La réception de virements en euros, en provenance d'un pays de la zone SEPA, est gratuite
+          Pour les virements dans une devise autre que l'euro et/ou les virements en provenance d'un pays en dehors de la zone SEPA : \n
+         - La réception d'un virement international sur votre compte d'un montant inférieur ou égal à 150 € (en contre-valeur euros) est gratuite. \n
+         - Pour des montants supérieurs ou égaux , des frais de 22 € sont appliqués afin notamment d'intégrer le coût des intermédiaires financiers qui diffèrent d'un pays à l'autre \n
+         [.. Des frais supplémentaires de commissions de change peuvent vous être facturés. Pour plus d'informations, contactez votre Conseiller Société Générale et notre brochure tarifaire..]"
+
+  utter_liste:
+  - text: "Vous pouvez afficher, consulter et gérer votre liste de comptes bénéficiaires depuis votre espace client rubrique Virements, puis cliquez sur 'Gérer les comptes bénéficiaires'"
+
+  utter_fonctionnalité_sans_contact:
+  - text: "La fonctionnalité sans contact est activée par défaut sur votre carte bancaire. Vous pouvez la désactiver ou la réactiver à tout moment et sans frais, depuis votre espace client Société Générale rubrique
+  La désactivation ou la réactivation de la fonctionnalité « sans contact » n'est pas instantanée. Vous devez attendre le lendemain de votre demande et réaliser un retrait sur un DAB au moyen de votre carte pour qu’elle prenne effet."
+  
+  utter_contestation_de_paiement:
+  - text: "Votre responsabilité n’est pas engagée. S'agissant des opérations non autorisées réalisées après votre demande de blocage. Les opérations non autorisées effectuées avant la demande de blocage de la carte sont à votre charge dans la limite d’un plafond de 50 €, à l’exception notamment des opérations effectuées sans utilisation de vos données de sécurité personnalisées."
+  
+  utter_paiement_carte_bancaire:
+  - text: "Pour contester un paiement effectué avec votre carte bancaire : 
+  - Faites d'abord opposition sur votre carte depuis votre espace client ou en contactant le centre d’opposition au (+33) 09 69 39 77 77 (appel non surtaxé hors éventuel surcoût opérateur, 7j/7, 24h/24)
+  - Puis contestez là ou (les) opération(s) que vous n’avez pas effectuée(s) en complétant le kit réclamation carte en ligne"
+  
+  utter_modifier_plafonds:
+  - text: "Pour modifier temporairement les plafonds de votre carte bancaire, 
+  vous pouvez demander une  augmentation exceptionnelle de plafond directement depuis votre Espace Client.
+  Accédez à la liste de vos comptes et cartes (https://www.amenfirstbank.com.tn/amenFirstBank/login.jsp) puis cliquez sur votre carte pour modifier son plafond. 
+  Si vous ne parvenez pas à modifier temporairement vos plafonds, prenez rendez-vous avec votre Conseille ou avec le 3933 (Service 0,30 € TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h"
+ 
+  utter_durée_validité_augmentation:
+  - text: "Le montant de l’augmentation exceptionnelle de paiement saisie est valable :
+  - Jusqu’au dernier jour du mois en cours pour les cartes à débit immédiat (sauf pour les saisies du 27 au 30/31 qui sont reportées au dernier jour du mois suivant) 
+  - Jusqu’à la date d’arrêté du mois en cours pour les cartes à débit différé
+  Le montant de l’augmentation exceptionnelle de retrait accordé est valable 48 h. 
+  Ce montant annule et remplace les 3 capacités contractuelles, quelque soit le niveau de capacité restant. 
+  Une fois ce délai passé, les capacités exceptionnelles sont remises à 0, et votre carte reviendra à sa capacité habituelle de retrait."
+ 
+  utter_temps_de_remboursement_contestation:
+  - text: "Si vous avez contesté un ou plusieurs paiements effectués avec votre carte en complétant le kit 
+  réclamation carte en ligne. La prise en compte est effectuée le même jour ou le jour ouvré 
+  suivant."
+
+  utter_choisir_code_secret:
+  - text: "Il n'est pas possible de choisir son code secret de carte bancaire ."
+ 
+  utter_rechercher_prélèvement:
+  - text: "Pour trouver des informations sur un créancier, rendez-vous dans votre espace client, rubrique
+  Prélèvements
+  Vous pourrez : 
+  - Consulter la liste de vos créanciers 
+  - Consulter la liste des prélèvements en cours et à venir 
+  - Contester un prélèvement ou un créancier que vous n'autorisez pas
+   Pour retrouver une opération spécifique, accédez à la rubrique Mon budget, puis Dépenses et 
+   revenus. La colonne Libellé vous permet d'afficher un filtre par mots clés (GDF, ENGIE, FNAC, etc.) facilitant la recherche d'une opération en particulier"
+
+  utter_créancier_un_prélèvement:
+  - text: "Pour rétablir un prélèvement SEPA que vous avez mis en opposition ou dont vous avez révoqué 
+  le mandat, nous vous invitons à appeler le 3933 (Service 0,30 € TTC / min + prix d'un appel), du 
+  lundi au vendredi de 8h à 20h et le samedi de 8h à 19h ou à vous rapprocher de votre Conseiller.
+  Pour une réclamation ou la bonne exécution de vos contrats, contacter votre agence (appel non 
+  surtaxé)"
+
+  utter_arrêter_prélèvement:
+  - text: "Pour arrêter un prélèvement, et révoquer le mandat de prélèvement SEPA associé, accédez à 
+  votre espace client, rubrique Prélèvements dans Comptes et cartes. Cliquez ensuite sur 
+  Créanciers. Sélectionnez le créancier dont vous souhaitez interrompre le ou les prélèvements 
+  puis cliquez sur Contester le créancier
+  Tous les prélèvements SEPA ultérieurs émanant de ce créancier seront rejetés. Nous vous 
+  invitons à informer immédiatement votre créancier de la révocation de son mandat de 
+  prélèvement"
+ 
+  utter_contester_prélèvement:
+  - text: "Vous pouvez contester un prélèvement à venir jusqu’au jour ouvré précédant sa date 
+  d’échéance 
+  Si le prélèvement a déjà été exécuté et votre compte débité, vous avez 8 semaines à partir de la 
+  date de débit de votre compte pour demander un remboursement, depuis votre espace client"
+
+  utter_opposition_prélèvement:
+  - text: "Vous pouvez faire opposition à un prélèvement SEPA récurrent ou ponctuel, autorisé ou non, en 
+  ligne sur votre espace client ou en adressant un courrier à votre Conseiller, jusqu’à l’avant-veille 
+  (ouvrée) de son échéance. Vous pouvez aussi demander à votre Conseiller d’interdire les 
+  prélèvements SEPA de certains créanciers.
+  Pour contester un prélèvement SEPA, connectez vous à votre espace client pour accéder à votre 
+  espace Prélèvements. Enregistrez votre demande d'opposition sur un prélèvement SEPA dans 
+  l'onglet Opérations puis validez.
+  Dans l'onglet Créanciers, vous pouvez demander la révocation d'un mandat de prélèvement SEPA.
+  Vous pouvez enfin consulter l'historique des contestations dans l'onglet Historique des contestations de la rubrique Prélèvements"
+
+  utter_mettre_en_place_prélèvement:
+  - text: "Pour mettre en place un prélèvement SEPA, remplissez, datez et signez le mandat de prélèvement SEPA transmis par votre créancier, à savoir la personne, l'organisme ou la société à 
+  qui vous devez de l'argent.
+  Renvoyez à votre créancier le mandat de prélèvement SEPA dûment complété, accompagné d’un Relevé d’Identité Bancaire (RIB) si nécessaire
+  Au premier prélèvement, vous recevrez une alerte sur votre espace client "
+
+  utter_modifier_prélèvement:
+  - text: "Pour modifier les caractéristiques d'un prélèvement SEPA (par exemple la date ou le montant), 
+  vous devez contacter votre créancier, à savoir la personne, l’organisme ou la société que vous 
+  avez autorisés à prélever sur votre compte"
+  
+  utter_suivre_prelevement:
+  - text: "Pour suivre vos prélèvements depuis votre espace client, rendez-vous dans votre espace client, 
+ rubrique Prélèvements
+ Vous pourrez ensuite : 
+ - Consulter la liste des prélèvements en cours et à venir
+ - Consulter la liste de vos créanciers
+ - Contester un prélèvement ou un créancier que vous n'autorisez pas
+ Bon à savoir : vous pouvez aussi anticiper les prélèvements à venir, depuis le détail de votre 
+ compte. Cliquez ensuite sur le bouton Consulter les opérations "
+ 
+  utter_avant_prélèvement:
+  - text: "Lorsque que vous mettez un prélèvement en place auprès d'un créancier, celui-ci doit vous 
+  informer des prélèvements à venir au plus tard 14 jours calendaires avant leur date d’échéance 
+  (à moins que vous n'ayez convenu d'un délai plus court) et par tout moyen à sa convenance 
+  (facture, avis, échéancier, etc.)
+  Au premier prélèvement d'un nouveau mandat, vous recevez une alerte sur votre espace client. 
+  Pensez à bien vérifier les informations de ce nouveau prélèvement autorisé"
+
+  utter_conséquences_compte_non_provisionné:
+  - text: " - Si un compte n’est pas suffisamment provisionné à la date d’échéance d’un prélèvement, celui ci est rejeté
+ Dans ce cas, nous vous invitons à contacter votre créancier afin de régulariser cet impayé. En cas 
+ de rejet, vous recevez une alerte sur votre espace client
+ - Des frais de rejet de prélèvement SEPA sont débités de votre compte. Retrouvez toutes les informations sur les tarifs dans
+la brochure tarifaire en ce lien: (https://www.amenbank.com.tn/interface/files/images/files/Conditions_de_banque_/20190503102253_IM_Tarifs_et_conditions.pdf)
+Conditions et tarifs appliqués aux opérations bancaires - Particuliers"
+
+  utter_prélèvement_SEPA:
+  - text: "Le prélèvement SEPA est un moyen de paiement automatisé, en euros, au sein de la zone SEPA. 
+ Il est initié par le créancier, avec l’accord préalable du payeur sous la forme d’un mandat de 
+ prélèvement signé
+ Le prélèvement SEPA peut être : 
+  - Ponctuel : il ne vaut alors que pour une opération
+  - Récurrent : il vaut alors pour une série d’opérations
+ Pour mettre en place un prélèvement SEPA, il vous suffit de remplir, dater et signer un mandat 
+ de prélèvement SEPA, puis de l'envoyer à votre créancier. Pour compléter ce mandat, vos 
+ coordonnées bancaires vous seront demandées"
+
+  utter_frais_relatifs_aux_prélèvements:
+  - text: "La mise en place d’un mandat de prélèvement SEPA ainsi que le paiement d’un prélèvement 
+ SEPA sont entièrement gratuits
+ De même, l’opposition sur une opération de prélèvement SEPA ou la révocation d’un mandat de 
+ prélèvement SEPA sont gratuits
+ En revanche, en cas de rejet d’un prélèvement SEPA pour défaut de provision, des frais sont 
+ facturés. Retrouvez toutes les informations sur les tarifs dans la brochure tarifaire en ce lien :(https://www.amenbank.com.tn/interface/files/images/files/Conditions_de_banque_/20190503102253_IM_Tarifs_et_conditions.pdf)
+  Conditions et tarifs appliqués aux opérations bancaires - Particuliers "
+
+  utter_rejet_prelevement:
+  - text: "Pour éviter qu’un prélèvement SEPA à venir soit rejeté, assurez-vous que votre compte présente 
+ une provision suffisante à la date d'échéance prévue. Vérifiez également que vous n'avez pas fait 
+ opposition à ce prélèvement, ou plus généralement, à tous les prélèvements émanant de ce 
+ créancier 
+ Si vous avez une Liste de créanciers autorisés, vous pouvez contacter votre Conseiller pour la 
+ consulter"
+ 
+  utter_prélèvements_récurrents:
+  - text: "Si vous avez constaté des prélèvements suspects, tout d'abord, assurez-vous du caractère 
+  frauduleux de l’opération contestée avant de porter plainte et d'en informer immédiatement 
+  votre Conseiller
+  Si vous êtes effectivement victime de fraude, vous avez jusqu'à 13 mois pour contester le ou les 
+  prélèvements non autorisés. Vous pouvez le faire depuis votre espace client(https://www.amenfirstbank.com.tn/amenFirstBank/login.jsp)dans les 8 semaines 
+  qui suivent le débit de votre compte. Au-delà, nous vous invitons à remplir le formulaire de 
+  contestation disponible en ligne"
+
+  utter_annuler_contestation_prélèvement:
+  - text: "Vous ne pouvez pas annuler ou lever vous-même une contestation de prélèvement ou de créancier. Pour 
+  ce faire, rapprochez-vous de votre Conseiller
+  Bon à savoir : On parle de contestation ou de remboursement de prélèvement lorsque le prélèvement est 
+  déjà passé en écriture sur le compte. Lorsqu’il n’est pas encore passé en écriture sur le compte, on parle 
+  d’opposition sur prélèvement"
+
+  utter_contestation_créancier:
+  - text: "On appelle contestation de créancier le fait de révoquer l’ensemble des mandats de 
+  prélèvement associés à un créancier, c'est-à-dire de retirer toutes les autorisations de 
+  prélèvement précédemment accordées une entreprise ou à un organisme donné. Par exemple, la 
+  contestation de votre opérateur de téléphonie entraînera l’annulation des autorisations de 
+  prélèvement de vos factures à la fois mobile et ADSL
+  Bon à savoir : ce créancier ne pourra plus effectuer aucun prélèvement sur vos comptes à 
+  l’avenir tant que la révocation ne sera pas levée"
+
+  utter_contestation_prélèvement:
+  - text: "On appelle contestation de prélèvement ou révocation d’un mandat de prélèvement SEPA le fait 
+  de retirer l’autorisation de prélèvement donnée à un créancier pour un service ou un produit donné
+  Vous pouvez par exemple contester le prélèvement de votre facture mobile lors de votre 
+  changement d’opérateur mobile, c'est-à-dire retirer l’autorisation de prélèvement donnée à votre ancien opérateur de téléphonie pour 
+  le paiement de votre facture mobile. 
+  Vos éventuels autres prélèvements (box, etc.) chez cet ancien opérateur seront maintenus tant que vous ne les contesterez pas"
+  
+  utter_frais_rejet:
+  - text: "Des frais de rejet vous sont facturés lorsqu’un prélèvement se présente sur votre compte alors 
+  que votre solde est au-delà du découvert autorisé. En cas de rejet d'une de vos opérations, vous 
+  recevez une alerte sur votre espace client et une notification sur votre smartphone si vous 
+  utilisez l'Appli Société Générale. Vous savez ainsi que votre paiement est rejeté et vous pouvez 
+  agir rapidement
+  En cas de difficulté passagère, parlez-en à votre Conseiller. Il peut vous accompagner pour 
+  faciliter la recherche de solutions. Retrouvez toutes les informations sur les tarifs dans la 
+  brochure tarifaire en ce lien (https://www.amenbank.com.tn/interface/files/images/files/Conditions_de_banque_/20190503102253_IM_Tarifs_et_conditions.pdf)"
+  
+  utter_compte_preleve2_fois:
+  - text: "Dans la plupart des cas quand votre compte est prélevé deux fois pour la même opération il 
+  s'agit d'un problème technique survenu soit chez votre créancier soit à Société Générale
+  Dans la plupart des cas, le problème est résolu la situation sur votre compte est régularisée si 
+  tel n'est pas le cas nous vous invitons à contester le prélèvement"
+
+  utter_contactless_feature:
+  - text: " - The contactless functionality is activated by default on your bank card. You can deactivate or You can deactivate or re-activate it at any time and free of charge, from your Société 
+  Générale customer area 
+  - The deactivation or reactivation of the contactless functionality is not instantaneous. 
+  You must wait until the day after your request and make a withdrawal from an ATM using your card for it to take effect."
+ 
+  utter_payment_dispute:
+  - text: " You are not liable. With regard to unauthorised transactions carried out after your request 
+  for blocking. The unauthorised transactions carried out before the request to block the card 
+  are at your expense up to a maximum of €50, with the exception of transactions carried out 
+  without use of your personalised security data "
+
+  utter_bank_card_payment:
+  - text:  " To dispute a payment made with your bank card:
+  - First, stop payment on your card from your customer area or by contacting the stop 
+  payment centre on (+33) 09 69 39 77 77 (call free of charge, excluding any operator
+  surcharges, 7 days a week, 24h/24)
+  - Then dispute the transaction(s) that you did not carry out by completing the online card
+  claim kit "
+
+  utter_change_the_limits:
+  - text: "To temporarily modify the limits of your bank card, you can request an increase directly from 
+  your Customer Area. Go to the list of your accounts and cards via(https://www.amenfirstbank.com.tn/amenFirstBank/login.jsp)
+  and then click on your card to change its limit. If you are unable to temporarily change your limits, make an appointment 
+  with your advisor or call 3933 (0 800 766 7669).
+  or call 3933 (€0.30 incl. tax / min + call charge), Monday to Friday from 8am to 8pm and 
+  Saturday from 8am to 7pm "
+
+  utter_increase_validity_period:
+  - text: "The amount of the exceptional payment increase entered is valid : 
+  - Until the last day of the current month for immediate debit cards (except for the seizures 
+  from 27 to 30/31 which are postponed to the last day of the following month) 
+  - Until the closing date of the current month for deferred debit cards.
+  The amount of the exceptional withdrawal increase granted is valid for 48 hours. This 
+  amount cancels and replaces the 3 contractual capacities, whatever the remaining capacity 
+  level. A Once this period has elapsed, the exceptional capacities are reset to 0, and your card 
+  will return to its usual withdrawal capacity "
+  
+  utter_refund_time_dispute:
+  - text: "If you have disputed one or more payments made with your card by completing the online 
+  card complaint kit. The complaint will be processed on the same day or the next working day 
+  following"
+
+  utter_choose_secret_code:
+  - text: "It is not possible to choose the secret code of your bank card"
+
+  utter_search_debit:
+  - text: "To find information on a creditor, go to your customer area, heading Direct debits
+  You can : 
+  - Consult the list of your creditors 
+  - Consult the list of current and future direct debits 
+  - dispute a direct debit or a creditor you do not authorise
+  To find a specific transaction, go to My budget, then Expenses and income. The column Label 
+  allows you to display a filter by key words (GDF, ENGIE, FNAC, etc.) to make it easier to find a 
+  particular transaction"
+
+  utter_a_creditor_a_debit:
+  - text: "To reinstate a SEPA direct debit that you have put on hold or for which you have revoked the 
+  mandate, we invite you to call 3933 (Service 0,30 € TTC / min + price of a call), from Monday 
+  to Friday from 8am to 8pm and Saturday from 8am to 7pm or contact your advisor. For a 
+  complaint or the proper execution of your contracts, contact your branch (call not
+  surcharged call)"
+
+  utter_stop_direct_debit:
+  - text: "To stop a direct debit and revoke the associated SEPA direct debit mandate, access your 
+  customer area, heading Direct debits via (https://www.amenfirstbank.com.tn/amenFirstBank/login.jsp)in Accounts and cards. Then click on Creditors. Select 
+  the creditor whose direct debit(s) you wish to stop and then click on Dispute creditor. All 
+  subsequent SEPA direct debits from this creditor will be rejected. We invite you to inform 
+  your creditor immediately of the revocation of their direct debit mandate."
+ 
+  utter_dispute_direct_debit:
+  - text: " You can dispute an upcoming direct debit up to the working day preceding its date due date.
+  If the direct debit has already been executed and your account debited, you have 8 weeks 
+  from the date of debit from your account to request a refund, from your customer area,
+  section Direct debits in Accounts and cards. Then click on the direct debit concerned,then Dispute transaction.After this 8-day period,you can dispute unauthorized SEPA direct debits, within a maximum period of 13 months. To do this, go to your customer area and complete the dispute form."
+  
+  
+  utter_direct_debit_opposition:
+  - text: " You can object to a recurring or one-off SEPA direct debit,whether authorised or not, online in your customer area or by sending a letter to your Adviser, up to the day before the due date. 
+  (of its due date. You can also ask your Adviser to prohibit You can also ask your Adviser 
+  to prohibit SEPA direct debits from certain creditors. To dispute a SEPA direct debit, log on to 
+  your customer area to access your Direct debit area. Register your request to stop a SEPA 
+  direct debit in the the Operations tab and then validate.In the Creditors tab, you can request the revocation of a REVOCATION OF A SEPA DIRECT DEBIT MANDATE.
+  Finally, you can consult the history of disputes in the History of disputes tab in the in the Direct debits section"
+  
+  utter_set_up_direct_debit:
+  - text: "To set up a SEPA direct debit, fill in, date and sign the SEPA direct debit mandate sent by 
+  your creditor mandate sent by your creditor, i.e. the person, organisation or company to 
+  whom you owe money. 
+  Send the completed SEPA Direct Debit mandate to your creditor, together with a Bank 
+  Account Statement (BIS) if necessary.
+  At the first direct debit, you will receive an alert on your customer area"
+  
+  utter_change_direct_debit:
+  - text: "To modify the characteristics of a SEPA direct debit (for example the date or the amount) 
+  you must contact your creditor, i.e. the person, organisation or company that you have
+  authorised to debit your account"
+
+  utter_track_direct_debit:
+  - text: "To follow your direct debits from your customer area, go to your customer area, heading 
+  Direct debits ,You can then : 
+  - Consult the list of current and future direct debits.
+  - Consult the list of your creditors.
+  - dispute a direct debit or a creditor you do not authorise.
+  Good to know : you can also anticipate future direct debits from your account details.Then 
+  click on the View transactions button"
+
+  utter_before_sampling:
+  - text: "When you set up a direct debit with a creditor, the creditor must inform you of the 
+  forthcoming direct debits at least 14 calendar days before their due date (unless you have 
+  agreed to a shorter period) and by any means at their convenience (invoice, notice, 
+  schedule, etc.)
+  The first time a new mandate is debited, you will receive an alert in your customer area. 
+  Remember to check the information on this new authorised direct debit"
+
+  utter_consequences_account_not_funded:
+  - text: "If an account does not have sufficient funds on the due date of a direct debit, it will be 
+  rejected
+  In this case, we invite you to contact your creditor in order to regularise this unpaid amount. 
+  In the event of rejection, you will receive an alert on your customer area
+  A charge for rejecting a SEPA direct debit will be debited from your account. Find all the 
+  information on fees in the Terms (https://www.amenbank.com.tn/interface/files/images/files/Conditions_de_banque_/20190503102253_IM_Tarifs_et_conditions.pdf)
+  and conditions and fees for banking transactions -Individuals"
+
+  utter_SEPA_Direct_Debit:
+  - text: "A SEPA direct debit is an automated payment method in euros within the SEPA zone. 
+  It is initiated by the creditor, with the prior agreement of the payer in the form of a signed
+  direct debit mandate. 
+  A SEPA direct debit can be : 
+  - punctual : it is valid for one transaction only
+  - Recurrent : it is valid for a series of transactions
+  To set up a SEPA direct debit, you just need to fill in, date and sign a SEPA direct debit 
+  mandate, then to set up a SEPA direct debit, simply fill in, date then send it to your creditor.
+  To complete this mandate, you will be asked for your bank details"
+
+  utter_direct_debit_fees:
+  - text: " *The setting up of a SEPA direct debit mandate as well as the payment of a direct debit SEPA 
+  are completely free
+  *Similarly, opposition to a SEPA direct debit transaction or the revocation of a SEPA Direct 
+  Debit are free
+  *On the other hand, in the event of rejection of a SEPA direct debit for lack of funds, costs 
+  are billed. Find all the information on rates in the rates brochure Conditions via (https://www.amenbank.com.tn/interface/files/images/files/Conditions_de_banque_/20190503102253_IM_Tarifs_et_conditions.pdf) 
+  and rates applied to banking transactions - Individuals"
+  
+  utter_sample_rejection:
+  - text: "To avoid having an upcoming SEPA direct debit rejected, make sure that your account has 
+  sufficient funds on the due date. Also check that you have not to this direct debit, or more 
+  generally, to all direct debits from this creditor.If you have a List of Authorised Creditors, you 
+  can contact your Advisor to consult it"
+
+  utter_recurring_direct_debits:
+  - text: "*If you have noticed suspicious direct debits, first of all, make sure that the disputed 
+  transaction is fraudulent before filing a complaint and informing fraudulent nature of the 
+  disputed transaction before filing a complaint and immediately informing your advisor
+  *If you are indeed a victim of fraud, you have up to 13 months to dispute the unauthorised 
+  unauthorised direct debits. You can do this from your customer area within 8 weeks of the 
+  debit to your account. after your account has been debited. After that, we invite you to fill in
+  the form available on line."
+
+  utter_cancel_direct_debit_dispute:
+  - text: "-You cannot cancel or lift a direct debit or creditor dispute yourself.To do so, contact your 
+  advisor.
+  Good to know : We talk about contesting or refunding the direct debit when the direct debit 
+  is already written to the account. When it has not yet been written to the account, we speak
+  objection to direct debit"
+ 
+  utter_creditor_dispute:
+  - text: "*A creditor's challenge is the act of revoking all of the mandates of direct debit associated 
+  with a creditor, i.e. to withdraw all authorizations from levy previously granted to a given 
+  company or body. For example, the Disputing your telephone carrier will result in the 
+  cancellation of the authorizations of collection of your mobile and ADSL bills
+  *Good to know : this creditor will no longer be able to make any deductions from your 
+  accounts at the future until the revocation is lifted."
+
+  utter_direct_debit_dispute:
+  - text: "*We call direct debit dispute or revocation of a SEPA direct debit mandate the factto 
+  withdraw the direct debit authorization given to a creditor for a service or product given
+  *You can, for example, dispute the debit of your mobile bill when you change of mobile 
+  operator, i.e. withdraw the direct debit authorization given to your old telephone operator 
+  for the payment of your mobile bill. Your possible other direct debits (box, etc.) with this 
+  former operator will be maintained as long as you do not will not dispute."
+
+  utter_rejection_fee:
+  - text: "*You are charged a rejection fee when a direct debit appears on your account then that your 
+  balance is over the authorized overdraft. If one of your transactions is rejected, you receive 
+  an alert in your customer area and a notification on your smartphone if you use the Societe 
+  Generale App. This way you know that your payment has been rejected and you can
+  act quickly .
+  *In case of temporary difficulty, talk to your Advisor. He can accompany you to facilitate the 
+  search for solutions. Find all the information on prices in the tariff brochure via(https://www.amenbank.com.tn/interface/files/images/files/Conditions_de_banque_/20190503102253_IM_Tarifs_et_conditions.pdf)"
+  utter_salut:
+  - text: "bienvenu comment je peux vous aidez "
+  
+  utter_code_securite_info_fr:
+  - text: "Le Code Sécurité est un code à usage unique qui vous est transmis sur votre téléphone Sécurité, préalablement enregistré, à chaque fois que vous réalisez une opération sensible (ajout d'un RIB, augmentation de plafond, un paiement par carte, etc.) . "
+
+  utter_modifier_corrdonnées_fr:
+  - text: "Vous pouvez modifier vos coordonnées en vous connectant à votre espace client, rubrique Mes coordonnées. Cliquez ensuite sur le bouton Modifier de votre choix "
+
+  utter_modifier_supprime_bénéficiaire_fr:
+  - text: "Pour modifier les coordonnées d’un compte bénéficiaire à la suite d’une erreur de saisie ou pour toute autre raison, il vous faudra supprimer ce compte de votre liste de bénéficiaire et en créer un nouveau avec les bonnes références.Pour le supprimer, rendez-vous dans votre Espace Client, rubrique Virements dans l'onglet Comptes et cartes. Cliquez ensuite sur Gérer les comptes bénéficiaires . "   
+
+  utter_démarches_déménagement_fr:
+  - text: "Vous pouvez effectuer un changement d’adresse depuis votre espace client, dans la rubrique Mes coordonnées. Il vous sera demandé d’y joindre votre justificatif de domicile datant de moins d'un an et un justificatif d'identité. Vous devrez également signer électroniquement votre demande."   
+
+  utter_démarches_change_nom_fr:
+  - text: "Si vous avez changé de nom et que vous souhaitez régulariser votre situation, rapprochez-vous de votre Conseiller muni d'un justificatif (livret de famille, jugement de divorce, pièce d'identité...)"   
+
+
+  utter_nouvelle_mail_fr:
+  - text: "Si vous souhaitez modifier votre adresse mail, rendez-vous sur votre espace client, rubrique Mon profil puis Mes coordonnées, ou contacter votre Conseiller."
+
+  utter_nouvelle_identité_passeport_fr:
+  - text: "Si vous devez transmettre votre nouvelle pièce d’identité à Société Générale, vous pouvez l’adresser à votre Conseiller en l’ajoutant en pièce jointe en utilisant votre messagerie sécurisée. " 
+
+
+
+  utter_garde_copie_identite_fr:
+  - text: "Les établissements bancaires sont tenus de vérifier l'identité de leurs clients dans le cadre de la lutte contre le blanchiment d'argent et de conserver une copie des documents relatifs à cette identité jusqu'à cinq ans après la cessation de leurs relations. Les informations collectées restent strictement confidentielles et uniquement utilisées pour ces finalités " 
+
+
+  utter_comptes_externes_sécurisé_fr:
+  - text: "Nous garantissons le même niveau de sécurité pour vos comptes externes et vos comptes : vos données d'authentification sont chiffrées et ni banque , ni ses sous-traitants, ne peuvent accéder à ces données de manière non chiffrée. Pour aller plus loin : pour garantir la confidentialité de vos comptes externes, ceux-ci sont accessibles par l'assistance technique uniquement en cas de dépannage, dans le cadre strict régi par les Conditions Générales du service."
+
+
+  utter_étranger_fonctionne_Pass_Sécurité_fr:
+  - text: "Si vous êtes en séjour à l'étranger, le Pass Sécurité fonctionne de la même manière qu'en Tunisie, sans action particulière de votre part. Il vous suffit d'avoir accès à une connexion Internet (Wifi, 3G, 4G, Edge).Si vous déménagez à l'étranger, n'oubliez pas de contacter votre Conseiller pour mettre à jour vos coordonnées (adresse postale, numéro de téléphone...). "
+
+
+  utter_activer_désactiver_Pass_Sécurité_fr:
+  - text: "Vous pouvez à tout moment désactiver ou activer le Pass Sécurité dans la rubrique Moyens de sécurité uniquement depuis votre application mobile. Si vous ne disposez plus de votre téléphone, vous pouvez demander la désactivation de votre Pass Sécurité en vous rapprochant de votre Conseiller ou en contactant le 3933 , du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h. Bon à savoir : le service Pass Sécurité est gratuit. "
+
+
+  utter_Pass_Sécurité_ne_fonctionne_pas_fr:
+  - text: "Si vous ne recevez pas de notification sur votre smartphone lors de la réalisation d'une opération sécurisée depuis votre banque à distance vous pouvez vérifier les points suivants :\n- Ouvrez votre application , l'application devrait vous redirigé sur la validation de votre opération \n- Si tel n'était pas le cas rendez-vous dans la rubrique Autres puis Pass Sécurité et cliquez sur Valider vos opérations \n- Si votre opération n'apparait pas dans la liste contactez alors votre Conseiller Pour vous assurer de la bonne réception des notifications du Pass Sécurité :\n- Vérifiez dans les réglages de votre mobile si les notifications pour l'application  sont bien activées \n- Vérifiez la connexion sur votre smartphone : il est indispensable d'être connecté sur un réseau Wifi, Edge, 3G, 4G ou 5G pour recevoir les notifications "
+
+  utter_modifier_code_secret_fr:
+  - text: "Une fois connecté à votre Espace Client, vous pouvez modifier votre code secret, en vous rendant dans l'onglet Autres, rubrique Profil , Sécurité puis cliquez sur Modifier mon code secret  et suivez les instructions.Nous vous conseillons de changer le code secret régulièrement et de ne pas utiliser de code secret facile à identifier (suite de chiffres, date de naissance, etc.) Bon à savoir : Pour des raisons de sécurité, la durée de validité de votre code secret est limitée à un an et vous ne pouvez pas utiliser un ancien code secret . "
+
+
+  utter_modifier_num_tel_securite_fr:
+  - text: "Pour déclarer votre numéro de Téléphone Sécurité, connectez-vous à votre Espace Client, onglet Autres, Profil puis cliquez sur Sécurité. Après avoir déclaré votre numéro de Téléphone Sécurité vous recevrez par courrier un Code de Sécurité vous permettant d'Activer votre Téléphone Sécurité. Vous pourrez également retrouver ce Code de Sécurité sur le ticket lors de votre prochain retrait d'espèce sur un distributeur Société Générale."
+
+  utter_obtenir_code_client_fr:
+  - text: "Votre code client, vous permettant d'accéder à l'espace client, est présent sur vos relevés de compte (code à 8 chiffres en haut à gauche) . Ce code client vous est attribué par un conseiller au moment de votre inscription au contrat Banque à distance en agence. Lors d'une ouverture de compte en ligne, le code client vous est envoyé par courrier . Vous pouvez également l'obtenir en contactant votre agence ou le 3933 , du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h . "
+
+  utter_obtenir_code_secret_fr:
+  - text: "Pour obtenir ou récupérer le code d'accès à votre espace client, rendez-vous sur votre espace client pour faire une demande de récupération. Votre nouveau code d'accès vous sera adressé par SMS sur votre numéro de téléphone mobile. Le code secret vous est envoyé par courrier postal après l'ouverture d'un compte bancaire et est personnalisable. Si vous avez perdu ce premier code secret, contactez le 3933  du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h. " 
+
+  utter_oublie_perte_carte_bancaire_fr:
+  - text: "En cas de perte, de vol, de détournement ou d'utilisation frauduleuse de votre carte ou des données liées à son utilisation, vous pouvez faire opposition 24h/24, 7j/7/: \n- Depuis votre espace client dans la rubrique Services d'urgence . \n- Par téléphone en contactant le Centre d’opposition au (+216) 71 39 77 77 (appel non surtaxé hors éventuel surcoût opérateur), ou le 3933  du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h. Pour une réclamation ou la bonne exécution de vos contrats, contacter votre agence (appel non surtaxé).Votre nouvelle carte sera automatiquement refabriquée. Elle vous est adressée à votre domicile ou à votre agence si vous avez demandé le changement de votre code secret, dans un délai maximum de 5 jours ouvrés . "
+
+  utter_réceptionner_code_sécurité_fr:
+  - text: "Pour recevoir un Code Sécurité, vous devez être en possession du téléphone Sécurité que vous préalablement avez déclaré :\n- Si vous avez déclaré un téléphone mobile, d'un opérateur français, le Code Sécurité vous est adressé par SMS . \n- Si le numéro déclaré est un numéro de téléphone fixe géré par un opérateur déclaré en France ou un numéro de téléphone fixe géré par un opérateur déclaré à l’étranger, l’Abonné reçoit le Code Sécurité par appel téléphonique . \n- Si le numéro déclaré est identifié par Société  comme étant un téléphone mobile géré par un opérateur étranger, l’Abonné reçoit le Code Sécurité par SMS " 
+
+  utter_email_douteux_fr:
+  - text: "Si vous pensez avoir reçu un e-mail douteux, vous demandant par exemple de confirmer vos numéros de cartes bancaires ou vos codes secrets, procédez comme suit :\n- Ne cliquez sur aucun des liens proposés\n- Ne tentez pas d'ouvrir les pièces jointes . \n- Ne répondez pas à l'e-mail douteux et ne contactez pas le numéro de téléphone indiqué . \n- Modifier immédiatement votre code secret, vous permettant d'accéder à votre espace client . Vous pouvez également contacter notre équipe Sécurité à l'adresse securite@bancaire.fr ou par téléphone au (+216) 77 126 365 (du lundi au samedi, de 8h à 19h). Notre bank ne vous sollicitera jamais sur votre adresse e-mail pour des motifs liés à la gestion de vos comptes et cartes ."
+
+  utter_repondu_email_douteux_fr:
+  - text: "Si vous avez simplement ouvert un mail vous semblant douteux, il ne se passera rien. Vous pouvez le transférer à notre équipe Sécurité à l'adresse securite@generale.fr, puis le supprimer.Si vous avez répondu à ce mail et donné vos coordonnées bancaires, connectez-vous à votre espace client, rubrique Sécurité et modifiez votre code secret.Si vous avez répondu à ce mail et donné votre numéro de carte bancaire, nous vous conseillons de faire opposition depuis votre espace client ou en contactant le (+216)71  39 77 77 (appel non surtaxé, 7j/7, 24h/24)."
+
+  utter_bloque_espace_client_fr:
+  - text: "Votre accès est temporairement bloqué suite à trois saisies erronées de vos codes.Pour débloquer immédiatement votre accès à votre espace client vous pouvez contacter le 3933 (Service 0,30 € TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h. Pour une réclamation ou la bonne exécution de vos contrats, contacter votre agence (appel non surtaxé)." 
+
+
+  utter_pas_recu_code_securite_tel_app_fr:
+  - text: "Si vous n'avez pas reçu votre Code Sécurité, vérifiez, tout d'abord, l'enregistrement de votre numéro de téléphone en vous connectant à votre Espace Client ou en appelant au (+216) 71 007 111 .Si vous n'avez pas reçu votre Code Sécurité alors que votre numéro de téléphone est correctement enregistré, contactez le 3933 (Service 0,30 € TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h. Pour une réclamation ou la bonne exécution de vos contrats, contacter votre agence (appel non surtaxé). "
+
+  utter_pas_recu_code_par_mail_code_securite_fr:
+  - text: "Si après un délai de 8 jours vous n'avez toujours pas reçu le courrier comportant le Code de Sécurité pour l'activation de votre Téléphone Sécurité, contactez notre assistance technique (+33) 01 42 14 58 58, du lundi au samedi de 8h à 19h (appel non surtaxé). Vous pouvez également vous rendre dans votre agence pour déclarer et activer votre Téléphone Sécurité. "
+  
+  utter_etranger_fct_pass_securite_fr:
+  - text: "Si vous êtes en séjour à l'étranger, le Pass Sécurité fonctionne de la même manière qu'en Tunisie, sans action particulière de votre part. Il vous suffit d'avoir accès à une connexion Internet (Wifi, 3G, 4G, Edge).Si vous déménagez à l'étranger, n'oubliez pas de contacter votre Conseiller pour mettre à jour vos coordonnées (adresse postale, numéro de téléphone...)."
+
+  utter_probleme_clavier_fr:
+  - text: "Si votre clavier ne s'affiche pas correctement, pensez à vérifier :\n- Votre connexion Internet. \n- Que la fenêtre de votre navigateur est en plein écran . Si cela ne fonctionne pas, essayez avec un autre navigateur Internet.Si votre problème persiste, contactez notre assistance technique au (+33) 01 42 14 58 58, du lundi au samedi de 8 h à 19 h (appel non surtaxé) ou par formulaire."
+
+  utter_contester_payement_fr:
+  - text: "Pour contester un paiement effectué avec votre carte bancaire :\n- Faites d'abord opposition sur votre carte depuis votre espace client ou en contactant le centre d’opposition au (+216) 71 39 77 77 (appel non surtaxé hors éventuel surcoût opérateur, 7j/7, 24h/24).\n- Puis contestez la ou (les) opération(s) que vous n’avez pas effectuée(s) en complétant le kit réclamation carte en ligne."
+
+  utter_security_code_info_ag:
+  - text: "The Security Code is a single-use code that is sent to your Security phone, previously registered, each time you carry out a sensitive operation (adding a bank account details, increasing the ceiling, paying by card, etc.) . "
+
+  utter_modify_contact_ag:
+  - text: "You can change your details by logging into your customer area, under My details. Then click on the Modify button of your choice . "
+
+  utter_modify_delete_beneficiary_en:
+  - text: "To modify the details of a beneficiary account following an input error or for any other reason, you will need to delete this account from your list of beneficiaries and create a new one with the correct references. To delete it, go to Go to your Customer Area, Transfers section in the Accounts and Cards tab. Then click on Manage Beneficiary Accounts. "
+
+  utter_steps_moving_en:
+  - text: "You can change your address from your customer area, in the My details section. You will be asked to attach your proof of address dating back less than a year and proof of identity. You will also need to electronically sign your application. "
+
+
+  utter_steps_change_name_ag:
+  - text: "If you have changed your name and want to regularize your situation, contact your Advisor with proof (family book, divorce decree, identity document, etc.) . "
+
+  utter_new_mail_an:
+  - text: "If you wish to change your email address, go to your customer area, under My profile then My details, or contact your Advisor. "
+
+  utter_new_identity_passport_ag:
+  - text: "If you need to send your new identity document to Societe Generale, you can send it to your Advisor by adding it as an attachment using your secure messaging system. "
+
+  utter_identity_copy_guard_en:
+  - text: "Banking establishments are required to verify the identity of their customers in the context of the fight against money laundering and to keep a copy of the documents relating to this identity for up to five years after the termination of their relationship. The information collected remains strictly confidential and only used for these purposes. "
+
+  utter_secure_external_accounts_en:
+  - text: "We guarantee the same level of security for your external accounts and your accounts: your authentication data is encrypted and neither bank nor its subcontractors can access this data in an unencrypted manner. To go further: to guarantee the confidentiality of your external accounts, these are accessible by technical assistance only in the event of troubleshooting, within the strict framework governed by the General Conditions of the service. " 
+
+  utter_foreigner_functions_Pass_Security_ag:
+  - text: "If you are staying abroad, the Security Pass works the same way as in Tunisia, without any particular action on your part. All you need is access to an Internet connection (Wifi, 3G, 4G, Edge). If you move abroad, do not forget to contact your Advisor to update your contact details (postal address, telephone number ...). "
+
+  utter_activate_deactivate_Security_Pass_ag:
+  - text: "You can deactivate or activate the Security Pass at any time in the Security means section only from your mobile application. If you no longer have your telephone, you can request the deactivation of your Security Pass by contacting your Advisor or by calling 3933, Monday to Friday from 8 a.m. to 8 p.m. and Saturday from 8 a.m. to 7 p.m. Good to know: the Security Pass service is free. "
+
+
+  utter_Security_Pass_not_working_ag:
+  - text: "If you do not receive a notification on your smartphone when carrying out a secure operation from your remote bank, you can check the following points:\n- Open your application, the application should redirect you to the validation of your operation \n- If this was not the case, go to the Others section, then Security Pass and click on Validate your transactions \n- If your transaction does not appear in the list, then contact your Advisor To ensure the correct receipt of Security Pass notifications:\n- Check in your mobile settings if the notifications for the application are activated \n- Check the connection on your smartphone: it is essential to be connected to a Wifi network, Edge , 3G, 4G or 5G to receive notifications . "
+
+  utter_modify_code_secret_ag:
+  - text: "Once connected to your Customer Area, you can modify your secret code, by going to the Other tab, Profile section, Security then click on Modify my secret code and follow the instructions. We advise you to change the secret code regularly and not to use a secret code that is easy to identify (series of numbers, date of birth, etc.) Good to know: For security reasons, the period of validity of your secret code is limited to one year and you cannot use an old secret code. " 
+
+  utter_change_phone_number_security_ag:
+  - text: "To declare your Security Telephone number, log in to your Customer Area, Others tab, Profile then click on Security. After declaring your Security Phone number, you will receive a Security Code by mail allowing you to Activate your Security Phone. You can also find this Security Code on the ticket the next time you withdraw cash from a Societe Generale ATM. " 
+
+  utter_get_customer_code_ag:
+  - text: "Your customer code, allowing you to access the customer area, is present on your account statements (8-digit code at the top left). This customer code is assigned to you by an adviser when you register for the remote banking contract in a branch. When opening an online account, the client code is sent to you by post. You can also obtain it by contacting your branch or 3933, Monday to Friday from 8 a.m. to 8 p.m. and Saturday from 8 a.m. to 7 p.m. " 
+
+  utter_get_secret_code_ag:
+  - text: "To obtain or recover the access code to your customer area, go to your customer area to make a recovery request. Your new access code will be sent to you by SMS on your mobile phone number. The secret code is sent to you by post after opening a bank account and is customizable. If you have lost this first secret code, contact 3933 Monday to Friday from 8 a.m. to 8 p.m. and Saturday from 8 a.m. to 7 p.m."  
+
+
+  utter_forget_lost_bank_card_ag:
+  - text: "In the event of loss, theft, misappropriation or fraudulent use of your card or data related to its use, you can object 24 hours a day, 7 days a week: \n- From your customer area in the Services section emergency. \n- By telephone by contacting the Opposition Center at (+216) 71 39 77 77 (non-surcharged call excluding any operator surcharge), or 3933 Monday to Friday from 8 a.m. to 8 p.m. and Saturday from 8 a.m. to 7 p.m. For a complaint or the proper execution of your contracts, contact your branch (non-surcharged call). Your new card will be automatically reissued. It is sent to you at your home or at your agency if you have requested the change of your secret code, within a maximum period of 5 working days."
+
+
+  utter_receive_security_code_ag:
+  - text: "To receive a Security Code, you must be in possession of the Security telephone that you previously declared:\n- If you declared a mobile telephone, from a French operator, the Security Code is sent to you by SMS. \n- If the declared number is a fixed telephone number managed by a declared operator in France or a fixed telephone number managed by a declared operator abroad, the Subscriber receives the Security Code by telephone call. \n- If the declared number is identified by Company as being a mobile phone managed by a foreign operator, the Subscriber receives the Security Code by SMS . " 
+
+  utter_dubious_mail_ag:
+  - text: "If you think you have received a questionable e-mail, for example asking you to confirm your credit card numbers or your secret codes, follow these steps:\n- Do not click on any of the links offered\n- Do not try to open the attachments . \n- Do not reply to the questionable email and do not contact the given phone number. \n- Immediately change your secret code, allowing you to access your customer area. You can also contact our Security team at securite@bancaire.fr or by telephone on (+216) 77 126 365 (Monday to Saturday, 8 a.m. to 7 p.m.). Our bank will never solicit your e-mail address for reasons related to the management of your accounts and cards. "
+
+  utter_answered_dubious_mail_ag:
+  - text: "If you simply opened an e-mail that seemed suspicious, nothing would happen. You can transfer it to our Security team at securite@generale.fr, then delete it. .If you have replied to this email and given your credit card number, we advise you to object from your customer area or by contacting (+216) 71 39 77 77 (non-surcharged call, 7 days a week, 24 hours a day). ). "
+
+  utter_blocked_customer_area_ag:
+  - text: "Votre accès est temporairement bloqué suite à trois saisies erronées de vos codes.Pour débloquer immédiatement votre accès à votre espace client vous pouvez contacter le 3933 (Service 0,30 € TTC / min + prix d'un appel), du lundi au vendredi de 8h à 20h et le samedi de 8h à 19h. Pour une réclamation ou la bonne exécution de vos contrats, contacter votre agence (appel non surtaxé). "
+
+  utter_did_not_receive_the_Security_Code_vie_phone_ag:
+  - text: "If you have not received your Security Code, first check the registration of your telephone number by logging into your Customer Area or by calling (+216) 71 007 111. If you have not have not received your Security Code even though your telephone number is correctly registered, contact 3933 (Service €0.30 including tax / min + price of a call), Monday to Friday from 8 a.m. to 8 p.m. and Saturday from 8 a.m. to 7 p.m. . For a complaint or the proper execution of your contracts, contact your agency (non-surcharged call). " 
+
+  utter_did_not_receive_SecurityCode_by_mail_ag:
+  - text: "If after a period of 8 days you have still not received the letter containing the Security Code for activating your Security Phone, contact our technical support (+33) 01 42 14 58 58, Monday to Saturday from 8 a.m. at 7 p.m. (non-surcharged call). You can also go to your branch to declare and activate your Security Phone. " 
+
+  utter_Security_Pass_work_travel_ag:
+  - text: "Si vous êtes en séjour à l'étranger, le Pass Sécurité fonctionne de la même manière qu'en Tunisie, sans action particulière de votre part. Il vous suffit d'avoir accès à une connexion Internet (Wifi, 3G, 4G, Edge).Si vous déménagez à l'étranger, n'oubliez pas de contacter votre Conseiller pour mettre à jour vos coordonnées (adresse postale, numéro de téléphone...). "
+
+  utter_keyborard_problem_ag:
+  - text: "If your keyboard does not display correctly, remember to check:\n- Your Internet connection. \n- That your browser window is full screen. If that doesn't work, try another Internet browser. If your problem persists, contact our technical support on (+33) 01 42 14 58 58, Monday to Saturday from 8 a.m. to 7 p.m. (non-surcharged call) or by form. "
+
+  utter_dispute_payment_ag:
+  - text: "To dispute a payment made with your credit card:\n- First make an objection on your card from your customer area or by contacting the objection center at (+216) 71 39 77 77 (non-surcharged call excluding any operator surcharge , 7 days a week, 24 hours a day).\n- Then contest the transaction(s) that you did not carry out by completing the online card complaint kit. "
+
+
+forms:
+  open_incident_form:
+    ignored_intents: []
+    required_slots:
+    - email
+    - priority
+    - problem_description
+    - incident_title
+    - confirm
+  incident_status_form:
+    ignored_intents: []
+    required_slots:
+    - email
+  name_form:
+    required_slots:
+      - first_name
+      - last_name
+
+
+actions:
+- action_ask_email
+- action_check_incident_status
+- action_handoff
+- action_handoff_options
+- action_open_incident
+- validate_open_incident_form
+- validate_incident_status_form
+## added
+- utter_slots_values
+- utter_submit
+#- action_tell_time
+- validate_name_form

@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-day_number",
+      "2": "I-day_number",
+      "3": "L-day_number",
+      "4": "U-day_number",
+      "5": "B-place",
+      "6": "I-place",
+      "7": "L-place",
+      "8": "U-place",
+      "9": "B-priority",
+      "10": "I-priority",
+      "11": "L-priority",
+      "12": "U-priority",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-day_number": 1,
+      "I-day_number": 2,
+      "L-day_number": 3,
+      "U-day_number": 4,
+      "B-place": 5,
+      "I-place": 6,
+      "L-place": 7,
+      "U-place": 8,
+      "B-priority": 9,
+      "I-priority": 10,
+      "L-priority": 11,
+      "U-priority": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "day_number",
+    "pattern": "\\d{10,12}"
+  },
+  {
+    "name": "place",
+    "pattern": "(\\bbrussels\\b|\\bzagreb\\b|\\blondon\\b|\\blisbon\\b|\\bamsterdam\\b|\\bseattle\\b)"
+  }
+]

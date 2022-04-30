@@ -1,0 +1,2146 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+    - hi there
+    - hello there
+    - greetings
+    - Hi
+    - helo
+    - Hi!
+    - Hi'
+    - Hi,
+    - Hi, bot
+    - Hieee
+    - Hieeeeeeeeeeeee
+    - Hola
+    - What is up?
+    - Whats up
+    - Whats up my bot
+    - Whats up?
+    - ayyyy whaddup
+    - ey boss
+    - I said, helllllloooooO!!!!
+    - Well hello there ;)
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - see ya
+    - buh bye
+    - Bye
+    - Bye bye
+    - adios
+    - adios?
+    - bye :P
+    - bye bot
+    - bye bye
+    - bye bye bot
+    - bye for now
+    - bye udo
+    - bye was nice talking to you
+    - bye!
+    - byee
+    - catch you later
+    - ciao
+    - cya
+    - farewell
+    - good bye
+    - good bye rasa bot!
+    - good night
+    - goodbye
+    - goodbye.
+    - goodnight
+    - gotta go
+    - ok Bye
+    - ok bye
+    - ok, bye
+    - ok.bye
+    - see u later
+    - see ya
+    - see you
+    - see you . bye
+    - take care
+    - then bye
+    - tlak to you later
+    - toodle-oo
+    - byr
+- intent: thank
+  examples: |
+    - thanks!
+    - thank you
+    - thanks a lot
+    - great thanks
+    - appreciate it
+    - cool thanks
+    - Cool. Thanks
+    - Great, thanks
+    - Thank you so much
+    - Thank's!
+    - Thanks bot
+    - Thanks for that
+    - Thanks!
+    - amazing, thanks
+    - cool thank you
+    - cool, thanks
+    - danke
+    - great thanks
+    - ok thanks
+    - ok thanks
+    - ok thanks!
+    - perfect thank you
+    - thank u
+    - thank you
+    - thank you anyways
+    - thanks
+    - thanks a bunch for everything
+    - thanks a lot
+    - thanks for the help
+    - thanks you
+    - thanks!
+    - thankyou
+    - thnks
+    - thx
+    - yes thanks
+    - thanks for your information
+    - thanks f
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - you are a bot right
+    - aren't you a bot
+    - Are you a bot?
+    - are you a BOT
+    - are you a bot?
+    - are you a chatbot
+    - are you a rasa bot?
+    - are you a real bot?
+    - are you a robot
+    - are you ai
+    - are you artificial
+    - are you artificial intelligence
+    - are you bot
+    - are you bot?
+    - are you rasa bot?
+    - are you real
+    - are you real lol
+    - are you really a bot
+    - are you robot
+    - are you sure that you're a bot?
+    - bot?
+    - cuz you are a bot
+    - i guess you are a chatbot
+    - oh are you chatbot?
+    - tell me, are you a bot?
+    - what are you, a bot?
+    - you are a robot
+    - you are ai
+    - you are chatbot
+    - you're a bot
+    - you robo
+    - real bot then?
+    - are you really a bbot?
+- intent: password_reset
+  examples: |
+    - need to reset my password
+    - need help resetting my password
+    - I can't reset my password
+    - need help with my password
+    - having issues resetting my password
+    - freaking password won't work
+    - reset my password
+    - password reset
+    - forgot my password and can't reset it
+    - uh password reset help please
+    - I'm having so many problems resetting my password
+    - Can you reset my password reset
+    - My pass word isn't working for me what do I do
+    - How can I reconfigure my pass word
+    - pass word reset?
+    - forgot my pass word again what now
+    - password help fix 
+    - show me how to set password again
+    - can you tell me how to change my password
+    - change pass word
+    - I forgot my password what can I do
+    - forgot my password help me reset it pls
+- intent: open_incident
+  examples: |
+    - I need to open an incident
+    - Can you open a case for me
+    - I have an issue I need to open a incident for
+    - open incident
+    - can you help me open a incident please
+    - I want to open a new incident
+    - I want to open a incident
+    - I'm having a weird issue.
+    - I'm having a problem
+    - I'm having a issue I need to open a incident for.
+    - I have a issue I need to open a case for.
+    - open an incident for aileen.mottern@example.com
+    - open an [urgent]{"entity": "priority", "value": "high"} issue
+    - I want to open an incident, but it's [low](priority) priority
+    - I need to open a helpdesk ticket. it's [really important]{"entity": "priority", "value": "high"}
+    - open an incident
+    - open an incedent
+    - i want to open an incident
+    - i wanna open a incident
+    - I want to open a ticket
+    - can I open a ticket
+    - pls help me open tix support
+    - ticket support incident open now can you do that for me
+- intent: help
+  examples: |
+    - I need help
+    - what can you help me with
+    - can you help me
+    - what can you do
+    - I need some help
+    - help me
+    - can you please help me
+    - problem
+    - big problem
+    - How can you help me
+    - How you help me?
+    - I need some help
+    - What are my options
+    - What are you able to do?
+    - What can I ask you?
+    - What can I do?
+    - What can you demo
+    - What can you do for me?
+    - What can you do?
+    - What can you tell me?
+    - What do you do
+    - anything els
+    - are there any other options?
+    - can I ask you anything else?
+    - can you do anything else?
+    - can you help me?
+    - come back
+    - cool! can I do something else here?
+    - hello what can you do for me
+    - help
+    - help me
+    - help please
+    - help pls
+    - help?
+    - hep me
+- intent: problem_email
+  examples: |
+    - my outlook application won't open
+    - I'm having issues with outlook.
+    - issues with outlook
+    - outlook application will not open
+    - there's a problem with my email
+    - something is broken with outlook
+    - I can't log in to my email
+    - can't log in to outlook
+    - my email won't let me log in
+    - i have a problem with my email
+    - can't get to slack
+    - i cant open my email
+    - i can't able to login
+    - I'm having trouble logging into my email
+    - can you help me with me with my email please
+    - what can you do about my email it's not working
+    - can you fix outlook for me I don't know what to do
+    - something isn't right with my e-mail
+    - can you help me with my e-mail account
+    - my internet mail isn't working
+    - outlook is showing me a weird message
+    - email isn't loading can you help
+- intent: inform
+  examples: |
+    - my email is test@example.com
+    - my email is abraham.lincoln@example.com
+    - name.name@example.com
+    - it is admin@example.com
+    - aileen.mottern@example.com
+    - [low](priority)
+    - [medium](priority)
+    - [high](priority)
+    - it should be a [low](priority) priority
+    - it should be [medium](priority)
+    - [escalated]{"entity": "priority", "value": "high"}
+    - [escalate]{"entity": "priority", "value": "high"}
+    - [super high](priority)
+    - john
+    - the priority is [high](priority)
+    - test@gmail.com
+    - xyz@example.com
+    - my email is ella@rasa.com
+    - abraham.lincoln@example.com
+    - steve
+    - sara@rasa.com
+    - [urgent]{"entity": "priority", "value": "high"}
+    - [critical]{"entity": "priority", "value": "high"}
+- intent: out_of_scope
+  examples: |
+    - what is the square root of 5
+    - I want to know the weather
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - what is the weather today
+    - what is the weather
+    - how old are you?
+    - add two plus two
+    - Hdjejene
+    - asd
+    - title
+    - how about the forecast
+    - foolish
+    - joke
+    - Can I get a hamburger?
+    - Can YouTube talk?
+    - Can you call me back ?
+    - Can you give me your datacenter's password
+    - Can you give me your datacenter's password?
+    - Can you make sandwiches?
+    - Can you please send me an uber
+- intent: incident_status
+  examples: |
+    - I want to check if my ticket has been closed
+    - what's the status of my incident?
+    - Has the incident been closed yet?
+    - Is my ticket in progress?
+    - What has happened with my open ticket?
+    - what's going on with the incident I opened?
+    - Do I have any open incidents at the moment?
+    - Can I check the status of my open tickets?
+    - Can I see the status of the ticket I opened?
+    - Check ticket status
+    - check incident status
+    - ok, try looking it up for abraham.lincoln@example.com
+    - look up ticket status for abel.tuter@example.com
+    - my ticket status
+    - What's the status of the ticket I opened?
+    - what's my ticket status
+    - how is my ticket going
+    - an updates on my incident ticket?
+    - I opened an issue last week how is it doing now
+    - can you check the status my email is sara@rasa.com
+    - has the ticket been closed yet?
+    - is my issue still open
+- intent: affirm
+  examples: |
+    - yes
+    - yes please
+    - yes I would
+    - please do
+    - yup
+    - yep
+    - that's right
+    - indeed
+    - Yes, please
+    - yeah
+    - sure
+    - yes thanks
+    - That would be great
+    - YES
+    - YUP
+    - Yea
+    - Yeah
+    - Yeah sure
+    - Yep
+    - Yep that's fine
+    - Yep!
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - Yes, I accept
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - no thanks
+    - not that one
+    - don't use that
+    - please no
+    - no don't do that
+    - no, use abraham.lincoln@example.com
+    - Neither
+    - Never
+    - Nevermind
+    - No thank you
+    - No, not really.
+    - No, thank you
+    - No.
+    - Nopes
+    - Not really
+    - absolutely not
+    - decline
+    - definitely not
+    - deny
+    - na
+    - nah
+    - nah I'm good
+- intent: human_handoff
+  examples: |
+    - I want a human
+    - can I speak to an agent
+    - real agent please
+    - real human
+    - chat with a live agent
+    - give me a person please
+    - i want to talk to a human
+    - can you transfer me to a human?
+    - handoff
+    - talk to a human
+    - i need to talk to a human
+    - human please
+    - i need help from a human
+    - i need help from a real human
+    - give me a human
+    - i want to talk to human
+    - i want a representative
+    - i want to talk to a person
+    - I don't wanna talk to a bot
+    - I dont like to talk to a machine
+    - I want to talk to a human
+    - I want to talk to the founders
+    - are there also humans working for your company?
+    - can I speak to a person?
+    - can i please speak to a human?
+    - can you forward me to your team
+    - can you please connect me to a real rasa employee?
+    - can you put me in touch with a human?
+    - do you have human support ?
+    - gimme a proper human
+    - give me a human now
+    - human handoff
+    - i dont wanna talk to a bot
+    - i want to speak to a real person
+    - i want to speak to customer service
+    - i want to talk to a human
+    - i want to talk to a person
+    - i want to talk to human
+    - i want to talk to someone at rasa
+    - i want to talk to someone else
+    - i want to talk to someone who is smarter than you
+    - i would like to speak to a person
+    - i'd rather speak with a real rasa employee
+    - id like to talk to a real rasa employee
+    - let me speak with a real person please
+    - let me talk to a human
+    - let me talk to a real person
+    - please give me a human
+    - service agent
+    - someone from customer care
+    - speak to a real person
+    - talking to a bot is stupid
+    - that's annoying I'd like to speak to someone real
+    - thats not helping, can i talk to human?
+    - wrong i want to speak to a human
+    - can i speak to human
+    - can i speak to your human
+    - i want to chat with human
+    - How do I talk to a human
+    - talk with a human
+    - Can i talk to a human instead
+    - nevermind.... you're not human ... I need to talk to a live person
+    - Can you get a human to assist me?
+    - Can i talk to a human?
+    - Can I talk to a human
+    - Can I speak to a human?
+    - can i speak to a human
+    - no, i want to talk to human
+    - can you hand a conversation over to a human?
+    - can I talk to human?
+    - can I talk to human
+    - talk to human
+    - i want human :(
+    - can i talk to human
+    - i want to talk to a human
+    - i want to speak to human
+    - can i talk to a real person?
+    - connect me to a real person
+    - I need a real person
+    - can i took with a real person
+    - let me speak to a real person
+    - let me speak to a real person please
+    - i want to talk to a real person
+
+############################################
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
+    
+- intent: greet_ar
+  examples: |
+    - Ahla
+    - ahla bik  
+    - Salem 
+    - Aslema 
+    - salemou 3alykom 
+    - sbe7 5ir 
+    - sbe7 nour 
+    - slm
+    - sbeh el5ir
+    
+
+- intent: goodbye_ar
+  examples: |
+    - bye 
+    - fileman 
+    - beslema 
+    - by 
+
+- intent: affirm_ar 
+  examples: |
+    - ey 
+    - shih ey 
+    - ok 
+
+- intent: deny_ar
+  examples: |
+    - le 
+    - manich mwefe9 
+    - moch hkeka 
+    - le3 
+    - lele 
+    - mh2ah 
+    
+- intent: mood_ar
+  examples: |
+    - lebes hamdoulah 
+    - lbes aaychek
+    - nehmdouh 
+    - hamdoulah 
+    - cava 
+    - lbes 
+    - hmdlh merci
+    - ca va 
+    - cava o inti?
+### les question fr/ar/an:   
+
+- intent : compte_bancaire_fr
+  examples: |
+    - Comment ouvrir un compte bancaire?
+    - Comment ouvrir un compte bancaire en Ligne?
+    - Quels documents pour ouvrir un compte bancaire?
+    - ouvrir un nouveau compte
+    - procedure de creation
+    - documents pour ouvrir un compte
+    - Comment ouvrir un compte joint?
+    - Quelles sont les pieces justificatives demandees pour ouvrir un compte joint?
+    - Comment ouvrir un compte bancaire individuel
+        
+- intent : compte_bancaire_an
+  examples: |
+    - How to open a bank account?
+    - How to open a bank account online?
+    - Which documents to open a bank account?
+    - open a new account
+    - creation procedure
+    - documents to open an account
+    - How to open a joint account?
+    - What supporting documents are required to open a joint account?
+    - How to open an individual bank account
+
+    
+- intent : compte_bancaire_ar
+  examples: |
+    - kifch n7el compte bancaire? 
+    - kifch nhel compte bancaire? 
+    - kifch na3mel compte f banque? 
+    - kifch n3mel compte ?
+    - chnowa lezmni bch n7el compte?
+    - Lwre9 lezmni bech n7el compte ?
+    - nheb compte jdid ?
+    - n7eb n7el compte jdid?    
+#####################################################################
+- intent: types_comptes_fr
+  examples: |
+   - Quels sont les types de comptes bancaires que vous proposez 
+   - types de comptes 
+   - types de comptes bancaires 
+   - Les differents types de comptes bancaires
+   - type comptes
+   
+- intent: types_comptes_an
+  examples: | 
+    - What types of bank accounts do you offer?
+    - types of accounts
+    - types of bank accounts
+    - The different types of bank accounts
+    - type of accounts  
+- intent: types_comptes_ar
+  examples: | 
+    - chnoma anw3e les comptes bancaire ? 
+    - anwe3 les comptes bancaire ? 
+    - chnoma les types mt3 les comptes ? 
+    - anwa3 les comptes bancaire
+#########################################################################  
+- intent: cloture_comptes_fr
+  examples: |  
+    - Comment clôturer mon compte
+    - Comment clôturer un compte bancaire 
+    - cloture compte
+    - procedure de cloture 
+    - fermeture d'un compte
+    - comment fermer mon compte?
+    - procedure pour la fermeture de mon compte  
+    
+- intent: cloture_comptes_an
+  examples: |    
+    - How to close my account
+    - How to close a bank account
+    - account closure
+    - closing procedure
+    - closing an account
+    - how can I close my account?
+    - procedure for closing my account
+
+- intent: cloture_comptes_ar
+  examples: |    
+    - kifch nsker compte mt3i?
+    - nheb nsker compte 
+    - kifch na3mel bch nsaker compte 
+      
+######################################################################   
+- intent: carte_bancaire_fr
+  examples: |  
+    - comment obtenir une carte bancaire?
+    - comment avoir une carte bancaire ?
+    - quelles sont les conditions pour avoir une carte bancaire ? 
+    - j'ai besoin d'une carte bancaire 
+
+- intent: carte_bancaire_an
+  examples: |
+    - how to get a credit card?
+    - how to get a credit card?
+    - what are the conditions for having a bank card?
+    - I need a credit card
+
+- intent: carte_bancaire_ar
+  examples: |
+    - kifch n3mel carte bancaire ?
+    - nheb na3mel carte bancaire ?
+    - nest7a9 na3mel carte bancaire ?
+    - chnowa lezmni na3mel bech na5ou carte bancaire ? 
+
+#######################################################################
+- intent: relevés_bancaire_fr
+  examples: |
+    - Comment retrouver des anciens relevés de compte ?
+    - comment avoir mes anciens relevés bancaires ?
+    - comment avoir mes relevés de compte ? 
+    - comment obtenir mes relevés bancaires 
+    
+- intent: relevés_bancaire_an
+  examples: |  
+   - How to find old account statements?
+   - how can I get my old bank statements?
+   - how do I get my account statements?
+   - how to get my bank statements
+   
+- intent: relevés_bancaire_ar
+  examples: | 
+   - kifch nal9a des relevés bancaires 9dom ?
+   - kifch njem nejbed relevés bancaires 9dom ?
+   - kifch njem nal9a relevé 9dim ?
+   
+   
+
+######################################################### 
+- intent: relevés_bancaire_droit_fr 
+  examples: |
+   - Est-ce légal de demander un relevé de compte bancaire ? 
+
+- intent: relevés_bancaire_droit_fr 
+  examples: |  
+    - Is it legal to ask for a bank account statement?
+- intent: relevés_bancaire_droit_ar
+  examples: | 
+    - njem nes2el 3ala relevé compte mt3i ?
+    - nejem nesel 3ala relevé compte bancaire ?   
+#####################################################################
+- intent: blocked_card
+  examples: |
+    - J'ai bloqué ma carte après avoir composé plusieurs codes faux. Que faire ?
+    - ma carte ne marche plus, elle est verouillée suite à plusieurs essais d'echec
+    - carte bloquée
+    - codes faux
+
+- intent: choix_debit_card
+  examples: |
+    - Est-il possible de choisir le type de débit de ma carte ?
+    - débit carte 
+    - choisir debit de carte bancaire
+
+- intent: carte_volé_perdu
+  examples: |
+    - ma carte bancaire est volée, que faire svp?
+    - voler carte bancaire
+    - on m'a volé ma carte bancaire, aidez-moi 
+    - je ne trouve plus ma carte bancaire, j'ai besoin de votre aide s'il vous plait
+    - J'ai perdu ma carte à l'étranger : que faire ?
+
+- intent: carte_defectueuse
+  examples: |
+    - ma carte bancaire defectueuse , que faire svp?
+    - ma carte bancaire ne marche pas
+    - ma carte est non fonctionelle, aidez-moi 
+    - ma carte ne fonctionne plus, j'ai besoin de votre aide s'il vous plait
+    - le fonctionnement de ma carte est non valide 
+
+- intent: carte_enfant
+  examples: |
+    - Mon enfant est mineur : peut-il avoir une carte bancaire ?
+    - mon petit fils veut avoir un compte
+    - ma fille veut avoir un compte bancaire
+    - je veux ouvrir un compte bancaire à mon fils 
+
+- intent: carte_sans_contact
+  examples: |
+    - Qu'est-ce que le paiement sans contact ?
+    - j'ai entendu parler du paiement sans contact
+    - c'est quoi la fonctionnalité sans contact de la carte
+
+- intent: carte_dispo
+  examples: |
+    - Quelles sont les cartes bancaires disponibles ?
+    - que proposez vous pour les cartes 
+    - quelles sont les types de carte bancaires disponnible svp?
+
+- intent: delai_reception_code_carte
+  examples: |
+    -  Quand recevrai-je le code de ma nouvelle carte bancaire?
+    - je n'ai pas encore reçu le code de ma carte
+    - quand allez-vous m'envoyer le code de ma carte
+    - ça fait [1234567891](day_number) jours que j'attends mon code de carte 
+    - Dans combien de temps vais-je recevoir ma carte ?
+
+
+- regex: day_number
+  examples: |
+    - \d{10,12}
+
+- intent: deuxieme_carte
+  examples: |
+    - Ai-je la possibilité d’obtenir une deuxième carte bancaire ?
+    - Puis-je disposer d'une seconde carte bancaire pour mon compte joint ?
+
+- intent: changement_carte
+  examples: |
+    - Comment changer la gamme de ma carte bancaire ?
+    - puis-je opter pour une nouvelle carte bancaire
+    - je veux faire un changement de carte 
+
+- intent: cout_carte
+  examples: |
+    - quelles sont les prix des cartes ?
+    - quels sont les tarifs des cartes ?
+    - à combien sont les cartes ?
+    - donnez moi vos tarifs! 
+
+- intent: oui_details_prix
+  examples: |
+    - donnez-moi plus de détails sur les [tarifs] {"entity": prix_cartes}
+    - oui, oui je veux bien les détails des [prix] {"entity": prix_cartes}
+    - évidemment j'en veux des détails sur vos [tarifs] {"entity": prix_cartes} 
+    - oui cela m'importe
+
+- intent: non_details_prix
+  examples: |
+    - non merci 
+    - je n'ai pas besoin de ça 
+    - je ne veux pas les prix 
+
+- intent: supp_ajout_option_carte
+  examples: |
+    - Comment supprimer une option sur ma carte bancaire ?
+    - Comment ajouter une option sur ma carte bancaire ?
+    - je veux avoir plus d'options
+    - je veux avoir moins d'options
+    - je peux supprimer une fonctionnalité de ma carte
+    - enlever et retirer une fonction de ma carte
+
+- intent: retirement_carte
+  examples: |
+    - Comment supprimer ma carte bancaire ?
+    - Comment enlever ma carte bancaire ?
+    - je ne veux plus de ma carte actuelle
+    - je peux supprimer ma carte
+    - Comment résilier ma carte bancaire ?
+    - retirement carte
+
+- intent: chang_adresse_reception_carte
+  examples: |
+    - Comment changer d'adresse de réception de ma carte bancaire ?
+    - je ne veux plus recevoir ma carte sur l'adresse que j'ai fournie
+    - je peux changer l'adresse de réception de ma carte bancaire ?
+    - je peux changer le lieu de réception de ma carte bancaire ?
+
+    
+- intent:  payement_plusieurs_fois
+  examples: |
+    - Puis-je payer en plusieurs fois avec ma carte ?
+    - le paiement sur plusieurs fois est-il possible avec la carte ?
+    - y a t-il l'option de paiement sur plusieurs étapes avec ma carte?
+
+- intent: frais_nouvelle_carte
+  examples: |
+    - Quels sont les frais lors d'une commande de nouvelle carte ?
+    - je veux savoir le prix de commande de nouvelle carte 
+    - combien coûte le prix de commande de nouvelle carte 
+
+
+- intent: unknown_fonctionnalité_demande_conseiller
+  examples: |
+    - Mon paiement internet est bloqué : que faire ?
+    - Comment personnaliser le visuel de ma carte bancaire ?
+    - est ce que je peux modifier le look de ma carte
+    - je peux modifier l'apparance de ma carte
+    - Quels sont les délais de prise en compte ?
+    - Comment préparer et suivre votre dossier ?
+    - Vais-je recevoir une confirmation de la prise en compte de mes nouvelles coordonnées ?
+
+- intent: carte_avalé_distributeur
+  examples: |
+    - Ma carte a été avalée par un distributeur : que faire ?
+    - La carte a été absorbée par un guichet automatique : que dois-je faire ? 
+    
+- intent: obtenir_carte
+  examples: |
+    - Comment obtenir une carte bancaire ?  
+    - quelles sont les procédures d'avoir une carte bancaire
+    - citez-moi les etapes pour avoir une carte bancaire 
+    
+- intent: oublie_code_card
+  examples: |
+    - Que faire en cas d'oublie de mon code de carte bancaire ?
+    - je ne me souviens plus du code de ma carte 
+    - j'ai perdu le code de ma carte 
+    - je ne me remémore pas du code de ma carte 
+
+- intent: payement_refusé
+  examples: |
+    - Pourquoi mon paiement a été rejeté ?   
+    - Mon paiement internet est bloqué : que faire ?
+    - Pourquoi mon paiement par carte est refusé ?
+    - le paiement par carte n'es plus accepté
+
+- intent: definition_verr_temp_carte
+  examples: |
+    - definir le verouillage temporaire de carte
+    - Qu'est-ce que le verrouillage temporaire de la carte ?
+    - c quoi le verouillage temporaire de la carte?
+    - qu'ententez vous de la désactivation ephémère de la carte?
+
+- intent: deverr_carte
+  examples: |
+    - Comment déverrouiller sa carte ?
+    - je veux réactiver ma carte  
+
+- intent: transactions_carte_verr
+  examples: |
+    - Pourquoi des transactions ont été débitées sur ma carte alors qu'elle a été verrouillée ? 
+    - Comment les opérations a-t-elle été générées alors que ma carte a été bloquée ?
+
+- intent: activer_nv_carte
+  examples: |
+    - Comment activer sa nouvelle carte qui est verrouillée ?
+    - l'activation de carte 
+
+- intent: carte_temps_verrouillee
+  examples: |
+    - Combien de temps ma carte peut rester verrouillée ?
+    - période de verouillage ou desactivation de carte 
+    - combien dure le vérouillage de carte
+
+- intent: diff_ver_opp
+  examples: |
+    - Quelle différence y a-t-il entre le verrouillage et la mise en opposition d'une carte ?
+    - difference verrouillage opposition
+    
+
+########## ENGLISH PART #################
+
+- intent: blocked_card_ang
+  examples: |
+    - I blocked my card after entering several wrong codes. What to do ?
+    - my card no longer works, it is locked following several failed attempts
+    - blocked card
+    - wrong codes
+
+- intent: choix_debit_card_ang
+  examples: |
+    - Is it possible to choose the type of debit for my card?
+    - debit card
+    - choose credit card debit
+
+- intent: carte_volé_perdu_ang
+  examples: |
+    - my credit card is stolen, what should I do?
+    - steal credit card
+    - my credit card has been stolen, help me
+    - I can't find my bank card anymore, I need your help please
+    - I lost my card abroad: what should I do?
+
+- intent: carte_defectueuse_ang
+  examples: |
+    - my bank card is defective, what should I do?
+    - my bank card does not work
+    - my card is not functional, help me
+    - my card no longer works, I need your help please
+    - the operation of my card is invalid
+
+- intent: carte_enfant_ang
+  examples: |
+    - My child is a minor: can he have a bank card?
+    - my grandson wants to have an account
+    - my daughter wants to have a bank account
+    - I want to open a bank account for my son
+
+- intent: carte_sans_contact_ang
+  examples: |
+    - What is contactless payment?
+    - I heard about contactless payment
+    - what is the contactless functionality of the card
+
+- intent: carte_dispo_ang
+  examples: |
+    - What credit cards are available?
+    - what do you offer for the cards
+    - what are the types of credit card available please?
+
+- intent: delai_reception_code_carte_ang
+  examples: |
+    - When will I receive the code for my new bank card?
+    - I have not yet received the code for my card
+    - when will you send me the code of my card
+    - I've been waiting for my card code for [1234567891](day_number) days
+    - How soon will I receive my card?
+
+- intent: deuxieme_carte_ang
+  examples: |
+    - Can I get a second bank card?
+    - Can I have a second bank card for my joint account?
+
+- intent: changement_carte_ang
+  examples: |
+    - How do I change the range of my bank card?
+    - can I opt for a new bank card
+    - I want to make a change of card
+
+- intent: cout_carte_ang
+  examples: |
+    - how much do the cards cost?
+    - what are the prices of the cards?
+    - what are the card prices?
+    - how much are the cards?
+    - give me your rates!
+
+- intent: oui_details_prix_ang
+  examples: |
+    - give me more details about the [tariffs] {"entity": prix_cartes}
+    - yes, yes I would like the details of the [price] {"entity": price_cards}
+    - obviously I want details about your [tariffs] {"entity": prix_cartes}
+    - yes I do care
+
+- intent: non_details_prix_ang
+  examples: |
+    - no thanks
+    - i don't need this
+    - I don't want the prices
+
+- intent: supp_ajout_option_carte_ang
+  examples: |
+    - How do I delete an option on my credit card?
+    - How do I add an option to my credit card?
+    - I want to have more options
+    - I want to have less options
+    - I can remove a feature from my card
+    - remove and remove a function from my map
+
+- intent: retirement_carte_ang
+  examples: |
+    - How do I delete my credit card?
+    - How do I remove my credit card?
+    - I no longer want my current card
+    - I can delete my card
+    - How do I cancel my bank card?
+    - withdraw card
+
+- intent: chang_adresse_reception_carte_ang
+  examples: |
+    - How do I change my credit card reception address?
+    - I no longer want to receive my card at the address I provided
+    - can I change the reception address of my bank card?
+    - can I change the place of receipt of my bank card?
+
+- intent: payement_plusieurs_fois_ang
+  examples: |
+    - Can I pay in installments with my card?
+    - is it possible to pay over several installments with the card?
+    - is there the option of payment on several stages with my card?
+
+- intent: frais_nouvelle_carte_ang
+  examples: |
+    - What are the costs when ordering a new card?
+    - I want to know the price of ordering a new card
+    - how much is the new card order price
+
+
+- intent: unknown_fonctionnalité_demande_conseiller_ang
+  examples: |
+    - My internet payment is blocked: what should I do?
+    - How can I personalize the visual of my credit card?
+    - can I change the look of my card
+    - I can change the appearance of my cate
+    - How long does it take to be considered?
+    - How do I prepare and track my application?
+    - Will I receive confirmation that my new contact information has been taken into account?
+
+
+- intent: carte_avalé_distributeur_ang
+  examples: |
+    - My card has been swallowed by an ATM: what should I do?
+    - The card has been absorbed by an ATM: what should I do?
+
+
+- intent: obtenir_carte_ang
+  examples: |
+    - How to get a credit card?
+    - what are the procedures for having a bank card
+    - give me the steps to get a bank card
+    
+- intent: oublie_code_card_ang
+  examples: |
+    - What should I do if I forget my credit card code?
+    - I do not remember the code of my card
+    - I have lost my card code
+    - I do not remember the code of my card
+
+- intent: paymenent_refusé_ang
+  examples: |
+    - Why was my payment rejected?
+    - My internet payment is blocked: what should I do?
+    - Why is my card payment refused?
+    - payment by card is no longer accepted
+
+- intent: definition_verr_temp_carte_ang
+  examples: |
+    - set temporary card lock
+    - What is the temporary card lock?
+    - what is the temporary locking of the card?
+    - what do you mean by the temporary deactivation of the card?
+
+- intent: deverr_carte_ang
+  examples: |
+    - How to unlock his card?
+    - I want to reactivate my card
+
+- intent: transactions_carte_verr_ang
+  examples: |
+    - Why have transactions been debited from my card when it has been locked?
+    - How were the transactions generated when my card was blocked?
+
+- intent: activer_nv_carte_ang
+  examples: |
+    - How to activate his new card which is locked?
+    - card activation
+
+- intent: carte_temps_verrouillee_ang
+  examples: |
+    - How long can my card remain locked?
+    - period of locking or card deactivation
+    - how long the card lock lasts
+
+- intent: diff_ver_opp_ang
+  examples: |
+    - What is the difference between locking and blocking a card?
+    - opposition locking difference  
+   
+- intent: liste_virrement 
+  examples: |
+    - Comment afficher la liste de mes bénéficiaires enregistrés?
+
+- intent: list_virrement_an 
+  examples: |
+    - How do I view the list of my registered beneficiaries?
+
+- intent: annuler_modifier_virement 
+  examples: |
+    - Comment annuler ou modifier un virement classique ou international ?
+
+- intent: cancel_modify_classic_international_transfer_an 
+  examples: |
+    - How do I cancel or modify a classic or international transfer ?
+
+- intent: modifier_plafond_virement  
+  examples: |
+    - Comment modifier mon plafond de virement ?
+    
+- intent: How_change _transfer_limit
+  examples: |
+    - How can I change my transfer limit?
+
+- intent: connaitre_expediteur_virement  
+  examples: |
+    - Comment connaître l'expéditeur d'un virement ?
+
+- intent: findout_sent_wire_transfer
+  examples: |
+    - How do I find out who sent a wire transfer?
+
+- intent: effectuer_virement_espace_client  
+  examples: |
+    -Comment effectuer un virement depuis mon espace client ? 
+
+- intent: make_transfer_from_customer_area 
+  examples: |
+    -How do I make a transfer from my customer area ? 
+
+- intent: effectuer_virement_livret_epargne  
+  examples: |
+    -Comment effectuer un virement sur mon livret d'épargne ?
+    
+- intent: transfer_money_savings_account  
+  examples: |
+    -How do I transfer money to my savings account ?
+
+- intent: faire_virement_etranger 
+  examples: |
+    -Comment faire un virement vers l'étranger ?
+
+- intent: make_a_transfer_abroad
+  examples: |
+    -How to make a transfer abroad?
+
+- intent: pays_zone_SEPA
+  examples: |
+    -Quels sont les pays de la zone SEPA ?
+
+- intent: countries_SEPA_zone
+  examples: |
+    -Which countries are in the SEPA zone ?
+
+- intent: indiquer_montant_virement
+  examples: |
+    -Comment indiquer le montant d'un virement ?
+
+- intent: enter_amount_transfer
+  examples: |
+    -How do I enter the amount of a transfer?
+
+- intent: obtenir_justificatif_virement
+  examples: |
+    -Comment obtenir un justificatif de virement ?
+
+- intent: reference_reason_transfer
+  examples: |
+    -How to indicate a reference or a reason for a transfer ?
+
+- intent: remettre_place_virement
+  examples: |
+    -Comment remettre en place un virement ?
+
+- intent: putback_transfer
+  examples: |
+    -How to put back a transfer ?
+
+- intent: modifier_supprimer_beneficiaire_virement
+  examples: |
+    -Comment modifier ou supprimer un bénéficiaire de virement ?
+    
+- intent: modify_delete_beneficiary_transfer
+  examples: |
+    -How to modify or delete a beneficiary of a transfer?
+
+- intent: verifier_IBAN_RIB_destinataire_virement 
+  examples: |
+    -Comment vérifier l'IBAN ou le RIB d'un destinataire de virement  ?
+
+- intent: verify_IBAN_RIB_transfer_recipient
+  examples: |
+    -How can I verify the IBAN or RIB of a transfer recipient  ?
+
+- intent: un_virement_echu
+  examples: |
+    -Qu'est-ce qu'un virement échu ?
+
+- intent: matured_transfer
+  examples: |
+    -What is a matured transfer?
+
+- intent: SEPA_credit_transfer
+  examples: |
+    -What is a SEPA credit transfer?
+
+- intent: le_virement_SEPA
+  examples: |
+    -Qu'est-ce que le virement SEPA ?
+
+- intent: refuse_bloque
+  examples: |
+    -Que faire si mon virement a été refusé / bloqué ?
+
+- intent: refused_blocked
+  examples: |
+    -What should I do if my transfer has been refused/blocked ?
+
+- intent:  delai_SEPA_classique_compte_destinataire
+  examples: |
+    -Quel est le délai de réception d'un virement SEPA classique sur le compte destinataire?
+
+- intent:  periodoftime_receive_traditional_SEPA_transfer_recipient
+  examples: |
+    -How long does it take to receive a traditional SEPA transfer on the recipient's account?
+
+- intent:  delai_reception_virement_compte
+  examples: |
+    -Quel est le délai de réception d'un virement sur mon compte ?
+
+- intent:  periode_receive_transfer_personnal_account
+  examples: |
+    -How long does it take to receive a transfer on my account ?
+
+- intent:  limite_montant_virements
+  examples: |
+    -Quelle est la limite du montant des virements ?
+ 
+- intent:  limit_amount_transfers
+  examples: |
+    -What is the limit of the amount of transfers ?
+    
+- intent:  frais_reçu_virement_international
+  examples: |
+    -Quels sont les frais lorsque je reçois un virement international ?
+   
+- intent:  fees_receive_international_transfer
+  examples: |
+    -What are the fees when I receive an international transfer ? 
+
+- intent:  frais_virement_SEPA_France_pays_zone_euro
+  examples: |
+    -Y a-t-il des frais pour un virement SEPA vers la France ou vers un pays de la zone euro ?
+    
+- intent:  charges_SEPAtransfer_France_country_euro_zone 
+  examples: |
+    -Are there any charges for a SEPA transfer to France or to a country in the euro zone  ?
+        
+- intent:  demander_remboursement_frais_irement
+  examples: |
+    -Comment demander le remboursement de frais de virement?
+         
+- intent:  transfer_fees_request
+  examples: |
+    -How do I request a refund of transfer fees?
+           
+- intent:  verrification_virrement_Appli
+  examples: |
+    -Je n'arrive pas à effectuer un virement depuis l'Appli: que faire?
+    -je veux faire un virement bancaire depuis l'Appli:comment?
+             
+- intent:  verrification_Appli_transfer
+  examples: |
+    -I can't make a transfer from the App: what should I do?
+              
+- intent:  delai_traitement_virement_etranger
+  examples: |
+    -Quel est le délai de traitement pour un virement à l'étranger ?
+    -le délai de traitement pour un virement à l'étranger s'il vous plait ?
+               
+- intent:  deadline_international_tarnsfer
+  examples: |
+    -What is the processing time for an international transfer ?
+                  
+- intent:  erreur_coordonnees_beneficiaire_virement_valide
+  examples: |
+    -J'ai fait une erreur sur les coordonnées de mon bénéficiaire et mon virement a été validé: que faire?
+    -j'ai une erreur sur les coordonnées de mon bénéficiaire ?
+                                   
+- intent:  error_beneficiary_transfer_validated
+  examples: |
+    -I made a mistake on the details of my beneficiary and my transfer was validated: what should I do?
+                  
+- intent:  beneficiaire_non_ajoutee
+  examples: |
+    -Je n'arrive pas à ajouter un bénéficiaire: que faire?
+    -j'ai un probléme je ne peut pas ajouter un bénéficiaire ?
+                    
+- intent:  add_beneficiary
+  examples: |
+    -I can't add a beneficiary: what should I do?
+                  
+- intent:  faire_virement_pays_non_IBAN
+  examples: |
+    -Comment faire un virement vers un pays qui n'a pas d'IBAN ?
+                      
+- intent:  make_transfer_country _not_IBAN
+  examples: |
+    -How to make a transfer to a country that does not have an IBAN ?
+                  
+- intent:  les_frais_virements_internationaux
+  examples: |
+    -Quels sont les frais sur les virements internationaux ?
+                     
+- intent:  fees_international_transfers
+  examples: |
+    -What are the fees on international transfers ?
+                  
+- intent:  envoyer_argent_SMS
+  examples: |
+    -Comment envoyer de l'argent par SMS ?
+                   
+- intent:  send_money_SMS
+  examples: |
+    -How to send money by SMS ?
+                  
+- intent:  annuler_modifier_virement_permanent
+  examples: |
+    -Comment annuler ou modifier un virement permanent ?
+                      
+- intent:  cancel_modify_permanent_transfer
+  examples: |
+    -How do I cancel or modify a standing order ?
+                  
+- intent:  augmenter_plafond_virement_comptes_mineur
+  examples: |
+    -Comment augmenter le plafond de virement sur les comptes du titulaire mineur?
+                     
+- intent:  increase_transfer_limit_minor
+  examples: |
+    -How can I increase the transfer limit on the minor's accountsr?
+                  
+- intent:  effectuer_virement_bancaire_international
+  examples: |
+    -Comment effectuer un virement bancaire international?
+                     
+- intent:  make_international_bank_transfer
+  examples: |
+    -How to make an international bank transfer?
+                  
+- intent:  temps_prennent_virements_bancaires_internationaux 
+  examples: |
+    - Combien de temps prennent les virements bancaires internationaux ?
+                  
+- intent:  time_international_bank_transfer_takes 
+  examples: |
+    - How long do international bank transfers take ?
+                      
+- intent:  international_bank_transfer_time_cost 
+  examples: |
+    -How much does an international bank transfer cost ?
+                
+- intent:  coute_virement_bancaire_international
+  examples: |
+    -Combien coûte un virement bancaire internationalx ?
+                  
+- intent:  emplacement_virement_bancaire_international
+  examples: |
+    -Où puis-je envoyer un virement bancaire international ?
+                     
+- intent:  place_send_international_bank_transfer
+  examples: |
+    -Where can I send an international bank transfer ?
+                  
+- intent:  Quand_beneficiaire_recevra_irement_bancaire
+  examples: |
+    -Quand le bénéficiaire recevra-t-il le virement bancaire ?
+                     
+- intent:  receive_bank_transfer_notyet
+  examples: |
+    -Why hasn't the beneficiary received the bank transfer ?
+                    
+- intent:  When_beneficiary_receive_bank_transfer
+  examples: |
+    -When will the beneficiary receive the bank transfer ?
+                  
+- intent:  type_virement_modifier_annuler
+  examples: |
+    -Puis-je annuler un virement bancaire?
+                  
+- intent:  beneficiaire_reçu_virement_bancaire
+  examples: |
+    -Pourquoi le bénéficiaire n'a-t-il pas reçu le virement bancaire?
+                  
+- intent:  limite_maximale_montant_envoyee
+  examples: |
+    -Y a-t-il une limite maximale sur le montant que je peux envoyer?
+                    
+- intent:  maximum_limit_amount_can_send
+  examples: |
+    -Is there a maximum limit on the amount I can send?
+                  
+- intent:  code_BIC_Swift
+  examples: |
+    -Qu'est-ce qu'un code BIC ou Swift?
+                      
+- intent:  cd_BC_Swift_an
+  examples: |
+    -What is a BIC or Swift code?
+                  
+- intent:  code_IBAN
+  examples: |
+    -Qu'est-ce qu'un IBAN ?
+                     
+- intent:  code_IBAN_an
+  examples: |
+    -What is an IBAN?
+                        
+- intent:  cancel_bank_transfer
+  examples: |
+    -Can I cancel a bank transfer?
+- intent: paiement_sans_contact
+  examples: |
+    - Comment activer ou désactiver le paiement sans contact  ?
+
+- intent: contestation_de_paiement
+  examples: |
+    - Comment se passe le remboursement suite à une contestation de paiement ?
+
+- intent: paiement_carte_bancaire
+  examples: |
+    - Comment contester un paiement effectué avec ma carte bancaire ?
+
+- intent: modifier_les_plafonds
+  examples: |
+    - Comment modifier les plafonds de ma carte bancaire ?
+
+- intent: durée_validité_augmentation
+  examples: |
+    - Quelle est la durée de validité d'une augmentation exceptionnelle de paiement ?
+ 
+- intent: temps_de_remboursement_contestation
+  examples: |
+   - Dans combien de temps vais-je être remboursé suite à une contestation de paiement ?
+
+- intent: choisir_code_secret
+  examples: |
+   - Est-ce que je peux choisir le code secret de ma carte bancaire ?
+
+- intent: rechercher_prélèvement
+  examples: |
+   - Comment rechercher un prélèvement ?
+
+- intent: un_créancier_un_prélèvement
+  examples: |
+   - Comment remettre en place un créancier/un prélèvement ?
+
+- intent: arrêter_prélèvement
+  examples: |
+   - Comment arrêter un prélèvement ?
+
+- intent: contester_prélèvement
+  examples: |
+   - Comment contester un prélèvement ?
+
+- intent: opposition_prélèvement
+  examples: |  
+   - Comment faire opposition à un prélèvement SEPA ?
+
+- intent: mettre_en_place_prélèvement
+  examples: |  
+   - Comment mettre en place un prélèvement ?
+
+- intent:  modifier_prélèvement 
+  examples: |
+   - Comment modifier un prélèvement ?
+
+- intent: suivre_prelevement
+  examples: |
+   - Comment suivre mes prélèvements ?
+
+- intent: avant_prélèvement
+  examples: | 
+   - Est-on prévenu avant un prélèvement ?
+
+- intent: conséquences_compte_non_provisionné
+  examples: | 
+   - Lors d’un prélèvement quelles sont les conséquences d’un compte non provisionné ?
+
+- intent: prélèvement_SEPA
+  examples: | 
+   - Qu'est-ce qu'un prélèvement SEPA ?
+
+- intent: frais_relatifs_aux_prélèvements
+  examples: | 
+   - Quels sont les frais relatifs aux prélèvements  ?
+
+- intent: rejet_prelevement
+  examples: | 
+   - Comment faire pour demander le non rejet d'un prélèvement à venir ?
+
+- intent: prélèvements_récurrents
+  examples: |
+   - J'ai remarqué des prélèvements récurrents suspects : que faire ?
+
+- intent : annuler_contestation_prélèvement
+  examples: |
+   - Comment annuler une contestation de prélèvement ?
+   
+- intent : contestation_prélèvement
+  examples: |   
+   - Qu'est-ce qu'une contestation de prélèvement ?
+
+- intent : frais_rejet
+  examples: |   
+   - Quand des frais de rejet sont-ils appliqués ?
+
+- intent : compte_preleve2_fois
+  examples: |   
+   - Mon compte a été prélevé deux fois pour la même opération, que faire ?
+
+- intent : contactless_feature
+  examples: | 
+   - How to activate or desactivate contactless payment ?
+
+- intent : payment_dispute
+  examples: | 
+   - What happens to the refund after a disputed payment ?
+
+- intent : bank_card_payment
+  examples: | 
+   - How can I dispute a payment made with my bank card ?
+
+- intent : change_the_limits
+  examples: | 
+   - How can I change the limits on my bank card ?
+
+- intent : increase_validity_period
+  examples: | 
+   - How long is an exceptional payment increase valid ?
+
+- intent : refund_time_dispute
+  examples: | 
+   - How long will it take to get my money back after a disputed payment ?
+
+
+- intent : choose_secret_code
+  examples: | 
+   - Can I choose the secret code of my bank card ?
+
+- intent : search_debit
+  examples: | 
+   - How to search for a direct debit ?
+
+- intent : a_creditor_a_debit
+  examples: | 
+   - How do I reinstate a creditor/direct debit ?
+ 
+
+- intent : stop_direct_debit
+  examples: | 
+   - How to stop a direct debit ?
+
+
+- intent : dispute_direct_debit
+  examples: | 
+   - How to dispute a direct debit ?
+
+
+- intent : direct_debit_opposition
+  examples: | 
+   - How to stop a SEPA direct debit ?
+
+- intent : set_up_direct_debit
+  examples: | 
+   - How to set up a direct debit ?
+
+- intent : change_direct_debit
+  examples: | 
+   - How to modify a direct debit ?
+
+- intent : track_direct_debit
+  examples: | 
+   - How can I keep track of my direct debits ?
+
+- intent : before_sampling
+  examples: | 
+   - Is there any warning before a direct debit ?
+
+- intent : consequences_account_not_funded
+  examples: | 
+   - What are the consequences of a non-sufficiently funded account ?
+
+- intent : SEPA_Direct_Debit
+  examples: | 
+   - What is a SEPA Direct Debit ?
+
+- intent : direct_debit_fees
+  examples: | 
+   - What are the fees for direct debits ?
+
+- intent : sample_rejection
+  examples: | 
+   - How can I request that a future direct debit not be rejected ?
+
+- intent : recurring_direct_debits
+  examples: | 
+   - I have noticed suspicious recurring direct debits: what should I do?
+
+- intent : cancel_direct_debit_dispute
+  examples: | 
+   - How do I cancel a direct debit dispute ?
+
+- intent : creditor_dispute
+  examples: | 
+   - What is a creditor dispute ?
+
+- intent : direct_debit_dispute
+  examples: | 
+   - What is a direct debit dispute ?
+
+- intent : rejection_fee
+  examples: | 
+   - When are rejection fees applied ? 
+   
+- intent: salut
+  examples: |
+   - salut
+   - bonjour
+   - coucou
+   - bonsoir 
+   - salutations
+
+
+- intent: code_securite_info_fr
+  examples: |
+   - c'est quoi un code de securite
+   - code de securite
+   - mon code de securite
+
+- intent: modifier_corrdonnées_fr
+  examples: |
+   - Comment modifier mes coordonnées ? 
+   - la modification de mes coordonnées
+   - est ce que il y'a une possiblilite de modifier mes coordonnées
+
+
+- intent: modifier_supprime_bénéficiaire_fr
+  examples: |
+    -Comment modifier ou supprimer un bénéficiaire de virement 
+    -modifier supprimer bénéficiaire
+    - il y'a la possiblilite de modifier ou supprimer un bénéficiaire de virement
+
+
+- intent: démarches_déménagement_fr
+  examples: |
+    -Quelles sont les démarches à faire en cas de déménagement ? 
+    -démarches en cas de déménagement
+    -déménagement
+
+- intent: démarches_change_nom_fr
+  examples: |
+    -Quelles sont les démarches à effectuer en cas de changement de nom ? 
+    -changer mon nom 
+    -demarches changement de nom 
+
+- intent: nouvelle_mail_fr
+  examples: |
+    -Comment déclarer ma nouvelle adresse mail ? 
+    -nouvelle adresse mail 
+
+
+- intent: nouvelle_identité_passeport_fr
+  examples: |
+    -Comment transmettre ma nouvelle carte d’identité ou passeport  ?
+    -transmettre ma nouvelle carte d’identité ou passeport 
+
+
+- intent: garde_copie_identite_fr
+  examples: |
+    -La banque a-t-elle le droit de garder une copie de ma pièce d'identité ?
+    -garder copie de ma pièce d'identité
+
+
+- intent: comptes_externes_sécurisé_fr
+  examples: |
+    -Le service mes comptes externes est-il sécurisé ?
+    -mes comptes externes sécurisé
+    -la securite de mes comptes externes
+
+- intent: étranger_fonctionne_Pass_Sécurité_fr
+  examples: |
+    -Je suis à l'étranger : comment fonctionne le Pass Sécurité pour moi ?
+    -comment fonctionne le Pass Sécurité a l'étranger
+    -Pass Sécurité a l'étranger
+
+
+- intent: activer_désactiver_Pass_Sécurité_fr
+  examples: |
+    -Comment désactiver le Pass Sécurité ?
+    -Comment activer le Pass Sécurité ?
+    -l'activation du pass securite
+    -la deactivation du pass securite
+
+
+- intent: Pass_Sécurité_ne_fonctionne_pas_fr
+  examples: |
+    -Mon Pass Sécurité ne fonctionne pas, que faire ?
+    -Mon Pass Sécurité ne fonctionne pas
+
+
+- intent: modifier_code_secret_fr
+  examples: |
+    -Comment modifier mon code secret
+    -modifier code secret
+    -la modification du mon code secret
+
+
+- intent: modifier_num_tel_securite_fr
+  examples: |
+    -modifier mon numéro de Téléphone Sécurité
+    -modifier Téléphone Sécurité
+    -modification Téléphone Sécurité
+
+- intent: obtenir_code_client_fr
+  examples: |
+    -Comment obtenir mon code client ?
+    -obtenir code client
+  
+- intent: obtenir_code_secret_fr
+  examples: |
+    -Comment obtenir mon code secret pour accéder à l'espace client
+    -obtenir mon code secret
+
+- intent: oublie_perte_carte_bancaire_fr
+  examples: |
+    -Que faire en cas d'oubli de mon code de carte bancaire ?
+    -perte ma carte bancaire
+    -vol de ma carte bancaire
+    -j ai oublie le code de ma carte bancaire
+
+
+- intent: réceptionner_code_sécurité_fr
+  examples: |
+    -réceptionner un code sécurité 
+    -Comment réceptionner un code sécurité 
+
+- intent:  email_douteux_fr
+  examples: |
+    -email douteux 
+    -J'ai reçu un email qui me semble douteux
+
+
+- intent:  repondu_email_douteux_fr
+  examples: |
+    -J'ai répondu à un email qui me semble douteux
+    -J'ai répondu à un email douteux
+
+
+- intent:  bloque_espace_client_fr
+  examples: |
+    -J'ai bloqué l'accès à mon espace client que faire ?
+    -J ai eu un blocage sur mon espace client 
+
+
+- intent:  pas_recu_code_securite_tel_app_fr
+  examples: |
+    -Je n'ai pas reçu le Code Sécurité par SMS ou par appel
+    -Je n'ai pas reçu le code SMS 
+    -Je n'ai pas reçu le code par appel
+
+
+- intent:  pas_recu_code_par_mail_code_securite_fr
+  examples: |
+    -Je n'ai pas reçu mon Code de Sécurité par courrier pour activer le Téléphone Sécurité
+    -activation code securite par mail
+
+- intent:  etranger_fct_pass_securite_fr
+  examples: |
+    -Je suis à l'étranger : comment fonctionne le Pass Sécurité
+    -comment fonctionne le Pass Sécurité lorsque je suis en voyage 
+
+
+- intent:  probleme_clavier_fr
+  examples: |
+    -Le clavier virtuel ne s'affiche pas
+    -j'ai un probleme au clavier
+
+
+- intent:  contester_payement_fr
+  examples: |
+    -contester un paiement effectué avec ma carte bancaire
+    -contester un paiement
+
+
+
+- intent: security_code_info_ag
+  examples: |
+    -what is security code 
+    -security code
+    
+
+- intent:  modify_contact_ag
+  examples: |
+    -How to change my contact details
+    -Is there a possibility to modify my contact details?
+    -modify contact 
+
+
+
+- intent: modify_delete_beneficiary_en
+  examples: |
+    -How to modify or delete a transfer beneficiary
+    -modify delete beneficiary
+    -there is the possibility of modifying or deleting a transfer beneficiary ?
+
+
+- intent: steps_moving_en
+  examples: |
+    -What are the steps to take in the event of a move? 
+    - Procedures in case of moving 
+
+
+- intent: steps_change_name_ag
+  examples: |
+    -What are the steps to follow in case of name change?
+    -change my name
+    -name change process 
+
+- intent: new_mail_an
+  examples: |
+    -How do I register my new email address? 
+    -new email address 
+
+
+- intent: new_identity_passport_ag
+  examples: |
+    -How do I send my new identity card or passport?
+    -send my new identity card or passport
+
+- intent: identity_copy_guard_en
+  examples: |
+    -Does the bank have the right to keep a copy of my identity document?
+    -keep a copy of my ID 
+
+- intent: secure_external_accounts_en
+  examples: |
+    -Is the My External Accounts service secure?
+    -my secure external accounts
+    -the security of my external accounts  
+
+- intent: foreigner_functions_Pass_Security_ag
+  examples: |
+    -I am abroad: how does the Security Pass work for me?
+    -how the Safety Pass works when i travel 
+    
+- intent: activate_deactivate_Security_Pass_ag
+  examples: |
+    -How to deactivate the Security Pass?
+    -How to activate the Security Pass?
+    -activation of the security pass
+    -deactivation of the security pass
+
+
+
+- intent: Security_Pass_not_working_ag
+  examples: |
+    -My Security Pass is not working, what should I do?
+    -My Security Pass is not working
+
+
+- intent: modify_code_secret_ag
+  examples: |
+    -How to change my secret code
+    -change secret code
+    -changing my secret code
+
+
+- intent: change_phone_number_security_ag
+  examples: |
+    -change my security phone number
+    -changing my security phone number
+
+- intent: get_customer_code_ag
+  examples: |
+    -How do I get my customer code?
+    -get customer code
+
+
+- intent: get_secret_code_ag
+  examples: |
+    -How to get my secret code to access the customer area
+    -get my secret code
+
+
+- intent: forget_lost_bank_card_ag
+  examples: |
+    -What should I do if I forget my credit card code?
+    -lost my credit card
+    -theft of my credit card
+    -I forgot my credit card code
+
+- intent: receive_security_code_ag
+  examples: |
+    -receive a security code 
+    -How to receive a security code 
+
+
+- intent:  dubious_mail_ag
+  examples: |
+    -dubious email
+    -I received an email that seems to me suspicious
+
+
+- intent:  answered_dubious_mail_ag
+  examples: |
+    -I replied to an email that seems suspicious to me
+    -I replied to a questionable email
+
+
+- intent:  blocked_customer_area_ag
+  examples: |
+    -I have blocked access to my customer area, what should I do?
+    -I had a blockage on my customer area 
+
+
+- intent:  did_not_receive_the_Security_Code_vie_phone_ag
+  examples: |
+    -I did not receive the Security Code by SMS or by call
+    -I did not receive the SMS code 
+    -I did not receive the a call for code
+
+
+- intent:  did_not_receive_SecurityCode_by_mail_ag
+  examples: |
+    -I did not receive my Security Code by mail to activate the Security Phone   
+    -security code activation by email
+
+
+- intent:  Security_Pass_work_travel_ag
+  examples: |
+    -I am abroad: how does the Security Pass work?
+    -how does the Security Pass work when I'm traveling? 
+
+- intent: ask_time
+  examples: |
+    - what time is it right now?
+    - what day is it today?
+    - what's today?
+    - whats's yestreday?
+
+- intent:  keyborard_problem_ag
+  examples: |
+    -The virtual keyboard does not appear
+    -I have a problem with the keyboard
+
+- intent:  dispute_payment_ag
+  examples: |
+    -dispute a payment made with my bank card
+    -payment dispute
+
+- intent: request_names
+  examples: |
+    - i want to give you my name
+    - give name
+    - you need to know my name
+    - do you know my name?
+
+
+
+
+# - intent: thank
+#   examples: |
+#     - thanks!
+#     - thank you
+#     - thanks a lot
+#     - great thanks
+#     - appreciate it
+#     - cool thanks
+#     - Cool. Thanks
+#     - Great, thanks
+#     - Thank you so much
+#     - Thank's!
+#     - Thanks bot
+#     - Thanks for that
+#     - Thanks!
+#     - amazing, thanks
+#     - cool thank you
+#     - cool, thanks
+#     - danke
+#     - great thanks
+#     - ok thanks
+#     - ok thanks
+#     - ok thanks!
+#     - perfect thank you
+#     - thank u
+#     - thank you
+#     - thank you anyways
+#     - thanks
+#     - thanks a bunch for everything
+#     - thanks a lot
+#     - thanks for the help
+#     - thanks you
+#     - thanks!
+#     - thankyou
+#     - thnks
+#     - thx
+#     - yes thanks
+#     - thanks for your information
+#     - thanks f
+
+# - intent: help
+#   examples: |
+#     - I need help
+#     - what can you help me with
+#     - can you help me
+#     - what can you do
+#     - I need some help
+#     - help me
+#     - can you please help me
+#     - problem
+#     - big problem
+#     - How can you help me
+#     - How you help me?
+#     - I need some help
+#     - What are my options
+#     - What are you able to do?
+#     - What can I ask you?
+#     - What can I do?
+#     - What can you demo
+#     - What can you do for me?
+#     - What can you do?
+#     - What can you tell me?
+#     - What do you do
+#     - anything els
+#     - are there any other options?
+#     - can I ask you anything else?
+#     - can you do anything else?
+#     - can you help me?
+#     - come back
+#     - cool! can I do something else here?
+#     - hello what can you do for me
+#     - help
+#     - help me
+#     - help please
+#     - help pls
+#     - help?
+#     - hep me
+
+# - intent: out_of_scope
+#   examples: |
+#     - what is the square root of 5
+#     - I want to know the weather
+#     - what is the meaning of life.
+#     - Fridge Isn't Running
+#     - my tv isn't working
+#     - I want a pizza
+#     - my washing machine isn't working
+#     - what year is it
+#     - order a pizza
+#     - I want to order a pizza
+#     - what is the weather today
+#     - what is the weather
+#     - how old are you?
+#     - add two plus two
+#     - Hdjejene
+#     - asd
+#     - title
+#     - how about the forecast
+#     - foolish
+#     - joke
+#     - Can I get a hamburger?
+#     - Can YouTube talk?
+#     - Can you call me back ?
+#     - Can you give me your datacenter's password
+#     - Can you give me your datacenter's password?
+#     - Can you make sandwiches?
+#     - Can you please send me an uber
+
+- lookup: place
+  examples: |
+    - brussels
+    - zagreb
+    - london
+    - lisbon
+    - amsterdam
+    - seattle
+
+
+############################SYNONYM###########################"
+
+- synonym: compte bancaire
+  examples: |
+   - compte
+   - compte bancaire
+   - mon compte
+   - le compte
+   
+- synonym: compte bancaire_ar
+  examples: |
+   - elcompte
+   - el compte
+   - compte mt3i 
+   - comptowiya
+   - l compte
+   - lcompte
+   - compta
+   - lcompt
+   
+- synonym: bank account
+  examples: |
+   - account
+   - an account
+   - accounts
+   - my account
+    
+    
+- synonym: high
+  examples: |
+    - urgent
+    - really important
+    - escalated
+    - escalate
